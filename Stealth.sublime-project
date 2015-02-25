@@ -1,0 +1,54 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "Stealth/src"
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "Make for Xcode",
+			"cmd": ["make"],
+			"working_dir": "$project_path",
+			"variants":
+			[
+				{
+					"name": "Debug",
+					"cmd": ["make", "debug"],
+				},
+				{
+					"name": "Run",
+					"cmd": ["make", "run"], 
+				},
+
+				{
+					"name": "Stop",
+					"cmd": ["make", "stop"],
+				}
+			]
+		},
+		{
+			"name": "Python for Xcode",
+			"cmd": ["python", "build.py"],
+			"working_dir": "$project_path",
+			"variants":
+			[
+				{
+					"name": "Debug",
+					"cmd": ["xcodebuild", "-configuration", "Debug"],
+				},
+				{
+					"name": "Run",
+					"cmd": ["python", "build.py", "run"], 
+				},
+
+				{
+					"name": "Stop",
+					"cmd": ["python", "build.py", "stop"],
+				},
+			]
+		},
+	]
+}
