@@ -45,20 +45,6 @@ void Scene::addGameObject(unique_ptr<GameObject> go) {
     }
 }
 
-void Scene::addGameObject(GameObject &&go) {
-    cout << "Adding object at " << go.GetPosition().x() << " from &&go" << endl;
-    shared_ptr<GameObject> sGo {&go};
-
-    auto emplacePair = gameObjects.emplace(sGo -> ID(), sGo);
-    if (!emplacePair.second) {
-        cout << "Could not add game object with id " << sGo -> ID() << ": game object with same ID already exists in the scene." << endl;
-        //        BOOST_LOG_VERSION_NAMESPACE;
-        //        BOOST_LOG_TRIVIAL(warning) << boost::format("Could not add game object with id %d: game object with same ID already exists in the scene.") % go -> ID();
-        //        BOOST_CHRONO_STATIC;
-    }
-
-}
-
 void Scene::removeGameObject(weak_ptr<GameObject> &weakGo) {
     shared_ptr<GameObject> go {weakGo.lock()};
     if (go) {

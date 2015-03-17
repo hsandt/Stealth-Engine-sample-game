@@ -15,6 +15,7 @@
 #import <SDL2/SDL.h>
 
 // Engine
+#import "Locator.h"
 #import "Scene.h"
 
 // Game
@@ -26,14 +27,16 @@
 
 using namespace std;
 
-GameApplication::GameApplication(SDL_Window *win, SDL_Renderer *renderer, int fps) : win(win), renderer(renderer), running(false), fps(fps)
+GameApplication::GameApplication(SDL_Window *win, SDL_Renderer *renderer, int fps) :
+        win(win), renderer(renderer), isRunning(false), fps(fps)
 {
-    msecPerUpdate = 1000. / fps;
+    msecPerUpdate = (Uint32) floor(1000. / fps);
     secPerUpdate = 1. / fps;  // fixed deltaTime
 }
 
 GameApplication::~GameApplication()
 {
+    destroy();
 }
 
 void GameApplication::run() {
@@ -46,10 +49,10 @@ void GameApplication::run() {
     Uint32 lag {0};
     int sleep;
     
-    running = true;
+    isRunning = true;
 
     // update loop
-    while (running) {
+    while (isRunning) {
         currentTime = SDL_GetTicks();
         lag += currentTime - endTime;
 
@@ -82,42 +85,57 @@ void GameApplication::run() {
 
 }
 
-void GameApplication::init() {
-    currentScene = make_shared<Scene>();
-    
-    currentScene -> addGameObject(unique_ptr<GameObject> {new Guard({0, 20, 0})});  // use rhs or move only
-    currentScene -> addGameObject(unique_ptr<GameObject> {new Spy({50., 50., 0.})});
+void GameApplication::stop() {
+    isRunning = false;
 }
 
-void GameApplication::destroy() {
+void GameApplication::init() {
+    // register Service Providers to Service Locators
+    Locator::gameApplication = weak_ptr<GameApplication>(shared_from_this());
+    inputManager = make_shared<InputManager>();
+    Locator::inputManager = inputManager;
 
+    currentScene = make_shared<Scene>();
+
+    // T* &&arg did not work well, so to ensure I don't keep a ref of the GO I use only unique_ptr
+    currentScene->addGameObject(unique_ptr<GameObject> {new Guard({0, 20, 0})});  // use rhs or move only
+    currentScene->addGameObject(unique_ptr<GameObject> {new Spy({50., 50., 0.})});
+};
+
+void GameApplication::destroy() {
+    // nothing for now
 }
 
 void GameApplication::processInput() {
-    SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-        switch (event.type)
-        {
-            case SDL_QUIT:
-                running = false;
-                break;
-                
-            case SDL_KEYDOWN:
-            {
-                if (event.key.keysym.sym == SDLK_ESCAPE)
-                {
-                    running = false;
-                }
-            }
-        }
+    inputManager->processInputs();
+    if (inputManager->getButtonState(Button::QUIT) == ButtonState::PRESSED ||
+            inputManager->getButtonState(Button::QUIT) == ButtonState::RELEASED_PRESSED) {
+        stop();
     }
+    //SDL_Event event;
+    //while (SDL_PollEvent(&event)) {
+    //    switch (event.type)
+    //    {
+    //        case SDL_QUIT:
+    //            isRunning = false;
+    //            break;
+    //
+    //        case SDL_KEYDOWN:
+    //        {
+    //            if (event.key.keysym.sym == SDLK_ESCAPE)
+    //            {
+    //                isRunning = false;
+    //            }
+    //        }
+    //    }
+    //}
 }
 
 void GameApplication::update(double dt) {
-    std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene -> getGameObjects()};
+    std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
     for (auto goIt (gameObjects.begin()); goIt != gameObjects.end(); ++goIt)
     {
-        shared_ptr<GameObject> go {goIt -> second};
+        shared_ptr<GameObject> go {goIt->second};
         go -> update(dt);
         // go -> SetPosition(go -> GetPosition() + Point3d {23, 2, 0});
     }
@@ -128,29 +146,16 @@ void GameApplication::render() {
     SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0, 0xff);
     SDL_RenderClear(renderer);
 
-    std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene -> getGameObjects()};
+    std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
     for (auto goIt (gameObjects.begin()); goIt != gameObjects.end(); ++goIt)
     {
         // do not use GameObject& which would be invalid if all shared_ptr
         // to the game object disappeared in the meanwhile (~raw pointer issue)
-        shared_ptr<GameObject> go {goIt -> second};
-        
-        // cout << "rendering at " << go -> GetPosition().x() << endl;
-//        BOOST_LOG_TRIVIAL(warning) << "test";
-        SDL_Rect r;
-//        int w = 640, h = 480;
-
-        r.w = 20;
-        r.h = 20;
-        r.x = go->GetPosition().x();
-        r.y = go->GetPosition().y();
-        
-        
-        
-        SDL_SetRenderDrawColor(renderer, 0xff, 0xff, 0, 0xff);
-        SDL_RenderFillRect(renderer, &r);
-        
+        shared_ptr<GameObject> go {goIt->second};
+        go->render(renderer);
     }
 
     SDL_RenderPresent(renderer);
 }
+
+

@@ -7,17 +7,22 @@
 //
 
 #import "Character.h"
+#import "HumanController.h"
 
 #include "Spy.h"
+
+class Controller;
 
 Spy::Spy()
 : Character()
 {
+    controller = std::unique_ptr<Controller>(new HumanController());
 }
 
 Spy::Spy(const Point3d & pos)
 : Character(pos)
 {
+    controller = std::unique_ptr<Controller>(new HumanController());
 }
 
 Spy::~Spy()

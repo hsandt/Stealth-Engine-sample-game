@@ -13,6 +13,7 @@ enum class ButtonState
     PRESSED,
     DOWN,
     RELEASED,
-    UP
+    UP,
+    PRESSED_RELEASED,  // press and release in 1 frame
+    RELEASED_PRESSED   // release and press in 1 frame
 };
-

@@ -14,21 +14,25 @@
 #import <SDL2/SDL.h>
 
 #import "Scene.h"
+#include "InputManager.h"
 
-class GameApplication
+class GameApplication : public std::enable_shared_from_this<GameApplication>
 {
 
 public:
     GameApplication(SDL_Window *win, SDL_Renderer *renderer, int fps = 30);
+    GameApplication() = default;
     virtual ~GameApplication();
 
-    GameApplication(const GameApplication &) = delete;
-    GameApplication &operator=(const GameApplication &) & = delete;
-    GameApplication(GameApplication&&) = delete;
-    GameApplication &operator=(GameApplication&&) & = delete;
+    GameApplication(const GameApplication &) = default;
+    GameApplication &operator=(const GameApplication &) & = default;
+    GameApplication(GameApplication&&) = default;
+    GameApplication &operator=(GameApplication&&) & = default;
 
     // Run application
     void run();
+    // Exit application
+    void stop();
 
 private:
     // Initialize game, called by run()
@@ -46,15 +50,18 @@ private:
     SDL_Window *win;
     SDL_Renderer *renderer;
 
+    // Shared pointers to managers
+    std::shared_ptr<InputManager> inputManager;
+
     // Is the game running
-    bool running;
+    bool isRunning;
     
     // FPS and timer per update (ms)
     int fps;
     Uint32 msecPerUpdate;
     double secPerUpdate;  // avoids converting to sec every time
 
-    // active scene
+    // active scene (make it a unique_ptr if you are sure no one else uses it)
     std::shared_ptr<Scene> currentScene;
 
 };

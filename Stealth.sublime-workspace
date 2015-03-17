@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"APi",
+				"APickup::APickup"
+			],
+			[
+				"Atta",
+				"AttachTo"
+			],
+			[
+				"Pu",
+				"PickupMesh"
+			],
+			[
+				"Crea",
+				"CreateDefaultSubobject"
+			],
+			[
+				"Pick",
+				"PickupMesh"
+			],
+			[
+				"Ca",
+				"Category"
+			],
+			[
+				"BpR",
+				"BlueprintReadOnly"
+			],
+			[
 				"rend",
 				"renderer"
 			],
@@ -486,134 +514,38 @@
 			[
 				"target",
 				"targetPushable"
-			],
-			[
-				"GetC",
-				"GetComponentOrDie"
-			],
-			[
-				"tart",
-				"targetPushable"
-			],
-			[
-				"test",
-				"testedPoint"
-			],
-			[
-				"pushD",
-				"pushDirection"
-			],
-			[
-				"pushabl",
-				"pushableList"
-			],
-			[
-				"pusha",
-				"pushable"
-			],
-			[
-				"pushA",
-				"pushAreaScript"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Stealth/src/game/entity/Character.h",
+			"file": "Stealth/src/engine/service/Locator.h",
 			"settings":
 			{
-				"buffer_size": 507,
+				"buffer_size": 609,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Stealth/src/engine/scene/GameObject.h",
+			"file": "Stealth/src/engine/service/InputManager.cpp",
 			"settings":
 			{
-				"buffer_size": 688,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/game/application/GameApplication.h",
-			"settings":
-			{
-				"buffer_size": 1248,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/game/application/SdlApplication.h",
-			"settings":
-			{
-				"buffer_size": 1245,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/engine/scene/Scene.h",
-			"settings":
-			{
-				"buffer_size": 706,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/game/entity/Character.cpp",
-			"settings":
-			{
-				"buffer_size": 307,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/engine/scene/GameObject.cpp",
-			"settings":
-			{
-				"buffer_size": 628,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/hs/Archives/Graphics/Adobe CS6 Master Collection (Mac) Including retina/amtlib.framework/amtlib",
-			"settings":
-			{
-				"buffer_size": 4979120,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/game/application/GameApplication.cpp",
-			"settings":
-			{
-				"buffer_size": 3033,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/game/application/SdlApplication.cpp",
-			"settings":
-			{
-				"buffer_size": 2344,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Stealth/src/engine/scene/Scene.cpp",
-			"settings":
-			{
-				"buffer_size": 1287,
+				"buffer_size": 4008,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Packages/Kivy/Kivy-Project.sublime-build",
+	"build_system": "Python for Xcode",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 207.0,
 		"selected_items":
 		[
+			[
+				"build",
+				"Build: Build"
+			],
 			[
 				"rei",
 				"Indentation: Reindent Lines"
@@ -731,7 +663,7 @@
 				"Indentation: Reindent Lines"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -758,19 +690,32 @@
 		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine",
 		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene",
 		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application",
 		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/entity"
 	],
 	"file_history":
 	[
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/main.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/GameObject.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/SdlApplication.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/SdlApplication.h",
+		"/Users/hs/Documents/Unreal Projects/IntroProgrammingTP/Source/IntroProgrammingTP/Pickup.cpp",
+		"/Users/hs/Backup/macbook_pro_2015-02-21/root/Users/hs/Developer/AppCode/Live Templates/enum-class.file-template",
+		"/Users/hs/Backup/macbook_pro_2015-02-21/root/Users/hs/Developer/AppCode/Live Templates/switch-case.live-template",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth.sublime-project",
+		"/Users/hs/Documents/Unreal Projects/IntroProgrammingTP/Source/IntroProgrammingTP/Pickup.h",
+		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPerson.h",
+		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPersonCharacter.h",
+		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPersonGameMode.cpp",
+		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPersonCharacter.cpp",
 		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/Scene.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/GameApplication.h",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/SdlApplication.cpp",
 		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/GameApplication.cpp",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/entity/Character.cpp",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/GameObject.cpp",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/Scene.h",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/SdlApplication.h",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/entity/Character.h",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/GameObject.h",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/GameApplication.h",
+		"/Users/hs/Archives/Graphics/Adobe CS6 Master Collection (Mac) Including retina/amtlib.framework/amtlib",
+		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/main.cpp",
+		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/hs/Documents/cours/M2/physics/re15_1_31/newhfe.for",
 		"/Users/hs/Developer/Xcode/Xcode4CppClassTemplate-master/README.md",
@@ -876,21 +821,7 @@
 		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Textures/Minebot.tif",
 		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MicrosoftXboxOne.asset",
 		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Helper/MathHelper.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Rewired/Examples/ControlRemapping1/Scripts/ControlRemappingDemo1.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Avatar/AvatarBot.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/LevelManager.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/InputManager.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Tiles/LoopWarper.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Misc/GameOverGUI.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Misc/EndOfLevel.js",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Assertions/Comparers/FloatComparer.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2d/Editor/Fonts/tk2dFontBuilder.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Fx/MoodBox.js",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Objects/Misc/Bullet.FBX",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Objects/Enemies/mine_bot@forward.FBX",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Objects/Enemies/mine_bot.FBX",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/StageTest-TestResults.xml",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Assertions/Editor/GroupByTestsRenderer.cs"
+		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Rewired/Examples/ControlRemapping1/Scripts/ControlRemappingDemo1.cs"
 	],
 	"find":
 	{
@@ -1079,227 +1010,16 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Stealth/src/game/entity/Character.h",
+					"file": "Stealth/src/engine/service/Locator.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 507,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								507
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Stealth/src/engine/scene/GameObject.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 688,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								655
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Stealth/src/game/application/GameApplication.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								323,
-								283
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 29.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Stealth/src/game/application/SdlApplication.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1245,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1240,
-								1192
-							]
-						],
-						"settings":
-						{
-							"clone_numbers": 0,
-							"history_list_is_closing": true,
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 183.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Stealth/src/engine/scene/Scene.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								290,
-								332
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "Stealth/src/game/entity/Character.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 307,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								307
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Stealth/src/engine/scene/GameObject.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 628,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								202,
-								202
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/Users/hs/Archives/Graphics/Adobe CS6 Master Collection (Mac) Including retina/amtlib.framework/amtlib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4979120,
+						"buffer_size": 609,
 						"regions":
 						{
 						},
@@ -1312,59 +1032,30 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "Stealth/src/game/application/GameApplication.cpp",
+					"buffer": 1,
+					"file": "Stealth/src/engine/service/InputManager.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3033,
+						"buffer_size": 4008,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1116,
-								1116
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 615.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "Stealth/src/game/application/SdlApplication.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1189,
-								1189
+								289,
+								289
 							]
 						],
 						"settings":
@@ -1374,38 +1065,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 510.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "Stealth/src/engine/scene/Scene.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1287,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								365,
-								365
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1428,18 +1091,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -1451,7 +1107,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 301.0
+		"height": 177.0
 	},
 	"output.find_results":
 	{
@@ -1702,7 +1358,7 @@
 		[
 			[
 				"",
-				"~/Developer/Unix/config.sublime-project"
+				"~/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/BlueAndRed.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1715,7 +1371,7 @@
 		],
 		"width": 392.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

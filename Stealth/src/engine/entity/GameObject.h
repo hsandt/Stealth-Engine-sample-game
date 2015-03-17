@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include <SDL2/SDL_render.h>
 #import "Point3.h"
 
 class GameObject
@@ -29,13 +30,16 @@ public:
     int ID() const;
 
     // update
-    virtual void update(double dt) = 0;
+    virtual void update(double dt) {}
 
-    // position
+    // render
+    virtual void render(SDL_Renderer* renderer) {}
+
+    // position get/set
     Point3d GetPosition() const;
     void SetPosition(const Point3d & pos);
 
-private:
+protected:
 
     int id;
     Point3d pos;

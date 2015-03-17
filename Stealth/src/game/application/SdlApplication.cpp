@@ -6,11 +6,14 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
+#include <memory>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include "GameApplication.h"
 
 #include "SdlApplication.h"
+
+using namespace std;
 
 SdlApplication::SdlApplication() :
 _running(false)
@@ -58,8 +61,8 @@ int SdlApplication::run(int width, int height)
     SDL_Event ev;
     _running = true;
     
-    GameApplication gameApp {win, renderer, 30};
-    gameApp.run();
+    shared_ptr<GameApplication> gameApp (make_shared<GameApplication>(win, renderer, 30));
+    gameApp->run();
     
     return APP_OK;
 }

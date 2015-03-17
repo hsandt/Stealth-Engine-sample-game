@@ -10,10 +10,12 @@
 
 Guard::Guard()
 {
+    //controller = std::unique_ptr<Controller>(new HumanController());
 }
 
 Guard::Guard(const Point3d & pos) : Character(pos)
 {
+    //controller = std::unique_ptr<Controller>(new HumanController());
 }
 
 Guard::~Guard()

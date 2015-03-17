@@ -9,6 +9,7 @@
 #pragma once
 
 #include "Character.h"
+#include "HumanController.h"
 
 class Spy : public Character
 {
@@ -21,6 +22,8 @@ public:
     Spy &operator=(const Spy &) & = delete;
     Spy(Spy&&) = default;
     Spy &operator=(Spy&&) & = default;
-private:
+
+protected:
+
 };
 

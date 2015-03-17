@@ -12,6 +12,7 @@
 
 #import "Button.h"
 #import "ButtonState.h"
+#include "ButtonEvent.h"
 
 class InputManager
 {
@@ -25,12 +26,15 @@ public:
     InputManager &operator=(InputManager&&) & = delete;
     
     void processInputs();
-    ButtonState getButtonState(Button button);
+    ButtonState getButtonState(Button const button) const;
+    // return true if the button has been pressed or down during this frame
+    bool isPressedOrDown(const Button button) const;
 
 private:
+    // map of button -> (button state, first event handled on this frame) (only in processButton)
+    std::map<Button, std::pair<ButtonState, ButtonEvent>> buttonStateMap;
 
-
-    
-    std::map<Button, ButtonState> buttonStateMap;
+    // update the button state in the map based on whether it is pressed or released
+    void processButton(Button const button, Uint32 const eventType);
 };
 

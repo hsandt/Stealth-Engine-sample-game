@@ -8,7 +8,10 @@
 
 #pragma once
 
+#include <memory>
 #import "GameObject.h"
+#include "Controller.h"
+#include "HumanController.h"
 
 class Character : public GameObject
 {
@@ -23,6 +26,10 @@ public:
 
     virtual void update(double dt) override;
 
-private:
+    virtual void render(SDL_Renderer* renderer) override;
+
+protected:
+    std::unique_ptr<Controller> controller;
+    double speed = 20.0;
 };
 
