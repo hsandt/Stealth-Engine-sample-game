@@ -6,16 +6,13 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
-#include "Guard.h"
+#include "AIController.h"
 
-Guard::Guard()
-{
-    //controller = std::unique_ptr<Controller>(new HumanController());
-}
+#include "Guard.h"
 
 Guard::Guard(const Point3d & pos) : Character(pos)
 {
-    //controller = std::unique_ptr<Controller>(new HumanController());
+    controller = std::unique_ptr<Controller>(new AIController());
 }
 
 Guard::~Guard()
@@ -24,5 +21,5 @@ Guard::~Guard()
 
 void Guard::update(double dt)
 {
-	SetPosition(GetPosition() + dt * Point3d {30, 30, 0});
+    Character::update(dt);
 }

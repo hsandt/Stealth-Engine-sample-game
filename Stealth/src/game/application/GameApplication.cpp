@@ -98,8 +98,8 @@ void GameApplication::init() {
     currentScene = make_shared<Scene>();
 
     // T* &&arg did not work well, so to ensure I don't keep a ref of the GO I use only unique_ptr
-    currentScene->addGameObject(unique_ptr<GameObject> {new Guard({0, 20, 0})});  // use rhs or move only
-    currentScene->addGameObject(unique_ptr<GameObject> {new Spy({50., 50., 0.})});
+    currentScene->addGameObject(unique_ptr<GameObject> {new Guard("Guard", {0, 20, 0})});  // use rhs or move only
+    currentScene->addGameObject(unique_ptr<GameObject> {new Spy("Spy", {50., 50., 0.})});
 };
 
 void GameApplication::destroy() {
@@ -132,13 +132,15 @@ void GameApplication::processInput() {
 }
 
 void GameApplication::update(double dt) {
-    std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
+    map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
     for (auto goIt (gameObjects.begin()); goIt != gameObjects.end(); ++goIt)
     {
         shared_ptr<GameObject> go {goIt->second};
         go -> update(dt);
         // go -> SetPosition(go -> GetPosition() + Point3d {23, 2, 0});
     }
+    // DEBUG
+    
 }
 
 void GameApplication::render() {
@@ -154,7 +156,6 @@ void GameApplication::render() {
         shared_ptr<GameObject> go {goIt->second};
         go->render(renderer);
     }
-
     SDL_RenderPresent(renderer);
 }
 

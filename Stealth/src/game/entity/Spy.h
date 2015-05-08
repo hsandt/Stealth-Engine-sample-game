@@ -14,8 +14,7 @@
 class Spy : public Character
 {
 public:
-    Spy();
-    Spy(const Point3d & pos);
+    Spy(const Point3d & pos={0, 0, 0});
     virtual ~Spy();
 
     Spy(const Spy &) = delete;

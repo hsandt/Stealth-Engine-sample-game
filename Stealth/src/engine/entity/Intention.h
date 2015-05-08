@@ -11,6 +11,7 @@
 struct Intention {
     // move intention, 2D vector with magnitude between 0 and 1
     Point3d move;
+    Intention() : move({0, 0, 0}) {}  // required if no explicit member initialization
 };
 
 

@@ -13,17 +13,16 @@
 class Guard : public Character
 {
 public:
-    Guard();
-    Guard(const Point3d & pos);
+    Guard(const Point3d & pos={0, 0, 0});
     virtual ~Guard();
 
     Guard(const Guard &) = delete;
     Guard &operator=(const Guard &) & = delete;
     Guard(Guard&&) = default;
     Guard &operator=(Guard&&) & = default;
-    
+
     virtual void update(double dt) override;
-    
+
 private:
 };
 

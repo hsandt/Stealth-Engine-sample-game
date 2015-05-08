@@ -13,16 +13,11 @@
 
 class Controller;
 
-Spy::Spy()
-: Character()
-{
-    controller = std::unique_ptr<Controller>(new HumanController());
-}
-
 Spy::Spy(const Point3d & pos)
 : Character(pos)
 {
     controller = std::unique_ptr<Controller>(new HumanController());
+    speed = 2;
 }
 
 Spy::~Spy()

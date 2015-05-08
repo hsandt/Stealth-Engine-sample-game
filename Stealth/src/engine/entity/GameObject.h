@@ -15,11 +15,9 @@ class GameObject
 {
     
 public:
-    
     static int last_id;
 
-    GameObject();
-    GameObject(const Point3d & pos);
+    GameObject(const std::string &name, Point3d const &pos = {0, 0, 0});
     virtual ~GameObject();
     GameObject(const GameObject &) = delete;
     GameObject &operator=(const GameObject &) & = delete;
@@ -35,13 +33,23 @@ public:
     // render
     virtual void render(SDL_Renderer* renderer) {}
 
-    // position get/set
-    Point3d GetPosition() const;
-    void SetPosition(const Point3d & pos);
+
+    std::string getName() const {
+        return name;
+    }
+
+
+    Point3d getPosition() const {
+        return position;
+    }
+
+    void setPosition(const Point3d &pos) {
+        GameObject::position = pos;
+    }
 
 protected:
-
     int id;
-    Point3d pos;
+    std::string name;
+    Point3d position = {0, 0, 0};  // must initialize, else garbage
 
 };

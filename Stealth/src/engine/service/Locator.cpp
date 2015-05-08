@@ -12,11 +12,11 @@ weak_ptr<GameApplication> Locator::gameApplication;  // default initialization t
 weak_ptr<InputManager> Locator::inputManager;
 
 // maybe return a shared_ptr for faster processing
-weak_ptr<GameApplication> Locator::getGameApplication() {
+shared_ptr<GameApplication> Locator::getGameApplication() {
     if (gameApplication.expired()) {
         cout << "Locator: could not locate GameApplication service." << endl;
     }
-    return gameApplication;
+    return gameApplication.lock();
 }
 
 shared_ptr<InputManager> Locator::getInputManager() {
@@ -24,8 +24,4 @@ shared_ptr<InputManager> Locator::getInputManager() {
         cout << "Locator: could not locate InputManager service." << endl;
     }
     return inputManager.lock();
-}
-
-weak_ptr<InputManager> Locator::getWeakInputManager() {
-    return inputManager;
 }

@@ -16,8 +16,7 @@
 class Character : public GameObject
 {
 public:
-    Character();
-    Character(const Point3d & pos);
+    Character(const Point3d & pos={0, 0, 0});
     virtual ~Character();
     Character(const Character &) = delete;
     Character &operator=(const Character &) & = delete;
@@ -29,7 +28,7 @@ public:
     virtual void render(SDL_Renderer* renderer) override;
 
 protected:
-    std::unique_ptr<Controller> controller;
-    double speed = 20.0;
+    std::unique_ptr<Controller> controller = nullptr;
+    double speed = 5.0;
 };
 

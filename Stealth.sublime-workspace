@@ -523,7 +523,7 @@
 			"file": "Stealth/src/engine/service/Locator.h",
 			"settings":
 			{
-				"buffer_size": 609,
+				"buffer_size": 549,
 				"line_ending": "Unix"
 			}
 		},
@@ -537,9 +537,14 @@
 		}
 	],
 	"build_system": "Python for Xcode",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 207.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -825,7 +830,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -1019,7 +1024,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 609,
+						"buffer_size": 549,
 						"regions":
 						{
 						},
@@ -1113,15 +1118,17 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "Stealth.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -1354,8 +1361,17 @@
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "ste",
 		"selected_items":
 		[
+			[
+				"ste",
+				"~/Projects/AI/Schwab/Stealth-Unity/Stealth-Unity.sublime-project"
+			],
+			[
+				" ",
+				"~/Projects/AI/Schwab/Stealth-Unity/Stealth-Unity.sublime-project"
+			],
 			[
 				"",
 				"~/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/BlueAndRed.sublime-project"
@@ -1366,6 +1382,7 @@
 	"select_symbol":
 	{
 		"height": 27.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],

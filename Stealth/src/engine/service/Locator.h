@@ -13,8 +13,7 @@ public:
 
 	Locator() = delete;
 
-    static std::weak_ptr<GameApplication> getGameApplication();
-    static std::weak_ptr<InputManager> getWeakInputManager();
+    static std::shared_ptr<GameApplication> getGameApplication();
     static std::shared_ptr<InputManager> getInputManager();
 
 private:

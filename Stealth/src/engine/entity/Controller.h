@@ -25,7 +25,7 @@ protected:
     Controller(Controller &&) = default;
     Controller &operator=(Controller &&) & = default;
 
-    Intention intention;
+    Intention intention = {};
 };
 
 

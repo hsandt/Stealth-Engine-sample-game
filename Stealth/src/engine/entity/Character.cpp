@@ -10,11 +10,7 @@
 
 using namespace std;
 
-Character::Character() : GameObject()
-{
-}
-
-Character::Character(const Point3d & pos) : GameObject(pos)
+Character::Character(const Point3d & pos) : GameObject(<#initializer#>, pos)
 {
 }
 
@@ -22,17 +18,18 @@ Character::~Character()
 {
 }
 
-void Character::update(double dt)
-{
-    // let controller set intention
-    if(controller)
+void Character::update(double dt) {
+    // update physics
+    // if controller, let controller set intention
+    if (controller) {
         controller->setIntention();
-    else {
-        cout << "No controller found on Character" << endl;
+
+        // move based on intention
+        position += controller->getIntention().move * speed;
     }
-    speed = 10;
-    // move based on intention
-    pos += controller->getIntention().move * speed;
+    else {
+        //cout << "No controller found on Character" << endl;
+    }
 }
 
 void Character::render(SDL_Renderer *renderer) {
@@ -43,9 +40,9 @@ void Character::render(SDL_Renderer *renderer) {
 
     r.w = 20;
     r.h = 20;
-    r.x = GetPosition().x();
-    r.y = GetPosition().y();
+    r.x = getPosition().x();
+    r.y = getPosition().y();
 
     SDL_SetRenderDrawColor(renderer, 0xff, 0xff, 0, 0xff);
-    SDL_RenderFillRect(renderer, &r);
+    SDL_RenderDrawRect(renderer, &r);
 }

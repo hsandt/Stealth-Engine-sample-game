@@ -16,14 +16,10 @@
 
 int GameObject::last_id = 0;
 
-GameObject::GameObject()
+GameObject::GameObject(const std::string &name, Point3d const &pos) :
+        id(++last_id), name(name), position(pos)
 {
-    id = ++last_id;
-}
-
-GameObject::GameObject(const Point3d & pos) : GameObject()
-{
-    SetPosition(pos);
+    //id = ++last_id;
 }
 
 GameObject::~GameObject()
@@ -33,12 +29,4 @@ GameObject::~GameObject()
 
 int GameObject::ID() const {
     return id;
-}
-
-Point3d GameObject::GetPosition() const {
-    return pos;
-}
-
-void GameObject::SetPosition(const Point3d & _pos) {
-    pos = _pos;
 }
