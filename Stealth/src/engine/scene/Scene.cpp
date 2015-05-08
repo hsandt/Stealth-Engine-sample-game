@@ -32,16 +32,16 @@ std::map<int, std::shared_ptr<GameObject>> Scene::getGameObjects() const {
 
 void Scene::addGameObject(unique_ptr<GameObject> go) {
     
-    shared_ptr<GameObject> sGo {move(go)};
+    shared_ptr<GameObject> shGo{move(go)};
     
     //cout << "Adding object at " << sGo -> GetPosition().x() << " from unique_ptr &go" << endl;
     
-    auto emplacePair = gameObjects.emplace(sGo -> ID(), sGo);
+    auto emplacePair = gameObjects.emplace(shGo-> ID(), shGo);
     if (emplacePair.second) {
-        cout << "[SCENE] Added game object with id: " << sGo -> ID() << endl;
+        cout << "[SCENE] Added game object #" << shGo->ID() << " " << shGo->getName() << endl;
     }
     else {
-        cout << "Could not add game object with id: " << sGo -> ID() << ": game object with same ID already exists in the scene." << endl;
+        cout << "Could not add game object with id: " << shGo->ID() << ": game object with same ID already exists in the scene." << endl;
 //        BOOST_LOG_VERSION_NAMESPACE;
 //        BOOST_LOG_TRIVIAL(warning) << boost::format("Could not add game object with id %d: game object with same ID already exists in the scene.") % go -> ID();
 //        BOOST_CHRONO_STATIC;
@@ -51,7 +51,7 @@ void Scene::addGameObject(unique_ptr<GameObject> go) {
 void Scene::removeGameObject(weak_ptr<GameObject> &weakGo) {
     shared_ptr<GameObject> go {weakGo.lock()};
     if (go) {
-        int nbErased = (int) gameObjects.erase(go -> ID());
+        int nbErased = (int) gameObjects.erase(go->ID());
         if (nbErased == 0) {
 //            BOOST_LOG_TRIVIAL(warning) << boost::format("Could not remove game object with id %d: no game objects with this ID in the scene.") % go -> ID();
         }

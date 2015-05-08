@@ -8,7 +8,9 @@
 
 #pragma once
 
+#include <string>
 #include <SDL2/SDL_render.h>
+
 #import "Point3.h"
 
 class GameObject

@@ -8,13 +8,15 @@
 
 #pragma once
 
+#include <string>
+
 #include "Character.h"
 #include "HumanController.h"
 
 class Spy : public Character
 {
 public:
-    Spy(const Point3d & pos={0, 0, 0});
+    Spy(const std::string &name, Point3d const &pos);
     virtual ~Spy();
 
     Spy(const Spy &) = delete;

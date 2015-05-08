@@ -8,12 +8,14 @@
 
 #pragma once
 
+#include <string>
+
 #import "Character.h"
 
 class Guard : public Character
 {
 public:
-    Guard(const Point3d & pos={0, 0, 0});
+    Guard(const std::string &name, Point3d const &pos);
     virtual ~Guard();
 
     Guard(const Guard &) = delete;

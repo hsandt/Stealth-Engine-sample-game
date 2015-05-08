@@ -24,7 +24,7 @@ GameObject::GameObject(const std::string &name, Point3d const &pos) :
 
 GameObject::~GameObject()
 {
-    std::cout << "GO destroyed" << std::endl;
+    std::cout << "[GAMEOBJECT] GameObject #" << id << " " << name << " destroyed" << std::endl;
 }
 
 int GameObject::ID() const {

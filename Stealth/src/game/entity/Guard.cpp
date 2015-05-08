@@ -6,11 +6,15 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
-#include "AIController.h"
-
 #include "Guard.h"
 
-Guard::Guard(const Point3d & pos) : Character(pos)
+#include <string>
+
+#include "AIController.h"
+
+using namespace std;
+
+Guard::Guard(const string &name, Point3d const &pos) : Character(name, pos)
 {
     controller = std::unique_ptr<Controller>(new AIController());
 }

@@ -6,6 +6,8 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
+#include <string>
+
 #import "Character.h"
 #import "HumanController.h"
 
@@ -13,8 +15,9 @@
 
 class Controller;
 
-Spy::Spy(const Point3d & pos)
-: Character(pos)
+using namespace std;
+
+Spy::Spy(const string &name, Point3d const &pos) : Character(name, pos)
 {
     controller = std::unique_ptr<Controller>(new HumanController());
     speed = 2;

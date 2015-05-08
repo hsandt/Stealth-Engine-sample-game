@@ -10,7 +10,7 @@
 
 using namespace std;
 
-Character::Character(const Point3d & pos) : GameObject(<#initializer#>, pos)
+Character::Character(std::string const &name, Point3d const &pos) : GameObject(name, pos)
 {
 }
 

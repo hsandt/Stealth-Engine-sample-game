@@ -16,7 +16,7 @@
 class Character : public GameObject
 {
 public:
-    Character(const Point3d & pos={0, 0, 0});
+    Character(std::string const &name, Point3d const &pos);
     virtual ~Character();
     Character(const Character &) = delete;
     Character &operator=(const Character &) & = delete;
