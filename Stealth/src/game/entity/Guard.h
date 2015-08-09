@@ -10,7 +10,7 @@
 
 #include <string>
 
-#import "Character.h"
+#include "entity/Character.h"
 
 class Guard : public Character
 {

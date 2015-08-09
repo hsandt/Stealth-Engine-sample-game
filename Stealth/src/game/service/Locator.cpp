@@ -4,6 +4,10 @@
 //
 
 #include <iostream>
+
+#include "application/GameApplication.h"
+#include "service/InputManager.h"
+
 #include "Locator.h"
 
 using namespace std;

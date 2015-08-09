@@ -8,13 +8,13 @@
 
 #pragma once
 
-#import <memory>
+#include <memory>
 
 // SDL
-#import <SDL2/SDL.h>
+#include <SDL2/SDL.h>
 
-#import "Scene.h"
-#include "InputManager.h"
+#include "scene/Scene.h"
+#include "service/InputManager.h"
 
 class GameApplication : public std::enable_shared_from_this<GameApplication>
 {

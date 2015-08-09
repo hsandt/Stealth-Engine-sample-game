@@ -6,9 +6,9 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
-#import <iostream>
+#include <iostream>
 
-#import "Point3.h"
+#include "geometry/Point3.h"
 
 #include "GameObject.h"
 

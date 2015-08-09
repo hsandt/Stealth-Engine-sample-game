@@ -1,9 +1,11 @@
-cmake_minimum_required(VERSION 2.8.4)
-project(Stealth)
+cmake_minimum_required(VERSION 3.2)
+project(Stealth_C)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES
+    Stealth/src/engine/entity/AIController.cpp
+    Stealth/src/engine/entity/AIController.h
     Stealth/src/engine/entity/Character.cpp
     Stealth/src/engine/entity/Character.h
     Stealth/src/engine/entity/Controller.cpp
@@ -24,8 +26,8 @@ set(SOURCE_FILES
     Stealth/src/engine/scene/Scene.h
     Stealth/src/engine/service/InputManager.cpp
     Stealth/src/engine/service/InputManager.h
-    Stealth/src/engine/service/Locator.cpp
-    Stealth/src/engine/service/Locator.h
+    Stealth/src/game/service/Locator.cpp
+    Stealth/src/game/service/Locator.h
     Stealth/src/game/application/GameApplication.cpp
     Stealth/src/game/application/GameApplication.h
     Stealth/src/game/application/SdlApplication.cpp
@@ -36,15 +38,23 @@ set(SOURCE_FILES
     Stealth/src/game/entity/Spy.h
     Stealth/src/game/main.cpp)
 
+include_directories(Stealth/src)
 include_directories(Stealth/src/engine)
-include_directories(Stealth/src/engine/entity)
-include_directories(Stealth/src/engine/enum)
-include_directories(Stealth/src/engine/geometry)
-include_directories(Stealth/src/engine/helper)
-include_directories(Stealth/src/engine/scene)
-include_directories(Stealth/src/engine/service)
 include_directories(Stealth/src/game)
-include_directories(Stealth/src/game/application)
-include_directories(Stealth/src/game/entity)
 
-add_executable(Stealth ${SOURCE_FILES})
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/Stealth/cmake")
+
+#pkg_search_module(SDL2 REQUIRED SDL2)
+find_package(SDL2 REQUIRED)
+find_package(SDL2_image REQUIRED)
+find_package(SDL2_ttf REQUIRED)
+
+include_directories(${SDL2_INCLUDE_DIR}
+                    ${SDL2_IMAGE_INCLUDE_DIR}
+                    ${SDL2_TTF_INCLUDE_DIR})
+
+add_executable(Stealth_C ${SOURCE_FILES})
+
+target_link_libraries(Stealth_C ${SDL2_LIBRARY}
+                             ${SDL2_IMAGE_LIBRARIES}
+                             ${SDL2_TTF_LIBRARIES})

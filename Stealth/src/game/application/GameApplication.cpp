@@ -6,22 +6,22 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
-#import <iostream>
-#import <memory>
-#import <vector>
-#import <boost/log/trivial.hpp>
+#include <iostream>
+#include <memory>
+#include <vector>
+#include <boost/log/trivial.hpp>
 
 // SDL
-#import <SDL2/SDL.h>
+#include <SDL2/SDL.h>
 
 // Engine
-#import "Locator.h"
-#import "Scene.h"
+#include "service/Locator.h"
+#include "scene/Scene.h"
 
 // Game
-#import "Guard.h"
-#import "Spy.h"
-#import "GameObject.h"
+#include "entity/Guard.h"
+#include "entity/Spy.h"
+#include "entity/GameObject.h"
 
 #include "GameApplication.h"
 

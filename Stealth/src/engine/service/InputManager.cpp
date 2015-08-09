@@ -6,10 +6,10 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
-#import <utility>
+#include <utility>
 #include <SDL2/SDL.h>
 
-#include "Button.h"
+#include "enum/Button.h"
 #include "InputManager.h"
 
 using namespace std;

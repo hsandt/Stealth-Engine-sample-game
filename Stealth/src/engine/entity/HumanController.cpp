@@ -6,10 +6,10 @@
 #include <iostream>
 #include <memory>
 
-#include "Button.h"
-#include "ButtonState.h"
-#include "Locator.h"
-#include "InputManager.h"
+#include "enum/Button.h"
+#include "enum/ButtonState.h"
+#include "service/Locator.h"
+#include "service/InputManager.h"
 
 #include "HumanController.h"
 

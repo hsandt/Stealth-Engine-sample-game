@@ -11,7 +11,7 @@
 #include <string>
 #include <SDL2/SDL_render.h>
 
-#import "Point3.h"
+#include "geometry/Point3.h"
 
 class GameObject
 {

@@ -8,9 +8,7 @@
 
 #include "Guard.h"
 
-#include <string>
-
-#include "AIController.h"
+#include "entity/AIController.h"
 
 using namespace std;
 

@@ -9,7 +9,7 @@
 #pragma once
 
 #include <memory>
-#import "GameObject.h"
+#include "GameObject.h"
 #include "Controller.h"
 #include "HumanController.h"
 

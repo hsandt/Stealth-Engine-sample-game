@@ -8,10 +8,10 @@
 
 #pragma once
 
-#import <memory>
-#import <map>
+#include <memory>
+#include <map>
 
-#import "GameObject.h"
+#include "entity/GameObject.h"
 
 class Scene
 {

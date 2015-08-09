@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 L Nguyen Huu. All rights reserved.
 //
 
-#ifndef __SDL2_Tutorial_Lesson6__helper__
-#define __SDL2_Tutorial_Lesson6__helper__
+#pragma once
 
 #include <iostream>
 
@@ -33,4 +32,3 @@ void renderTexture(SDL_Texture *tex, SDL_Renderer *ren, const SDL_Rect& dst, con
 SDL_Texture* renderText(const std::string &message, const std::string &fontFile,
                         SDL_Color color, int fontSize, SDL_Renderer *renderer);
 
-#endif /* defined(__SDL2_Tutorial_Lesson6__helper__) */

@@ -8,8 +8,8 @@
 
 #include <string>
 
-#import "Character.h"
-#import "HumanController.h"
+#include "entity/Character.h"
+#include "entity/HumanController.h"
 
 #include "Spy.h"
 

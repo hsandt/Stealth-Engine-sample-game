@@ -8,11 +8,13 @@
 
 #pragma once
 
-#import <map>
+#include <map>
+#include <SDL2/SDL.h>
 
-#import "Button.h"
-#import "ButtonState.h"
-#include "ButtonEvent.h"
+#include "enum/Button.h"
+#include "enum/ButtonState.h"
+#include "enum/ButtonEvent.h"
+
 
 class InputManager
 {
