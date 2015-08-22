@@ -1,0 +1,3 @@
+[submodule "Stealth/engine"]
+	path = Stealth/engine
+	url = git@bitbucket.org:hsandt/c-2d-game-engine
