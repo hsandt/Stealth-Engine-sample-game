@@ -10,8 +10,8 @@
 
 #include <string>
 
-#include "entity/Character.h"
-#include "entity/HumanController.h"
+#include "engine/include/Character.h"
+#include "engine/include/HumanController.h"
 
 class Spy : public Character
 {

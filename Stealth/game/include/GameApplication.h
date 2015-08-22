@@ -13,8 +13,8 @@
 // SDL
 #include <SDL2/SDL.h>
 
-#include "scene/Scene.h"
-#include "service/InputManager.h"
+#include "engine/include/Scene.h"
+#include "engine/include/InputManager.h"
 
 class GameApplication : public std::enable_shared_from_this<GameApplication>
 {

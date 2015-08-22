@@ -15,13 +15,13 @@
 #include <SDL2/SDL.h>
 
 // Engine
-#include "service/Locator.h"
-#include "scene/Scene.h"
+#include "Locator.h"
+#include "engine/include/Scene.h"
 
 // Game
-#include "entity/Guard.h"
-#include "entity/Spy.h"
-#include "entity/GameObject.h"
+#include "Guard.h"
+#include "Spy.h"
+#include "engine/include/GameObject.h"
 
 #include "GameApplication.h"
 
