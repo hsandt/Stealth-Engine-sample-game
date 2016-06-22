@@ -49,7 +49,7 @@ void GameApplication::run() {
 		currentTime = glfwGetTime();
 		lag += currentTime - endTime;
 
-		// if using glfwWait, maybe don't poll twice
+		// CHANGE: if using glfwWait, maybe don't poll twice
 		glfwPollEvents();
 
 		if (glfwWindowShouldClose(window))
@@ -101,10 +101,7 @@ void GameApplication::init() {
 	Locator::inputManager = inputManager;
 
 	currentScene = make_shared<Scene>();
-
-	// T* &&arg did not work well, so to ensure I don't keep a ref of the GO I use only unique_ptr
-//	currentScene->addGameObject(unique_ptr<GameObject> {new Guard("Guard", {0, 20, 0})});  // use rhs or move only
-//	currentScene->addGameObject(unique_ptr<GameObject> {new Spy("Spy", {50., 50., 0.})});
+	currentScene->init();
 };
 
 void GameApplication::destroy() {
@@ -158,7 +155,7 @@ void GameApplication::render() {
 		// do not use GameObject& which would be invalid if all shared_ptr
 		// to the game object disappeared in the meanwhile (~raw pointer issue)
 		shared_ptr<GameObject> go{goIt->second};
-//		go->render(renderer);
+		go->render(nullptr);
 	}
 //	SDL_RenderPresent(renderer);
 }

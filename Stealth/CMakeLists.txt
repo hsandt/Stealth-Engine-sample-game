@@ -75,66 +75,73 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 #>> endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
-SET(CMAKE_FIND_LIBRARY_SUFFIXES .a )
+#SET(CMAKE_FIND_LIBRARY_SUFFIXES .a .lib)
+SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll)
+
+message(WARNING "v1")
+
+find_package(OpenGL REQUIRED)
+if (OPENGL_FOUND)
+    include_directories(${OpenGL_INCLUDE_DIRS})
+    link_directories(${OpenGL_LIBRARY_DIRS})
+    add_definitions(${OpenGL_DEFINITIONS})
+else (OPENGL_FOUND)
+    message(SEND_ERROR "OPENGL not found!")
+endif (OPENGL_FOUND)
+message(WARNING ${OPENGL_LIBRARIES})
+
+#find_package(GLEW REQUIRED HINTS "${PROJECT_SOURCE_DIR}/libs")
+#find_package(GLEW REQUIRED)
+#if (GLEW_FOUND)
+#    include_directories($(GLEW_INCLUDE_DIR))
+#    link_directories(${GLEW_LIBRARY})
+#    add_definitions(-DGLEW_STATIC)
+#    add_definitions(-DGLEW_MX)
+#endif()
+
+# non-static causes undefined reference to `__imp___glewGenVertexArrays' and so one
+# static cause: Warning: corrupt .drectve at end of def file
+# glew32s.lib(tmp/glew_static/Release/x64/glew.obj):(.text$mn+0xd): undefined reference to `__imp_wglGetProcAddress'
+#find_library(GLEW glew32s ${PROJECT_SOURCE_DIR}/engine/libs)  # static
+find_library(GLEW glew32d ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+#find_library(GLEW glew ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+#find_library(GLEW glew32 ${PROJECT_SOURCE_DIR}/engine/libs)
+include_directories(engine/libs/include)
+#add_definitions(-DGLEW_STATIC)
+#add_definitions(-DGLEW_MX)  # single context enough for 1 window
+message(WARNING "GLEW lib path: ${GLEW}")
+
+
 # IMPROVE: create or download FindGLFW.cmake somewhere
 find_library(GLFW glfw3 ${PROJECT_SOURCE_DIR}/engine/libs)
-
 #set(GLFW_LOCATION libs)
 #find_package(GLFW)  # does not work with .a (detected in priority with MingW-w64)
 message(WARNING "glfw lib path: ${GLFW}")
 message(WARNING "glfw include dir: ${GLFW_INCLUDE_DIR}")
 #add_definitions(-DGLFW_DLL) (if using .a, do not use DLL (crashes as can't detect libgcc... and glfw3.dll anyway)
 
-set(GRAPHICS_RENDERER "OpenGL")
 
-if (GRAPHICS_RENDERER STREQUAL "SDL2")
-    find_package(SDL2)
-    find_package(SDL2_image)
-    find_package(SDL2_ttf)
-    if (SDL_FOUND)
-        include_directories(${SDL2_INCLUDE_DIR}
-                ${SDL2_IMAGE_INCLUDE_DIR}
-                ${SDL2_TTF_INCLUDE_DIR})
-        add_definitions(-DWITH_SDL2)
-    else (SDL_FOUND)
-        message(WARNING "SDL2 not found! Fall back to OpenGL")
-        # set fallback renderer
-        set(GRAPHICS_RENDERER "OpenGL")
-    endif (SDL_FOUND)
-endif (GRAPHICS_RENDERER STREQUAL "SDL2")
-
-if (GRAPHICS_RENDERER STREQUAL "OpenGL")
-    find_package(OpenGL REQUIRED)
-    if (OPENGL_FOUND)
-        include_directories(${OpenGL_INCLUDE_DIRS})
-        link_directories(${OpenGL_LIBRARY_DIRS})
-        add_definitions(${OpenGL_DEFINITIONS})
-        add_definitions(-DWITH_OPENGL)
-    else (OPENGL_FOUND)
-        message(SEND_ERROR "OPENGL not found!")
-    endif (OPENGL_FOUND)
-    message(WARNING ${OPENGL_LIBRARIES})
-
-endif (GRAPHICS_RENDERER STREQUAL "OpenGL")
 
 
 # target
 
+# DEUBG: in case target_include_directories does not work
+include_directories(engine/include engine/libs/include)
+include_directories(game/src)
+
 add_library(engine ${ENGINE_SOURCE_FILES})
-target_include_directories(engine PUBLIC engine/include engine/libs/include)
+#target_include_directories(engine PUBLIC engine/include engine/libs/include)
 
 add_executable(StealthCpp ${GAME_SOURCE_FILES})
-target_include_directories(StealthCpp PUBLIC game/src)
+#target_include_directories(StealthCpp PUBLIC game/src)  # does not seem to work, need full path?
 
 
 # linking
 
 target_link_libraries(engine
-        ${GLFW}
         ${OPENGL_LIBRARIES}
-        ${SDL2_LIBRARY}
-        ${SDL2_IMAGE_LIBRARIES}
-        ${SDL2_TTF_LIBRARIES}
+        ${GLEW}
+        ${GLFW}
         )
 
 target_link_libraries(StealthCpp

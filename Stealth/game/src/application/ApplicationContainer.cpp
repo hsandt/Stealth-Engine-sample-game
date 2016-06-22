@@ -37,9 +37,14 @@ int ApplicationContainer::init(int width, int height)
         return FAILURE;
     }
 
-    // Create window (OpenGL 2.0+)
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
+    // Create window (OpenGL 4.0+, 4.5 not available yet, check your drivers)
+//	glfwWindowHint(GLFW_SAMPLES, 4); // 4x antialiasing
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+//    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL
+
     window = glfwCreateWindow(width, height, APPTITLE, nullptr, nullptr);
     if (!window) {
         glfwTerminate();
@@ -57,6 +62,20 @@ int ApplicationContainer::init(int width, int height)
     glfwMakeContextCurrent(window);
 
     // GL loader here
+	glewExperimental=true; // Needed in core profile
+	if (glewInit() != GLEW_OK) {
+		fprintf(stderr, "Failed to initialize GLEW\n");
+		return -1;
+	}
+
+    // for now, pure OpenGL
+//    glClearColor(0.0, 0.0, 0.0, 0.0);         // black background
+//    glMatrixMode(GL_PROJECTION);              // setup viewing projection
+//    glLoadIdentity();                           // start with identity matrix
+//    glOrtho(0.0, 10.0, 0.0, 10.0, -1.0, 1.0);   // setup a 10x10x2 viewing world
+
+    cout << glGetString(GL_VERSION) << endl;
+
 
     // VSync
     glfwSwapInterval(1);

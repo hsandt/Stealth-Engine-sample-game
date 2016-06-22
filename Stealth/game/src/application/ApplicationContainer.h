@@ -8,9 +8,11 @@
 
 #pragma once
 
+// Include GLEW. Always include it before gl.h and glfw.h, since it's a bit magic.
+#include "GL/glew.h"
 #include "GLFW/glfw3.h"
 
-#define APPTITLE "SDL Template Program"
+#define APPTITLE "OpenGL Template Program"
 
 class GameApplication;
 
