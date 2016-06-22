@@ -52,7 +52,7 @@ void GameApplication::run() {
 		// if using glfwWait, maybe don't poll twice
 		glfwPollEvents();
 
-		if (!glfwWindowShouldClose(window))
+		if (glfwWindowShouldClose(window))
 			isRunning = false;
 
 		processInput();
@@ -96,8 +96,8 @@ void GameApplication::stop() {
 
 void GameApplication::init() {
 	// register Service Providers to Service Locators
-	Locator::gameApplication = weak_ptr<GameApplication>(shared_from_this());
-	inputManager = make_shared<InputManager>(window);
+	Locator::gameApplication = this;
+	inputManager = new InputManager(window);
 	Locator::inputManager = inputManager;
 
 	currentScene = make_shared<Scene>();
@@ -109,6 +109,7 @@ void GameApplication::init() {
 
 void GameApplication::destroy() {
 	// nothing for now
+	delete inputManager;
 }
 
 void GameApplication::processInput() {

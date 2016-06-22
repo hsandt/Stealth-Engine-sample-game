@@ -13,8 +13,8 @@ int main(int argc, char* argv[])
 	std::cout << "Main" << std::endl;
 
     ApplicationContainer applicationContainer;
-//    applicationContainer.init(APP_WIDTH, APP_HEIGHT);
-//    applicationContainer.runGame(30);
+    applicationContainer.init(APP_WIDTH, APP_HEIGHT);
+    applicationContainer.runGame(30);
     return 0;
 }
 

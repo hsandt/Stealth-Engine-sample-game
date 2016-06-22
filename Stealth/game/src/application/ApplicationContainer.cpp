@@ -67,7 +67,7 @@ int ApplicationContainer::init(int width, int height)
 void ApplicationContainer::destroy()
 {
     if (game)
-        delete(game);
+        delete game;
 
     if (window)
         glfwDestroyWindow(window);

@@ -47,7 +47,7 @@ private:
     GLFWwindow *window;
 
     // Shared pointers to managers
-    std::shared_ptr<InputManager> inputManager;
+    InputManager *inputManager;
 
     // Is the game running
     bool isRunning;
