@@ -10,8 +10,8 @@
 
 #include <memory>
 
-#include "scene/Scene.h"
-#include "service/InputManager.h"
+#include "Scene.h"
+#include "InputManager.h"
 
 class GameApplication : public std::enable_shared_from_this<GameApplication>
 {

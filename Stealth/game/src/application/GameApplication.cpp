@@ -12,13 +12,13 @@
 //#include <boost/log/trivial.hpp>
 
 // Engine
-#include "service/Locator.h"
-#include "scene/Scene.h"
+#include "Locator.h"
+#include "Scene.h"
+#include "GameObject.h"
 
 // Game
 #include "entity/Guard.h"
 #include "entity/Spy.h"
-#include "entity/GameObject.h"
 
 #include "GameApplication.h"
 

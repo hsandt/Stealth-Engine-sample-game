@@ -8,35 +8,35 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(ENGINE_SOURCE_FILES
         engine/src/entity/AIController.cpp
-        engine/src/entity/AIController.h
+        engine/include/AIController.h
         engine/src/entity/Character.cpp
-        engine/src/entity/Character.h
+        engine/include/Character.h
         engine/src/entity/Controller.cpp
-        engine/src/entity/Controller.h
+        engine/include/Controller.h
         engine/src/entity/GameObject.cpp
-        engine/src/entity/GameObject.h
+        engine/include/GameObject.h
         engine/src/entity/HumanController.cpp
-        engine/src/entity/HumanController.h
+        engine/include/HumanController.h
         engine/src/entity/Intention.cpp
-        engine/src/entity/Intention.h
-        engine/src/enum/Button.h
-        engine/src/enum/ButtonEvent.h
-        engine/src/enum/ButtonState.h
-        engine/src/geometry/Point3.h
+        engine/include/Intention.h
+        engine/include/enum/Button.h
+        engine/include/enum/ButtonEvent.h
+        engine/include/enum/ButtonState.h
+        engine/include/geometry/Point3.h
         engine/src/helper/helper.cpp
-        engine/src/helper/helper.h
+        engine/include/helper.h
         engine/src/scene/Scene.cpp
-        engine/src/scene/Scene.h
+        engine/include/Scene.h
         engine/src/service/InputManager.cpp
-        engine/src/service/InputManager.h
+        engine/include/InputManager.h
         engine/src/renderer/Renderer.cpp
-        engine/src/renderer/Renderer.h
-        engine/src/enum/KeyDynamicState.h
+        engine/include/Renderer.h
+        engine/include/enum/KeyDynamicState.h
         )
 
 set(GAME_SOURCE_FILES
         engine/src/service/Locator.cpp
-        engine/src/service/Locator.h
+        engine/include/Locator.h
         game/src/application/GameApplication.cpp
         game/src/application/GameApplication.h
         game/src/application/ApplicationContainer.cpp
@@ -53,8 +53,15 @@ set(GAME_SOURCE_FILES
 
 
 # DEBUG: if libgcc... of MingW is missing and you prefer building statically with standard libraries for dist
+# libraries that need to be copied as DLL or statically compiled:
+# libgcc
+# libstdc++
+# libwinpthread-1.dll
+
 #Set Linker flags
-#set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+#set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ -static-libwinpthread")
+
 # or
 #> if (MINGW)
 #>>     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -static-libgcc")
@@ -114,7 +121,7 @@ endif (GRAPHICS_RENDERER STREQUAL "OpenGL")
 # target
 
 add_library(engine ${ENGINE_SOURCE_FILES})
-target_include_directories(engine PUBLIC engine/src engine/libs/include)
+target_include_directories(engine PUBLIC engine/include engine/libs/include)
 
 add_executable(StealthCpp ${GAME_SOURCE_FILES})
 target_include_directories(StealthCpp PUBLIC game/src)
@@ -132,4 +139,17 @@ target_link_libraries(engine
 
 target_link_libraries(StealthCpp
         engine
+        )
+
+
+# output path
+
+set_target_properties( engine
+        PROPERTIES
+        ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin/lib"
+        )
+
+set_target_properties( StealthCpp
+        PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin"
         )

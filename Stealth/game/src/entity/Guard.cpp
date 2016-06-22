@@ -8,7 +8,8 @@
 
 #include "Guard.h"
 
-#include "entity/AIController.h"
+// Engine
+#include "AIController.h"
 
 using namespace std;
 

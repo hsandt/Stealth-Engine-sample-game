@@ -8,8 +8,9 @@
 
 #include <string>
 
-#include "entity/Character.h"
-#include "entity/HumanController.h"
+// Engine
+#include "Character.h"
+#include "HumanController.h"
 
 #include "Spy.h"
 

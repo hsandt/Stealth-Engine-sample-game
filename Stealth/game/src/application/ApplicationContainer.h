@@ -53,10 +53,10 @@ private:
     
     // Whether the application is in event loop.
     bool _running;
-    GLFWwindow * window;
+    GLFWwindow * window = nullptr;
 
     /// Contained game application
-    GameApplication* game;
+    GameApplication* game = nullptr;
 
 };
 
