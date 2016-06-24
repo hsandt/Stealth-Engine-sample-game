@@ -48,6 +48,13 @@ set(GAME_SOURCE_FILES
         game/src/main.cpp
         )
 
+set(TEST_ENGINE_SOURCE_FILES
+        engine/tests/catch.hpp
+        engine/tests/catch_with_main.hpp
+        engine/tests/testdummy.cpp
+        engine/tests/testmain.cpp
+        )
+
 
 # Cmake packages
 
@@ -127,10 +134,14 @@ message(WARNING "glfw include dir: ${GLFW_INCLUDE_DIR}")
 
 # DEUBG: in case target_include_directories does not work
 include_directories(engine/include engine/libs/include)
+include_directories(engine/tests)  # not performant, really need to isolate target include directories
 include_directories(game/src)
 
 add_library(engine ${ENGINE_SOURCE_FILES})
 #target_include_directories(engine PUBLIC engine/include PRIVATE engine/libs/include)
+
+add_executable(test_engine ${TEST_ENGINE_SOURCE_FILES})
+#target_include_directories(engine_test PUBLIC engine/tests)  # does not seem to work, need full path?
 
 add_executable(StealthCpp ${GAME_SOURCE_FILES})
 #target_include_directories(StealthCpp PUBLIC game/src)  # does not seem to work, need full path?
@@ -142,6 +153,10 @@ target_link_libraries(engine
         ${OPENGL_LIBRARIES}
         ${GLEW}
         ${GLFW}
+        )
+
+target_link_libraries(test_engine
+        engine
         )
 
 target_link_libraries(StealthCpp
