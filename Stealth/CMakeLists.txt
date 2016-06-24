@@ -32,7 +32,7 @@ set(ENGINE_SOURCE_FILES
         engine/src/renderer/Renderer.cpp
         engine/include/Renderer.h
         engine/include/enum/KeyDynamicState.h
-        )
+        engine/include/utils/Color.cpp engine/include/utils/Color.h)
 
 set(GAME_SOURCE_FILES
         engine/src/service/Locator.cpp
@@ -130,7 +130,7 @@ include_directories(engine/include engine/libs/include)
 include_directories(game/src)
 
 add_library(engine ${ENGINE_SOURCE_FILES})
-#target_include_directories(engine PUBLIC engine/include engine/libs/include)
+#target_include_directories(engine PUBLIC engine/include PRIVATE engine/libs/include)
 
 add_executable(StealthCpp ${GAME_SOURCE_FILES})
 #target_include_directories(StealthCpp PUBLIC game/src)  # does not seem to work, need full path?

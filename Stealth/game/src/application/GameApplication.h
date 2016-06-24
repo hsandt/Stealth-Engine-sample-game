@@ -44,15 +44,18 @@ private:
     void render();
 
     // Application window
-    GLFWwindow *window;
+    GLFWwindow *window = nullptr;
 
-    // Shared pointers to managers
-    InputManager *inputManager;
+    // Renderer
+    Renderer *renderer = nullptr;
+
+    // Input manager
+    InputManager *inputManager = nullptr;
 
     // Is the game running
     bool isRunning;
     
-    // FPS and timer per update (ms)
+    // FPS and timer per update (s)
     int fps;
     double secPerUpdate;
 

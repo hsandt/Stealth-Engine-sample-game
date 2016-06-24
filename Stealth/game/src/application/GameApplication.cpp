@@ -97,6 +97,9 @@ void GameApplication::stop() {
 void GameApplication::init() {
 	// register Service Providers to Service Locators
 	Locator::gameApplication = this;
+
+	renderer = new Renderer(window);
+
 	inputManager = new InputManager(window);
 	Locator::inputManager = inputManager;
 
@@ -105,7 +108,7 @@ void GameApplication::init() {
 };
 
 void GameApplication::destroy() {
-	// nothing for now
+	delete renderer;  // or use unique_ptr
 	delete inputManager;
 }
 
@@ -139,23 +142,23 @@ void GameApplication::update(double dt) {
 	for (auto goIt(gameObjects.begin()); goIt != gameObjects.end(); ++goIt) {
 		shared_ptr<GameObject> go{goIt->second};
 		go->update(dt);
-		// go -> SetPosition(go -> GetPosition() + Point3d {23, 2, 0});
+		// go -> SetPosition(go -> GetPosition() + Point3f {23, 2, 0});
 	}
 	// DEBUG
 
 }
 
-void GameApplication::render() {
+void GameApplication::render()
+{
 
-//	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0, 0xff);
-//	SDL_RenderClear(renderer);
+	renderer->clear();
 
-	std::map<int, std::shared_ptr<GameObject>> gameObjects{currentScene->getGameObjects()};
+	std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
 	for (auto goIt(gameObjects.begin()); goIt != gameObjects.end(); ++goIt) {
 		// do not use GameObject& which would be invalid if all shared_ptr
 		// to the game object disappeared in the meanwhile (~raw pointer issue)
-		shared_ptr<GameObject> go{goIt->second};
-		go->render(nullptr);
+		shared_ptr<GameObject> go {goIt->second};
+		go->render(renderer);
 	}
 //	SDL_RenderPresent(renderer);
 }
