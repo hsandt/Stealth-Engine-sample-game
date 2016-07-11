@@ -32,7 +32,11 @@ set(ENGINE_SOURCE_FILES
         engine/src/renderer/Renderer.cpp
         engine/include/Renderer.h
         engine/include/enum/KeyDynamicState.h
-        engine/include/utils/Color.cpp engine/include/utils/Color.h engine/src/physics/Physics.cpp engine/src/physics/Physics.h)
+        engine/include/utils/Color.cpp
+        engine/include/utils/Color.h
+        engine/src/physics/Physics.cpp
+        engine/src/physics/Physics.h
+        )
 
 set(GAME_SOURCE_FILES
         engine/src/service/Locator.cpp
@@ -51,8 +55,8 @@ set(GAME_SOURCE_FILES
 set(TEST_ENGINE_SOURCE_FILES
         engine/tests/catch.hpp
         engine/tests/catch_with_main.hpp
-        engine/tests/testdummy.cpp
         engine/tests/testmain.cpp
+        engine/tests/geometry/testvec3.cpp
         )
 
 

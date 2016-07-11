@@ -142,7 +142,7 @@ void GameApplication::update(double dt) {
 	for (auto goIt(gameObjects.begin()); goIt != gameObjects.end(); ++goIt) {
 		shared_ptr<GameObject> go{goIt->second};
 		go->update(dt);
-		// go -> SetPosition(go -> GetPosition() + Point3f {23, 2, 0});
+		// go -> SetPosition(go -> GetPosition() + Vec3f {23, 2, 0});
 	}
 	// DEBUG
 
