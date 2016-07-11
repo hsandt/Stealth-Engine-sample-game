@@ -79,8 +79,10 @@
 	"folders":
 	[
 		{
-			"follow_symlinks": true,
-			"path": "Stealth/src"
+			"path": "Stealth"
+		},
+		{
+			"path": "C:\\Program Files (x86)\\CMake\\share\\cmake-3.5\\Modules"
 		}
 	]
 }

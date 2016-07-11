@@ -22,7 +22,7 @@ set(ENGINE_SOURCE_FILES
         engine/include/enum/Button.h
         engine/include/enum/ButtonEvent.h
         engine/include/enum/ButtonState.h
-        engine/include/geometry/Point3.h
+        engine/include/geometry/Vec3.h
         engine/src/helper/helper.cpp
         engine/include/helper.h
         engine/src/scene/Scene.cpp
@@ -32,7 +32,7 @@ set(ENGINE_SOURCE_FILES
         engine/src/renderer/Renderer.cpp
         engine/include/Renderer.h
         engine/include/enum/KeyDynamicState.h
-        engine/include/utils/Color.cpp engine/include/utils/Color.h)
+        engine/include/utils/Color.cpp engine/include/utils/Color.h engine/src/physics/Physics.cpp engine/src/physics/Physics.h)
 
 set(GAME_SOURCE_FILES
         engine/src/service/Locator.cpp
@@ -83,9 +83,30 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 #SET(CMAKE_FIND_LIBRARY_SUFFIXES .a .lib)
-SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll)
+#SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll)
+SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .lib)
 
-message(WARNING "v1")
+message(WARNING "v1.1")
+
+# Physics
+
+#SET(BOX2D_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/engine/libs/include)
+#
+#find_package(Box2D)
+#if (BOX2D_FOUND)
+#    include_directories(${BOX2D_INCLUDE_DIR})
+#else (BOX2D_FOUND)
+#    message(SEND_ERROR "BOX2D not found!")
+#endif (BOX2D_FOUND)
+#message(WARNING ${BOX2D_INCLUDE_DIR})
+
+include_directories(engine/libs/include)
+
+# Box2D: static linking
+find_library(Box2D Box2D ${PROJECT_SOURCE_DIR}/engine/libs)
+message(WARNING "Box2D lib path: ${Box2D}")
+
+# Rendering
 
 find_package(OpenGL REQUIRED)
 if (OPENGL_FOUND)
@@ -113,7 +134,6 @@ message(WARNING ${OPENGL_LIBRARIES})
 find_library(GLEW glew32d ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
 #find_library(GLEW glew ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
 #find_library(GLEW glew32 ${PROJECT_SOURCE_DIR}/engine/libs)
-include_directories(engine/libs/include)
 #add_definitions(-DGLEW_STATIC)
 #add_definitions(-DGLEW_MX)  # single context enough for 1 window
 message(WARNING "GLEW lib path: ${GLEW}")
@@ -150,6 +170,7 @@ add_executable(StealthCpp ${GAME_SOURCE_FILES})
 # linking
 
 target_link_libraries(engine
+        ${Box2D}
         ${OPENGL_LIBRARIES}
         ${GLEW}
         ${GLFW}
