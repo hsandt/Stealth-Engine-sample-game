@@ -15,8 +15,7 @@
 class Guard : public Character
 {
 public:
-    Guard(const int id, const std::string &name);
-    Guard(const int id, const std::string &name, Point3d const &pos);
+    Guard(const std::string &name, Vec3f const &pos);
     virtual ~Guard();
 
     Guard(const Guard &) = delete;
@@ -28,4 +27,3 @@ public:
 
 private:
 };
-
