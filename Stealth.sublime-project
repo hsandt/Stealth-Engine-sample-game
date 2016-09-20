@@ -79,8 +79,7 @@
 	"folders":
 	[
 		{
-			"follow_symlinks": true,
-			"path": "Stealth/src"
+			"path": "."
 		}
 	]
 }

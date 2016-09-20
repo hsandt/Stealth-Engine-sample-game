@@ -12,7 +12,14 @@
 
 using namespace std;
 
-Guard::Guard(const string &name, Point3d const &pos) : Character(name, pos)
+
+Guard::Guard(const int id, const std::string &name) :
+    Guard(id, name, {0, 0, 0})
+{
+
+}
+
+Guard::Guard(const int id, const string &name, Point3d const &pos) : Character(id, name, pos)
 {
     controller = std::unique_ptr<Controller>(new AIController());
 }

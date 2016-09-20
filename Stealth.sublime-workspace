@@ -520,37 +520,60 @@
 	"buffers":
 	[
 		{
-			"contents": "//\n// Created by L Nguyen Huu on 25/02/15 ap. J.-C..\n// Copyright (c) 2015 L Nguyen Huu. All rights reserved.\n\n#include \"GameApplication.h\"\n#include \"InputManager.h\"\n\n#pragma once\n\nclass Locator {\npublic:\n	friend class GameApplication; // does not compile, add class or import\n\n	Locator() = delete;\n\n    static std::shared_ptr<GameApplication> getGameApplication();\n    static std::shared_ptr<InputManager> getInputManager();\n\nprivate:\n	static std::weak_ptr<GameApplication> gameApplication;\n    static std::weak_ptr<InputManager> inputManager;\n\n};\n",
-			"file": "Stealth/src/engine/service/Locator.h",
-			"file_size": 549,
-			"file_write_time": 130835859213122442,
+			"file": "/home/wing/Developer/warnings/Unreal Engine build",
 			"settings":
 			{
-				"buffer_size": 549,
+				"buffer_size": 314,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Stealth/src/engine/service/InputManager.cpp",
+			"file": "/home/wing/Applications/IDE/riderRS-144.4571/Install-Linux-tar.txt",
 			"settings":
 			{
-				"buffer_size": 4014,
+				"buffer_size": 1840,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/wing/Projects/Video Games/IDE 05 - Manga-ville/Unity - Manga-ville/.gitignore",
+			"settings":
+			{
+				"buffer_size": 1796,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "build.py",
+			"contents": "Package Control Messages\n========================\n\nGitGutter\n---------\n\n  * Fix error dialog for missing git binary from reopening\n    in an endless loop. Should only show once per session now.\n  \n  * Fix an bug that was introduced that broke GitGutter in ST2\n  \n  \n  💛 Git Gutter? Want to support development?\n  \n  I've teamed up with Wes Bos to offer the following discounts:\n  \n  ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n  ⚡                                                  ⚡\n  ⚡  Use the coupon code GITGUTTER for $10 💵 off:   ⚡\n  ⚡                                                  ⚡\n  ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\n  \n  🏅 ⭐ ES6 ⭐\n  \n  👉 ES6.io/friend/GITGUTTER\n  \n  🏅 ⭐ Sublime Text Book ⭐\n  \n  👉 SublimeTextBook.com/friend/GITGUTTER\n  \n  🏅 ⭐ React For Beginners ⭐\n  \n  👉 ReactForBeginners.com/friend/GITGUTTER\n  \n  \n  Join 3,000 other developers already learning React.js with Wes Bos.\n  \n  These are fantastic resources - 100% money back guarantee! 🌟\n\n  * Better cleanup of temfiles\n  \n  * Make Sublime Linter regions protected by default\n  \n  * Enhance git_binary setting\n  \n    - Allow git_binary to be customized on a per-platform basis.\n    \n    - Add support for environment variables in git_binary setting\n",
 			"settings":
 			{
-				"buffer_size": 1246,
+				"buffer_size": 1254,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/home/wing/Games/IDE/htaccess",
+			"settings":
+			{
+				"buffer_size": 81,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "CMakeLists.txt",
+			"file": "/home/wing/Documents/licenses/bitbucket-recovery-codes.txt",
 			"settings":
 			{
-				"buffer_size": 2195,
+				"buffer_size": 172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Stealth/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 2775,
 				"line_ending": "Unix"
 			}
 		},
@@ -558,29 +581,28 @@
 			"file": ".gitignore",
 			"settings":
 			{
-				"buffer_size": 1681,
+				"buffer_size": 1691,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "cmake_minimum_required(VERSION 2.8.4)\nproject(Stealth)\n\nset(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -std=c++11\")\n\nset(SOURCE_FILES\n    Stealth/src/engine/entity/Character.cpp\n    Stealth/src/engine/entity/Character.h\n    Stealth/src/engine/entity/Controller.cpp\n    Stealth/src/engine/entity/Controller.h\n    Stealth/src/engine/entity/GameObject.cpp\n    Stealth/src/engine/entity/GameObject.h\n    Stealth/src/engine/entity/HumanController.cpp\n    Stealth/src/engine/entity/HumanController.h\n    Stealth/src/engine/entity/Intention.cpp\n    Stealth/src/engine/entity/Intention.h\n    Stealth/src/engine/enum/Button.h\n    Stealth/src/engine/enum/ButtonEvent.h\n    Stealth/src/engine/enum/ButtonState.h\n    Stealth/src/engine/geometry/Point3.h\n    Stealth/src/engine/helper/helper.cpp\n    Stealth/src/engine/helper/helper.h\n    Stealth/src/engine/scene/Scene.cpp\n    Stealth/src/engine/scene/Scene.h\n    Stealth/src/engine/service/InputManager.cpp\n    Stealth/src/engine/service/InputManager.h\n    Stealth/src/engine/service/Locator.cpp\n    Stealth/src/engine/service/Locator.h\n    Stealth/src/game/application/GameApplication.cpp\n    Stealth/src/game/application/GameApplication.h\n    Stealth/src/game/application/SdlApplication.cpp\n    Stealth/src/game/application/SdlApplication.h\n    Stealth/src/game/entity/Guard.cpp\n    Stealth/src/game/entity/Guard.h\n    Stealth/src/game/entity/Spy.cpp\n    Stealth/src/game/entity/Spy.h\n    Stealth/src/game/main.cpp)\n\ninclude_directories(Stealth/src/engine)\ninclude_directories(Stealth/src/engine/entity)\ninclude_directories(Stealth/src/engine/enum)\ninclude_directories(Stealth/src/engine/geometry)\ninclude_directories(Stealth/src/engine/helper)\ninclude_directories(Stealth/src/engine/scene)\ninclude_directories(Stealth/src/engine/service)\ninclude_directories(Stealth/src/game)\ninclude_directories(Stealth/src/game/application)\ninclude_directories(Stealth/src/game/entity)\n\nadd_executable(Stealth ${SOURCE_FILES})",
+			"file": "Stealth.sublime-project",
 			"settings":
 			{
-				"buffer_size": 1946,
-				"line_ending": "Unix",
-				"name": "cmake_minimum_required(VERSION 2.8.4)"
+				"buffer_size": 939,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "run.py",
 			"settings":
 			{
-				"buffer_size": 192,
+				"buffer_size": 195,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Packages/C++/cmake.sublime-build",
+	"build_system": "Python for Xcode",
 	"build_system_choices":
 	[
 		[
@@ -646,15 +668,135 @@
 				"Packages/C++/cmake.sublime-build",
 				""
 			]
+		],
+		[
+			[
+				[
+					"Make for Xcode",
+					""
+				],
+				[
+					"Make for Xcode",
+					"Debug"
+				],
+				[
+					"Make for Xcode",
+					"Run"
+				],
+				[
+					"Make for Xcode",
+					"Stop"
+				],
+				[
+					"Python for Xcode",
+					""
+				],
+				[
+					"Python for Xcode",
+					"Debug"
+				],
+				[
+					"Python for Xcode",
+					"Run"
+				],
+				[
+					"Python for Xcode",
+					"Stop"
+				],
+				[
+					"Packages/C++/cmake.sublime-build",
+					""
+				],
+				[
+					"Packages/Kivy/Kivy-Project.sublime-build",
+					""
+				],
+				[
+					"Packages/Kivy/Kivy.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python-nosetests.sublime-build",
+					""
+				]
+			],
+			[
+				"Python for Xcode",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Make for Xcode",
+					""
+				],
+				[
+					"Make for Xcode",
+					"Debug"
+				],
+				[
+					"Make for Xcode",
+					"Run"
+				],
+				[
+					"Make for Xcode",
+					"Stop"
+				],
+				[
+					"Python for Xcode",
+					""
+				],
+				[
+					"Python for Xcode",
+					"Debug"
+				],
+				[
+					"Python for Xcode",
+					"Run"
+				],
+				[
+					"Python for Xcode",
+					"Stop"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/cmake.sublime-build",
+					""
+				],
+				[
+					"Packages/Kivy/Kivy-Project.sublime-build",
+					""
+				],
+				[
+					"Packages/Kivy/Kivy.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python-nosetests.sublime-build",
+					""
+				]
+			],
+			[
+				"Python for Xcode",
+				"Run"
+			]
 		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 72.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"reve",
+				"File: Reveal"
+			],
 			[
 				"build",
 				"Build: Build"
@@ -776,7 +918,7 @@
 				"Indentation: Reindent Lines"
 			]
 		],
-		"width": 476.0
+		"width": 485.0
 	},
 	"console":
 	{
@@ -799,10 +941,17 @@
 	},
 	"expanded_folders":
 	[
-		"/home/wing/Projects/C++/Stealth C++/Stealth/src"
+		"/home/wing/Projects/C++/Stealth C++",
+		"/home/wing/Projects/C++/Stealth C++/Stealth",
+		"/home/wing/Projects/C++/Stealth C++/build"
 	],
 	"file_history":
 	[
+		"/home/wing/Projects/Video Games/IDE 05 - Manga-ville/Unity - Manga-ville/.idea/modules.xml",
+		"/home/wing/Projects/C++/Stealth C++/build_unix.py",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/src/engine/service/Locator.h",
+		"/home/wing/Projects/C++/Stealth C++/CMakeLists.txt",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/src/engine/service/InputManager.cpp",
 		"/home/wing/Projects/C++/Stealth C++/Makefile",
 		"/Users/hs/Documents/Unreal Projects/IntroProgrammingTP/Source/IntroProgrammingTP/Pickup.cpp",
 		"/Users/hs/Backup/macbook_pro_2015-02-21/root/Users/hs/Developer/AppCode/Live Templates/enum-class.file-template",
@@ -925,12 +1074,7 @@
 		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Common/ResultWriter/ResultSummarizer.cs",
 		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2d/Editor/tk2dPreferencesEditor.cs",
 		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/AI/SpiderReturnMoveController.js",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/ThrowCustomException.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Tests/MoveRightAction.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Modules/SpawnAtCheckpoint.js",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Textures/Minebot.tif",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MicrosoftXboxOne.asset",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Helper/MathHelper.cs"
+		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/ThrowCustomException.cs"
 	],
 	"find":
 	{
@@ -1119,31 +1263,156 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Stealth/src/engine/service/Locator.h",
+					"file": "/home/wing/Developer/warnings/Unreal Engine build",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 549,
+						"buffer_size": 314,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								548,
-								548
+								314,
+								314
 							]
 						],
 						"settings":
 						{
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/wing/Applications/IDE/riderRS-144.4571/Install-Linux-tar.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 462.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/wing/Projects/Video Games/IDE 05 - Manga-ville/Unity - Manga-ville/.gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1386,
+								1386
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 166.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								700,
+								700
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"encoding_helper_encoding": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"tab_width": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/wing/Games/IDE/htaccess",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 81,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1153,29 +1422,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Stealth/src/engine/service/InputManager.cpp",
+					"buffer": 5,
+					"file": "/home/wing/Documents/licenses/bitbucket-recovery-codes.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4014,
+						"buffer_size": 172,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								172,
+								172
 							]
 						],
 						"settings":
 						{
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1185,52 +1452,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "build.py",
-					"semi_transient": false,
+					"buffer": 6,
+					"file": "Stealth/CMakeLists.txt",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1246,
+						"buffer_size": 2775,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								85,
-								85
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 330.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "CMakeLists.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2195,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								609,
-								609
+								2603,
+								2603
 							]
 						],
 						"settings":
@@ -1242,27 +1477,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 660.0,
+						"translation.y": 1254.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1681,
+						"buffer_size": 1691,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								72,
-								72
+								192,
+								192
 							]
 						],
 						"settings":
@@ -1275,56 +1510,55 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
+					"file": "Stealth.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1946,
+						"buffer_size": 939,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								572,
-								572
+								766,
+								766
 							]
 						],
 						"settings":
 						{
-							"auto_name": "cmake_minimum_required(VERSION 2.8.4)",
-							"default_dir": "/home/wing/Projects/C++/Stealth C++/Stealth/src",
-							"encoding_helper_encoding": "",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 66.0,
+						"translation.y": 1056.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "run.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 192,
+						"buffer_size": 195,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								124,
-								124
+								120,
+								120
 							]
 						],
 						"settings":
@@ -1337,7 +1571,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1376,7 +1610,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 177.0
+		"height": 335.0
 	},
 	"output.find_results":
 	{
@@ -1625,9 +1859,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "ste",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/.config/sublime-text-3/Packages/packages.sublime-project"
+			],
 			[
 				"ste",
 				"~/Projects/AI/Schwab/Stealth-Unity/Stealth-Unity.sublime-project"
@@ -1635,10 +1873,6 @@
 			[
 				" ",
 				"~/Projects/AI/Schwab/Stealth-Unity/Stealth-Unity.sublime-project"
-			],
-			[
-				"",
-				"~/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/BlueAndRed.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1659,8 +1893,8 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 187.0,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

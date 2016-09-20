@@ -1,4 +1,4 @@
-#include "application/SdlApplication.h"
+#include "SdlApplication.h"
 
 int main(int argc, char* argv[])
 {

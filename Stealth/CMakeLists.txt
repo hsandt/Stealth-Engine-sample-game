@@ -26,13 +26,18 @@ set(ENGINE_SOURCE_FILES
         engine/include/Scene.h
     engine/src/service/InputManager.cpp
         engine/include/InputManager.h
-)
+    engine/src/entity/GameObjectFactory.cpp
+        engine/include/GameObjectFactory.h engine/include/FactoryUtils.h engine/src/entity/Actor.cpp engine/include/Actor.h engine/src/component/Component.cpp engine/include/Component.h engine/src/component/RenderComponent.cpp engine/include/RenderComponent.h engine/src/component/SquareRenderComponent.cpp engine/include/SquareRenderComponent.h engine/src/component/Transform.cpp engine/include/Transform.h)
+
+
+set(ENGINE_TEST_SOURCE_FILES
+        engine/tests/TestGameObjectFactory.cpp)
 
 set(SOURCE_FILES
-    game/src/service/Locator.cpp
-        game/include/Locator.h
-    game/src/application/GameApplication.cpp
-        game/include/GameApplication.h
+        engine/src/service/Locator.cpp
+        engine/include/Locator.h
+        engine/src/application/GameApplication.cpp
+        engine/include/GameApplication.h
     game/src/application/SdlApplication.cpp
         game/include/SdlApplication.h
     game/src/entity/Guard.cpp
@@ -69,4 +74,10 @@ target_link_libraries(StealthCpp
         ${SDL2_LIBRARY}
         ${SDL2_IMAGE_LIBRARIES}
         ${SDL2_TTF_LIBRARIES}
+)
+
+add_executable(TestEngine ${ENGINE_TEST_SOURCE_FILES})
+target_link_libraries(TestEngine
+        engine
+        UnitTest++
 )
