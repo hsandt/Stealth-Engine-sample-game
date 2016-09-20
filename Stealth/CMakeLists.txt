@@ -4,42 +4,42 @@ project(Stealth_Cpp)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(ENGINE_SOURCE_FILES
-    engine/src/entity/AIController.cpp
-    engine/src/entity/AIController.h
-    engine/src/entity/Character.cpp
-    engine/src/entity/Character.h
-    engine/src/entity/Controller.cpp
-    engine/src/entity/Controller.h
-    engine/src/entity/GameObject.cpp
-    engine/src/entity/GameObject.h
-    engine/src/entity/HumanController.cpp
-    engine/src/entity/HumanController.h
-    engine/src/entity/Intention.cpp
-    engine/src/entity/Intention.h
-    engine/src/enum/Button.h
-    engine/src/enum/ButtonEvent.h
-    engine/src/enum/ButtonState.h
-    engine/src/geometry/Point3.h
-    engine/src/helper/helper.cpp
-    engine/src/helper/helper.h
-    engine/src/scene/Scene.cpp
-    engine/src/scene/Scene.h
-    engine/src/service/InputManager.cpp
-    engine/src/service/InputManager.h
-    engine/src/entity/GameObjectFactory.cpp
+        engine/src/entity/AIController.cpp
+        engine/src/entity/AIController.h
+        engine/src/entity/Character.cpp
+        engine/src/entity/Character.h
+        engine/src/entity/Controller.cpp
+        engine/src/entity/Controller.h
+        engine/src/entity/GameObject.cpp
+        engine/src/entity/GameObject.h
+        engine/src/entity/HumanController.cpp
+        engine/src/entity/HumanController.h
+        engine/src/entity/Intention.cpp
+        engine/src/entity/Intention.h
+        engine/src/enum/Button.h
+        engine/src/enum/ButtonEvent.h
+        engine/src/enum/ButtonState.h
+        engine/src/geometry/Point3.h
+        engine/src/helper/helper.cpp
+        engine/src/helper/helper.h
+        engine/src/scene/Scene.cpp
+        engine/src/scene/Scene.h
+        engine/src/service/InputManager.cpp
+        engine/src/service/InputManager.h
+        engine/src/entity/GameObjectFactory.cpp
         engine/include/GameObjectFactory.h
-engine/include/FactoryUtils.h
-engine/src/entity/Actor.cpp
-engine/include/Actor.h
-engine/src/component/Component.cpp
-engine/include/Component.h
-engine/src/component/RenderComponent.cpp
-engine/include/RenderComponent.h
-engine/src/component/SquareRenderComponent.cpp
-engine/include/SquareRenderComponent.h
-engine/src/component/Transform.cpp
-engine/include/Transform.h
-)
+        engine/include/FactoryUtils.h
+        engine/src/entity/Actor.cpp
+        engine/include/Actor.h
+        engine/src/component/Component.cpp
+        engine/include/Component.h
+        engine/src/component/RenderComponent.cpp
+        engine/include/RenderComponent.h
+        engine/src/component/SquareRenderComponent.cpp
+        engine/include/SquareRenderComponent.h
+        engine/src/component/Transform.cpp
+        engine/include/Transform.h
+        )
 
 set(GAME_SOURCE_FILES
         engine/src/service/Locator.cpp
@@ -91,9 +91,9 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 #SET(CMAKE_FIND_LIBRARY_SUFFIXES .a .lib)
 #SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll)
-SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .lib)
+SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .lib .so)
 
-message(WARNING "v1.1")
+message(WARNING "v1.2")
 
 # Physics
 
@@ -113,6 +113,7 @@ message(WARNING "Box2D lib path: ${Box2D}")
 
 # Rendering
 
+# FindOpenGL.cmake is required to find_package! (on Linux)
 find_package(OpenGL REQUIRED)
 if (OPENGL_FOUND)
     include_directories(${OpenGL_INCLUDE_DIRS})
@@ -121,7 +122,13 @@ if (OPENGL_FOUND)
 else (OPENGL_FOUND)
     message(SEND_ERROR "OPENGL not found!")
 endif (OPENGL_FOUND)
-message(WARNING ${OPENGL_LIBRARIES})
+message(WARNING OpenGL gl lib: ${OPENGL_gl_LIBRARY})
+message(WARNING OpenGL glu lib: ${OPENGL_glu_LIBRARY})
+message(WARNING OpenGL xmesa lib: ${OPENGL_xmesa_LIBRARY})
+message(WARNING OpenGL include dir: ${OPENGL_INCLUDE_DIR})
+message(WARNING OpenGL libs: ${OPENGL_LIBRARIES})
+
+# LINUX: I installed libGLEW.so from GLEW 2.0 with some API changes, check compatibility!
 
 #find_package(GLEW REQUIRED HINTS "${PROJECT_SOURCE_DIR}/libs")
 #find_package(GLEW REQUIRED)
@@ -136,8 +143,10 @@ message(WARNING ${OPENGL_LIBRARIES})
 # static cause: Warning: corrupt .drectve at end of def file
 # glew32s.lib(tmp/glew_static/Release/x64/glew.obj):(.text$mn+0xd): undefined reference to `__imp_wglGetProcAddress'
 #find_library(GLEW glew32s ${PROJECT_SOURCE_DIR}/engine/libs)  # static
-find_library(GLEW glew32d ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
-#find_library(GLEW glew ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+find_library(GLEW glew ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+if (NOT GLEW_FOUND)
+    find_library(GLEW glew32d ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+endif(NOT GLEW_FOUND)
 #find_library(GLEW glew32 ${PROJECT_SOURCE_DIR}/engine/libs)
 #add_definitions(-DGLEW_STATIC)
 #add_definitions(-DGLEW_MX)  # single context enough for 1 window
@@ -146,9 +155,14 @@ message(WARNING "GLEW lib path: ${GLEW}")
 
 # IMPROVE: create or download FindGLFW.cmake somewhere
 find_library(GLFW glfw3 ${PROJECT_SOURCE_DIR}/engine/libs)
+if (NOT GLFW_FOUND)
+    # try glfw, but it should be the 3.0 API (on Linux, libglfw.so.3, but libglfw.so may be a copy)
+    find_library(GLFW glfw ${PROJECT_SOURCE_DIR}/engine/libs)
+endif(NOT GLFW_FOUND)
 #set(GLFW_LOCATION libs)
 #find_package(GLFW)  # does not work with .a (detected in priority with MingW-w64)
 message(WARNING "glfw lib path: ${GLFW}")
+message(WARNING "glfw libs: ${GLFW_LIBRARIES}")
 message(WARNING "glfw include dir: ${GLFW_INCLUDE_DIR}")
 #add_definitions(-DGLFW_DLL) (if using .a, do not use DLL (crashes as can't detect libgcc... and glfw3.dll anyway)
 
