@@ -61,7 +61,7 @@ int ApplicationContainer::init(int width, int height)
     // Use this window as OpenGL context
     glfwMakeContextCurrent(window);
 
-    // GL loader here
+    // GLEW loader here
 	glewExperimental=true; // Needed in core profile
 	if (glewInit() != GLEW_OK) {
 		fprintf(stderr, "Failed to initialize GLEW\n");

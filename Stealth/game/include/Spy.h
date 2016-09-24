@@ -10,13 +10,13 @@
 
 #include <string>
 
-#include "engine/include/Character.h"
-#include "engine/include/HumanController.h"
+#include "Character.h"
+#include "HumanController.h"
 
 class Spy : public Character
 {
 public:
-    Spy(const std::string &name, Vec3f const &pos);
+    Spy(const int id, const std::string &name);
     virtual ~Spy();
 
     Spy(const Spy &) = delete;

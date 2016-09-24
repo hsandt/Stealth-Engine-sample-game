@@ -10,12 +10,12 @@
 
 #include <string>
 
-#include "engine/include/Character.h"
+#include "Character.h"
 
 class Guard : public Character
 {
 public:
-    Guard(const std::string &name, Vec3f const &pos);
+    Guard(const int id, const std::string &name);
     virtual ~Guard();
 
     Guard(const Guard &) = delete;

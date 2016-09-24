@@ -53,7 +53,7 @@ find_path( GLFW_INCLUDE_DIR
 )
 
 #
-# XXX: Do we still need to search for GL/glfw.h?
+# XXX: Do we still need to search for GLEW/glfw.h?
 #
 find_path( GLFW_INCLUDE_DIR 
     NAMES

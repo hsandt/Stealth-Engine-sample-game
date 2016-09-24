@@ -5,10 +5,10 @@
 #  OPENGL_FOUND        - system has OpenGL
 #  OPENGL_XMESA_FOUND  - system has XMESA
 #  OPENGL_GLU_FOUND    - system has GLU
-#  OPENGL_INCLUDE_DIR  - the GL include directory
+#  OPENGL_INCLUDE_DIR  - the GLEW include directory
 #  OPENGL_LIBRARIES    - Link these to use OpenGL and GLU
 #
-# If you want to use just GL you can use these values
+# If you want to use just GLEW you can use these values
 #  OPENGL_gl_LIBRARY   - Path to OpenGL Library
 #  OPENGL_glu_LIBRARY  - Path to GLU Library
 #

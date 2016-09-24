@@ -1,6 +1,6 @@
 #include <iostream>
-#include "application/ApplicationContainer.h"
-#include "application/GameApplication.h"
+#include "ApplicationContainer.h"
+#include "GameApplication.h"
 
 #define APP_WIDTH 1280
 #define APP_HEIGHT 720

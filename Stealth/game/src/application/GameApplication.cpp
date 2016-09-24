@@ -6,6 +6,9 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -15,10 +18,12 @@
 #include "Locator.h"
 #include "Scene.h"
 #include "GameObject.h"
+#include "GameObjectFactory.h"
+#include "Renderer.h"
 
 // Game
-#include "entity/Guard.h"
-#include "entity/Spy.h"
+#include "Guard.h"
+#include "Spy.h"
 
 #include "GameApplication.h"
 
@@ -102,6 +107,9 @@ void GameApplication::init() {
 
 	inputManager = new InputManager(window);
 	Locator::inputManager = inputManager;
+
+	gameObjectFactory = new GameObjectFactory();
+	Locator::gameObjectFactory = gameObjectFactory;
 
 	currentScene = make_shared<Scene>();
 	currentScene->init();

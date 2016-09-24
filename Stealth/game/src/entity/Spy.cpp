@@ -8,8 +8,8 @@
 
 #include <string>
 
-#include "engine/include/Character.h"
-#include "engine/include/HumanController.h"
+#include "Character.h"
+#include "HumanController.h"
 
 #include "Spy.h"
 
@@ -17,7 +17,7 @@ class Controller;
 
 using namespace std;
 
-Spy::Spy(const string &name, Vec3f const &pos) : Character(name, pos)
+Spy::Spy(const int id, const string &name) : Character(id, name)
 {
     controller = std::unique_ptr<Controller>(new HumanController());
     speed = 2;

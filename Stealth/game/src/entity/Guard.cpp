@@ -8,12 +8,12 @@
 
 #include "Guard.h"
 
-#include "engine/include/AIController.h"
+#include "AIController.h"
 
 using namespace std;
 
 
-Guard::Guard(const string &name, Vec3f const &pos) : Character(name, pos)
+Guard::Guard(const int id, const std::string &name) : Character(id, name)
 {
     controller = std::unique_ptr<Controller>(new AIController());
 }

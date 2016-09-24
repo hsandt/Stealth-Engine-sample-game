@@ -5,27 +5,32 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(ENGINE_SOURCE_FILES
         engine/src/entity/AIController.cpp
-        engine/src/entity/AIController.h
+        engine/include/AIController.h
         engine/src/entity/Character.cpp
-        engine/src/entity/Character.h
+        engine/include/Character.h
         engine/src/entity/Controller.cpp
-        engine/src/entity/Controller.h
+        engine/include/Controller.h
         engine/src/entity/GameObject.cpp
-        engine/src/entity/GameObject.h
+        engine/include/GameObject.h
         engine/src/entity/HumanController.cpp
-        engine/src/entity/HumanController.h
+        engine/include/HumanController.h
         engine/src/entity/Intention.cpp
-        engine/src/entity/Intention.h
-        engine/src/enum/Button.h
-        engine/src/enum/ButtonEvent.h
-        engine/src/enum/ButtonState.h
-        engine/src/geometry/Point3.h
+        engine/include/Intention.h
+        engine/include/enum/Button.h
+        engine/include/enum/ButtonEvent.h
+        engine/include/enum/ButtonState.h
+        engine/include/enum/KeyDynamicState.h
+        engine/src/geometry/Vec3.cpp
+        engine/include/geometry/Vec3.h
+        engine/include/utils/Color.cpp
+        engine/include/utils/Color.h
+        engine/include/utils/infix_iterator.h
         engine/src/helper/helper.cpp
-        engine/src/helper/helper.h
+        engine/include/helper.h
         engine/src/scene/Scene.cpp
-        engine/src/scene/Scene.h
+        engine/include/Scene.h
         engine/src/service/InputManager.cpp
-        engine/src/service/InputManager.h
+        engine/include/InputManager.h
         engine/src/entity/GameObjectFactory.cpp
         engine/include/GameObjectFactory.h
         engine/include/FactoryUtils.h
@@ -39,19 +44,21 @@ set(ENGINE_SOURCE_FILES
         engine/include/SquareRenderComponent.h
         engine/src/component/Transform.cpp
         engine/include/Transform.h
+        engine/src/renderer/Renderer.cpp
+        engine/include/Renderer.h
         )
 
 set(GAME_SOURCE_FILES
         engine/src/service/Locator.cpp
         engine/include/Locator.h
         game/src/application/GameApplication.cpp
-        game/src/application/GameApplication.h
+        game/include/GameApplication.h
         game/src/application/ApplicationContainer.cpp
-        game/src/application/ApplicationContainer.h
+        game/include/ApplicationContainer.h
         game/src/entity/Guard.cpp
-        game/src/entity/Guard.h
+        game/include/Guard.h
         game/src/entity/Spy.cpp
-        game/src/entity/Spy.h
+        game/include/Spy.h
         game/src/main.cpp
         )
 
@@ -91,7 +98,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 #SET(CMAKE_FIND_LIBRARY_SUFFIXES .a .lib)
 #SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll)
-SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .lib .so)
+SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .so .lib)
 
 message(WARNING "v1.2")
 
@@ -143,7 +150,7 @@ message(WARNING OpenGL libs: ${OPENGL_LIBRARIES})
 # static cause: Warning: corrupt .drectve at end of def file
 # glew32s.lib(tmp/glew_static/Release/x64/glew.obj):(.text$mn+0xd): undefined reference to `__imp_wglGetProcAddress'
 #find_library(GLEW glew32s ${PROJECT_SOURCE_DIR}/engine/libs)  # static
-find_library(GLEW glew ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+find_library(GLEW GLEW ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
 if (NOT GLEW_FOUND)
     find_library(GLEW glew32d ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
 endif(NOT GLEW_FOUND)
@@ -154,11 +161,8 @@ message(WARNING "GLEW lib path: ${GLEW}")
 
 
 # IMPROVE: create or download FindGLFW.cmake somewhere
-find_library(GLFW glfw3 ${PROJECT_SOURCE_DIR}/engine/libs)
-if (NOT GLFW_FOUND)
-    # try glfw, but it should be the 3.0 API (on Linux, libglfw.so.3, but libglfw.so may be a copy)
-    find_library(GLFW glfw ${PROJECT_SOURCE_DIR}/engine/libs)
-endif(NOT GLFW_FOUND)
+# VERSION NOTES: Windows glfw3.dll is GLFW 3.2.0, libglfw.so.3.2 is GLFW 3.2.1 (API compatible)
+find_library(GLFW glfw ${PROJECT_SOURCE_DIR}/engine/libs)
 #set(GLFW_LOCATION libs)
 #find_package(GLFW)  # does not work with .a (detected in priority with MingW-w64)
 message(WARNING "glfw lib path: ${GLFW}")
@@ -174,7 +178,7 @@ message(WARNING "glfw include dir: ${GLFW_INCLUDE_DIR}")
 # DEUBG: in case target_include_directories does not work
 include_directories(engine/include engine/libs/include)
 include_directories(engine/tests)  # not performant, really need to isolate target include directories
-include_directories(game/src)
+include_directories(game/include)
 
 add_library(engine ${ENGINE_SOURCE_FILES})
 #target_include_directories(engine PUBLIC engine/include PRIVATE engine/libs/include)
@@ -189,7 +193,7 @@ add_executable(StealthCpp ${GAME_SOURCE_FILES})
 # linking
 
 target_link_libraries(engine
-        ${Box2D}
+#        ${Box2D}
         ${OPENGL_LIBRARIES}
         ${GLEW}
         ${GLFW}
