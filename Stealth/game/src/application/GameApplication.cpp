@@ -18,7 +18,7 @@
 #include "Locator.h"
 #include "Scene.h"
 #include "GameObject.h"
-#include "GameObjectFactory.h"
+#include "Factory.h"
 #include "Renderer.h"
 
 // Game
@@ -104,20 +104,28 @@ void GameApplication::init() {
 	Locator::gameApplication = this;
 
 	renderer = new Renderer(window);
+	Locator::renderer = renderer;
 
 	inputManager = new InputManager(window);
 	Locator::inputManager = inputManager;
 
-	gameObjectFactory = new GameObjectFactory();
-	Locator::gameObjectFactory = gameObjectFactory;
+	gameObjectFactory = new Factory();
+	Locator::factory = gameObjectFactory;
 
 	currentScene = make_shared<Scene>();
 	currentScene->init();
+
+	gameObjectFactory->CreateGameObject<Spy>();
+	gameObjectFactory->CreateGameObject<Guard>();
+
+//	currentScene->addGameObject(make_shared<Character>(0, "spy"));
+//	currentScene->addGameObject(make_shared<Guard>(1, "guard"));
 };
 
 void GameApplication::destroy() {
 	delete renderer;  // or use unique_ptr
 	delete inputManager;
+	delete gameObjectFactory;
 }
 
 void GameApplication::processInput() {
@@ -150,7 +158,7 @@ void GameApplication::update(double dt) {
 	for (auto goIt(gameObjects.begin()); goIt != gameObjects.end(); ++goIt) {
 		shared_ptr<GameObject> go{goIt->second};
 		go->update(dt);
-		// go -> SetPosition(go -> GetPosition() + Vec3f {23, 2, 0});
+		// go -> SetPosition(go -> GetPosition() + Vector3 {23, 2, 0});
 	}
 	// DEBUG
 
@@ -161,6 +169,9 @@ void GameApplication::render()
 
 	renderer->clear();
 
+	renderer->render();
+
+	/*
 	std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
 	for (auto goIt(gameObjects.begin()); goIt != gameObjects.end(); ++goIt) {
 		// do not use GameObject& which would be invalid if all shared_ptr
@@ -168,6 +179,10 @@ void GameApplication::render()
 		shared_ptr<GameObject> go {goIt->second};
 		go->render(renderer);
 	}
+	*/
+
+
+
 //	SDL_RenderPresent(renderer);
 }
 

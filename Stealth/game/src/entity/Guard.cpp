@@ -13,7 +13,7 @@
 using namespace std;
 
 
-Guard::Guard(const int id, const std::string &name) : Character(id, name)
+Guard::Guard(const std::string &name) : Character(name)
 {
     controller = std::unique_ptr<Controller>(new AIController());
 }

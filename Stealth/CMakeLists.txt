@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(Stealth_Cpp)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 set(ENGINE_SOURCE_FILES
         engine/src/entity/AIController.cpp
@@ -20,7 +20,6 @@ set(ENGINE_SOURCE_FILES
         engine/include/enum/ButtonEvent.h
         engine/include/enum/ButtonState.h
         engine/include/enum/KeyDynamicState.h
-        engine/src/geometry/Vec3.cpp
         engine/include/geometry/Vec3.h
         engine/include/utils/Color.cpp
         engine/include/utils/Color.h
@@ -31,8 +30,8 @@ set(ENGINE_SOURCE_FILES
         engine/include/Scene.h
         engine/src/service/InputManager.cpp
         engine/include/InputManager.h
-        engine/src/entity/GameObjectFactory.cpp
-        engine/include/GameObjectFactory.h
+        engine/src/entity/Factory.cpp
+        engine/include/Factory.h
         engine/include/FactoryUtils.h
         engine/src/entity/Actor.cpp
         engine/include/Actor.h
@@ -46,6 +45,15 @@ set(ENGINE_SOURCE_FILES
         engine/include/Transform.h
         engine/src/renderer/Renderer.cpp
         engine/include/Renderer.h
+        engine/src/entity/Creator.cpp
+        engine/include/Creator.h
+        engine/include/Object.cpp
+        engine/include/Object.h
+        engine/src/entity/GameObjectCreator.cpp
+        engine/include/GameObjectCreator.h
+        engine/src/entity/ComponentCreator.cpp
+        engine/include/ComponentCreator.h
+#        engine/include/GameObject_TImpl.cpp
         )
 
 set(GAME_SOURCE_FILES
@@ -100,8 +108,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 #SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll)
 SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .so .lib)
 
-message(WARNING "v1.2")
-
 # Physics
 
 #SET(BOX2D_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/engine/libs/include)
@@ -116,7 +122,7 @@ message(WARNING "v1.2")
 
 # Box2D: static linking
 find_library(Box2D Box2D ${PROJECT_SOURCE_DIR}/engine/libs)
-message(WARNING "Box2D lib path: ${Box2D}")
+message(STATUS "Box2D lib path: ${Box2D}")
 
 # Rendering
 
@@ -129,11 +135,11 @@ if (OPENGL_FOUND)
 else (OPENGL_FOUND)
     message(SEND_ERROR "OPENGL not found!")
 endif (OPENGL_FOUND)
-message(WARNING OpenGL gl lib: ${OPENGL_gl_LIBRARY})
-message(WARNING OpenGL glu lib: ${OPENGL_glu_LIBRARY})
-message(WARNING OpenGL xmesa lib: ${OPENGL_xmesa_LIBRARY})
-message(WARNING OpenGL include dir: ${OPENGL_INCLUDE_DIR})
-message(WARNING OpenGL libs: ${OPENGL_LIBRARIES})
+message(STATUS OpenGL gl lib: ${OPENGL_gl_LIBRARY})
+message(STATUS OpenGL glu lib: ${OPENGL_glu_LIBRARY})
+message(STATUS OpenGL xmesa lib: ${OPENGL_xmesa_LIBRARY})
+message(STATUS OpenGL include dir: ${OPENGL_INCLUDE_DIR})
+message(STATUS OpenGL libs: ${OPENGL_LIBRARIES})
 
 # LINUX: I installed libGLEW.so from GLEW 2.0 with some API changes, check compatibility!
 
@@ -157,7 +163,7 @@ endif(NOT GLEW_FOUND)
 #find_library(GLEW glew32 ${PROJECT_SOURCE_DIR}/engine/libs)
 #add_definitions(-DGLEW_STATIC)
 #add_definitions(-DGLEW_MX)  # single context enough for 1 window
-message(WARNING "GLEW lib path: ${GLEW}")
+message(STATUS "GLEW lib path: ${GLEW}")
 
 
 # IMPROVE: create or download FindGLFW.cmake somewhere
@@ -165,9 +171,9 @@ message(WARNING "GLEW lib path: ${GLEW}")
 find_library(GLFW glfw ${PROJECT_SOURCE_DIR}/engine/libs)
 #set(GLFW_LOCATION libs)
 #find_package(GLFW)  # does not work with .a (detected in priority with MingW-w64)
-message(WARNING "glfw lib path: ${GLFW}")
-message(WARNING "glfw libs: ${GLFW_LIBRARIES}")
-message(WARNING "glfw include dir: ${GLFW_INCLUDE_DIR}")
+message(STATUS "glfw lib path: ${GLFW}")
+message(STATUS "glfw libs: ${GLFW_LIBRARIES}")
+message(STATUS "glfw include dir: ${GLFW_INCLUDE_DIR}")
 #add_definitions(-DGLFW_DLL) (if using .a, do not use DLL (crashes as can't detect libgcc... and glfw3.dll anyway)
 
 

@@ -15,7 +15,7 @@
 class Guard : public Character
 {
 public:
-    Guard(const int id, const std::string &name);
+    Guard(const std::string &name);
     virtual ~Guard();
 
     Guard(const Guard &) = delete;

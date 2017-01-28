@@ -16,7 +16,7 @@
 class Spy : public Character
 {
 public:
-    Spy(const int id, const std::string &name);
+    Spy(const std::string &name);
     virtual ~Spy();
 
     Spy(const Spy &) = delete;

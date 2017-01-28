@@ -17,7 +17,7 @@ class Controller;
 
 using namespace std;
 
-Spy::Spy(const int id, const string &name) : Character(id, name)
+Spy::Spy(const string &name) : Character(name)
 {
     controller = std::unique_ptr<Controller>(new HumanController());
     speed = 2;

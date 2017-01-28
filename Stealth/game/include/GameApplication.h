@@ -13,9 +13,9 @@
 #include "Scene.h"
 #include "InputManager.h"
 #include "Renderer.h"
-#include "GameObjectFactory.h"
+#include "Factory.h"
 
-class GameApplication : public std::enable_shared_from_this<GameApplication>
+class GameApplication
 {
 
 public:
@@ -55,7 +55,7 @@ private:
     InputManager *inputManager = nullptr;
 
     // Game object factory
-    GameObjectFactory *gameObjectFactory = nullptr;
+    Factory *gameObjectFactory = nullptr;
 
     // Is the game running
     bool isRunning;
