@@ -3,6 +3,11 @@ project(Stealth_Cpp)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
+set(CMAKE_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")  # executable output directory
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # static libraries output directory
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # dynamic libraries output directory (unused)
+
 set(ENGINE_SOURCE_FILES
         engine/src/entity/AIController.cpp
         engine/include/AIController.h
@@ -54,7 +59,7 @@ set(ENGINE_SOURCE_FILES
         engine/src/entity/ComponentCreator.cpp
         engine/include/ComponentCreator.h
 #        engine/include/GameObject_TImpl.cpp
-        )
+        engine/src/renderer/ShaderUtils.cpp engine/include/ShaderUtils.h)
 
 set(GAME_SOURCE_FILES
         engine/src/service/Locator.cpp
@@ -181,7 +186,7 @@ message(STATUS "glfw include dir: ${GLFW_INCLUDE_DIR}")
 
 # target
 
-# DEUBG: in case target_include_directories does not work
+# DEBUG: in case target_include_directories does not work
 include_directories(engine/include engine/libs/include)
 include_directories(engine/tests)  # not performant, really need to isolate target include directories
 include_directories(game/include)
@@ -194,6 +199,51 @@ add_executable(test_engine ${TEST_ENGINE_SOURCE_FILES})
 
 add_executable(StealthCpp ${GAME_SOURCE_FILES})
 #target_include_directories(StealthCpp PUBLIC game/src)  # does not seem to work, need full path?
+
+
+# http://qrikko.blogspot.fr/2016/05/cmake-and-how-to-copy-resources-during.html
+# Scan through resource folder for updated files and copy if none existing or changed
+message(WARNING ${PROJECT_SOURCE_DIR})
+
+file (GLOB_RECURSE resources "${PROJECT_SOURCE_DIR}/engine/resources/*.*")
+foreach(resource ${resources})
+get_filename_component(filename ${resource} NAME)
+get_filename_component(dir ${resource} DIRECTORY)
+get_filename_component(dirname ${dir} NAME)
+
+set (output "")
+
+while(NOT ${dirname} STREQUAL resources)
+get_filename_component(path_component ${dir} NAME)
+set (output "${path_component}/${output}")
+get_filename_component(dir ${dir} DIRECTORY)
+get_filename_component(dirname ${dir} NAME)
+endwhile()
+
+set(output "${CMAKE_BINARY_DIR}/bin/resources/${output}/${filename}")
+
+# custom command with OUTPUT suggested by the same website does not work
+#add_custom_command(
+#COMMENT "Moving updated resource-file '${filename}'"
+#OUTPUT ${output}
+#DEPENDS ${resource}
+#COMMAND ${CMAKE_COMMAND} -E copy_if_different
+#${resource}
+#${output}
+#)
+#add_custom_target(${filename} ALL DEPENDS ${resource} ${output})
+
+# POST_BUILD command works
+# http://stackoverflow.com/questions/13429656/cmake-how-to-copy-contents-of-a-directory-into-build-directory-after-make
+add_custom_command(
+    TARGET StealthCpp POST_BUILD COMMAND
+    ${CMAKE_COMMAND} -E copy_if_different
+    ${resource}
+    ${output}
+    COMMENT "Moving updated resource-file '${filename}'"
+)
+
+endforeach()
 
 
 # linking

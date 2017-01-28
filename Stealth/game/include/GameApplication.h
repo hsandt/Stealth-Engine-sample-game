@@ -30,6 +30,9 @@ public:
 
     // Initialize game, called by run()
     void init();
+    /// Load all basic shaders
+    void loadAllShaders();
+
     // Run application
     void run();
 
@@ -65,7 +68,7 @@ private:
     double secPerUpdate;
 
     // active scene (make it a unique_ptr if you are sure no one else uses it)
-    std::shared_ptr<Scene> currentScene;
+    Scene* currentScene;
 
 };
 

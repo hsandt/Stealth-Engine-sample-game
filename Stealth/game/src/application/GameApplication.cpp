@@ -12,6 +12,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <ShaderUtils.h>
 //#include <boost/log/trivial.hpp>
 
 // Engine
@@ -26,6 +27,7 @@
 #include "Spy.h"
 
 #include "GameApplication.h"
+#include "ShaderUtils.h"
 
 using namespace std;
 
@@ -35,7 +37,6 @@ GameApplication::GameApplication(GLFWwindow *window, int fps) :
 }
 
 GameApplication::~GameApplication() {
-
 	destroy();
 }
 
@@ -86,7 +87,6 @@ void GameApplication::run() {
 			// rendering required more than the end of the frame, not time to sleep!
 			cout << "No time to sleep!" << endl;
 //			glfwPollEvents();
-
 		}
 
 		glfwSwapBuffers(window);
@@ -100,6 +100,9 @@ void GameApplication::stop() {
 }
 
 void GameApplication::init() {
+	// load shaders
+	loadAllShaders();
+
 	// register Service Providers to Service Locators
 	Locator::gameApplication = this;
 
@@ -112,20 +115,36 @@ void GameApplication::init() {
 	gameObjectFactory = new Factory();
 	Locator::factory = gameObjectFactory;
 
-	currentScene = make_shared<Scene>();
+	currentScene = new Scene();
 	currentScene->init();
 
-	gameObjectFactory->CreateGameObject<Spy>();
-	gameObjectFactory->CreateGameObject<Guard>();
+	GameObject* spy = gameObjectFactory->CreateGameObject<Spy>();
+	GameObject* guard = gameObjectFactory->CreateGameObject<Guard>();
+
+	spy->setPosition({10.0f, 10.0f, 0.0f});
+	guard->setPosition({20.0f, 30.0f, 0.0f});
 
 //	currentScene->addGameObject(make_shared<Character>(0, "spy"));
 //	currentScene->addGameObject(make_shared<Guard>(1, "guard"));
 };
 
+void GameApplication::loadAllShaders() {
+	// Create and compile our GLSL program from the shaders
+	GLuint programID = loadShaders("resources/shaders/SimpleVertexShader.glsl", "resources/shaders/SimpleFragmentShader.glsl");
+}
+
 void GameApplication::destroy() {
+	delete currentScene;
+
 	delete renderer;  // or use unique_ptr
 	delete inputManager;
 	delete gameObjectFactory;
+
+	// clear reverse references considered as weak
+	Locator::gameApplication = nullptr;
+	Locator::renderer = nullptr;
+	Locator::inputManager = nullptr;
+	Locator::factory = nullptr;
 }
 
 void GameApplication::processInput() {
@@ -154,9 +173,9 @@ void GameApplication::processInput() {
 }
 
 void GameApplication::update(double dt) {
-	map<int, std::shared_ptr<GameObject>> gameObjects{currentScene->getGameObjects()};
-	for (auto goIt(gameObjects.begin()); goIt != gameObjects.end(); ++goIt) {
-		shared_ptr<GameObject> go{goIt->second};
+	map<int, GameObject*> gameObjects{currentScene->getGameObjects()};
+	for (auto goPair : gameObjects) {
+		GameObject* go{goPair.second};
 		go->update(dt);
 		// go -> SetPosition(go -> GetPosition() + Vector3 {23, 2, 0});
 	}
@@ -185,5 +204,4 @@ void GameApplication::render()
 
 //	SDL_RenderPresent(renderer);
 }
-
 

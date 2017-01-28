@@ -15,7 +15,7 @@ using namespace std;
 
 Guard::Guard(const std::string &name) : Character(name)
 {
-    controller = std::unique_ptr<Controller>(new AIController());
+    controller = new AIController();
 }
 
 Guard::~Guard()
