@@ -79,6 +79,8 @@ set(TEST_ENGINE_SOURCE_FILES
         engine/tests/catch.hpp
         engine/tests/catch_with_main.hpp
         engine/tests/testmain.cpp
+        # All actual test cpp files added from here
+        engine/tests/geometry/testvec2.cpp
         engine/tests/geometry/testvec3.cpp
         )
 
