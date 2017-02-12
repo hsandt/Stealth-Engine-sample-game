@@ -25,7 +25,7 @@ set(ENGINE_SOURCE_FILES
         engine/include/enum/ButtonEvent.h
         engine/include/enum/ButtonState.h
         engine/include/enum/KeyDynamicState.h
-        engine/include/geometry/Vec3.h
+        engine/include/geometry/Vector3.h
         engine/include/utils/Color.cpp
         engine/include/utils/Color.h
         engine/include/utils/infix_iterator.h
