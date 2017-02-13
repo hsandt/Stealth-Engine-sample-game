@@ -6,23 +6,23 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
-#include "Guard.h"
 
-#include "AIController.h"
+#include "entity/AICharacter.h"
+
+#include "entity/Guard.h"
 
 using namespace std;
 
 
-Guard::Guard(const std::string &name) : Character(name)
+Guard::Guard() : AICharacter()
 {
-    controller = new AIController();
 }
 
 Guard::~Guard()
 {
 }
 
-void Guard::update(double dt)
+void Guard::updateIntention()
 {
-    Character::update(dt);
+	moveHorizontal(1.0f);
 }

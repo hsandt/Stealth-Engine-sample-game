@@ -10,10 +10,10 @@
 
 #include <memory>
 
-#include "Scene.h"
-#include "InputManager.h"
-#include "Renderer.h"
-#include "Factory.h"
+#include "scene/Scene.h"
+#include "service/InputManager.h"
+#include "renderer/Renderer.h"
+#include "factory/Factory.h"
 
 class GameApplication
 {
@@ -41,11 +41,13 @@ public:
 private:
     // Destroy application, called by destructor
     void destroy();
-    // Called to process user input
+    // Called to process user input and store the new input dynamic states
     void processInput();
-    // Called to update AI and physics
-    void update(double dt);
-    // Called to render the game view
+    // Called to apply any callbacks bound to an input, mainly via InputComponents
+    void applyInputBindings();
+    // Called to update AI and physics (mainly via BehaviourComponents)
+    void update(float dt);
+    // Called to render the game view, mainly via RenderComponents
     void render();
 
     // Application window

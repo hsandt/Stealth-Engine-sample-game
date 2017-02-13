@@ -6,28 +6,32 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
+// REFACTOR: move to Engine once all dependencies to Spy/Guard have been removed
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 #include <iostream>
 #include <memory>
 #include <vector>
-#include <ShaderUtils.h>
+#include <renderer/ShaderUtils.h>
 //#include <boost/log/trivial.hpp>
 
 // Engine
-#include "Locator.h"
-#include "Scene.h"
-#include "GameObject.h"
-#include "Factory.h"
-#include "Renderer.h"
+#include "component/Transform.h"
+#include "entity/GameObject.h"
+#include "factory/Factory.h"
+#include "renderer/Renderer.h"
+#include "service/Locator.h"
+#include "scene/Scene.h"
+#include "geometry/Vector2.h"
 
 // Game
-#include "Guard.h"
-#include "Spy.h"
+#include "entity/Guard.h"
+#include "entity/Spy.h"
 
-#include "GameApplication.h"
-#include "ShaderUtils.h"
+#include "application/GameApplication.h"
+#include "renderer/ShaderUtils.h"
 
 using namespace std;
 
@@ -62,12 +66,13 @@ void GameApplication::run() {
 			isRunning = false;
 
 		processInput();
+		applyInputBindings();
 
 		while (lag >= secPerUpdate) {
 			// TODO: add limit for number of iterations to catch back
 			// pass fixed deltaTime as update argument, in sec
 			// ALT: use a service locator for deltaTime (fixed)
-			update(secPerUpdate);
+			update((float) secPerUpdate);
 			// TODO: compute at once
 			lag -= secPerUpdate;
 		}
@@ -118,14 +123,12 @@ void GameApplication::init() {
 	currentScene = new Scene();
 	currentScene->init();
 
-	GameObject* spy = gameObjectFactory->CreateGameObject<Spy>();
-	GameObject* guard = gameObjectFactory->CreateGameObject<Guard>();
+	Actor* spy = gameObjectFactory->CreateGameObject<Spy>();
+	Actor* guard = gameObjectFactory->CreateGameObject<Guard>();
 
-	spy->setPosition({10.0f, 10.0f, 0.0f});
-	guard->setPosition({20.0f, 30.0f, 0.0f});
-
-//	currentScene->addGameObject(make_shared<Character>(0, "spy"));
-//	currentScene->addGameObject(make_shared<Guard>(1, "guard"));
+	// implicit brace initialization does not seem to work on struct member assignment
+	spy->transform->position = {10.0f, 10.0f};
+	guard->transform->position = {20.0f, 30.0f};
 };
 
 void GameApplication::loadAllShaders() {
@@ -149,30 +152,14 @@ void GameApplication::destroy() {
 
 void GameApplication::processInput() {
 	inputManager->processInputs();
-//	if (inputManager->getButtonState(Button::QUIT) == ButtonState::PRESSED ||
-//		inputManager->getButtonState(Button::QUIT) == ButtonState::RELEASED_PRESSED) {
-//		stop();
-//	}
-	//SDL_Event event;
-	//while (SDL_PollEvent(&event)) {
-	//    switch (event.type)
-	//    {
-	//        case SDL_QUIT:
-	//            isRunning = false;
-	//            break;
-	//
-	//        case SDL_KEYDOWN:
-	//        {
-	//            if (event.key.keysym.sym == SDLK_ESCAPE)
-	//            {
-	//                isRunning = false;
-	//            }
-	//        }
-	//    }
-	//}
 }
 
-void GameApplication::update(double dt) {
+void GameApplication::applyInputBindings()
+{
+	inputManager->applyInputBindings();
+}
+
+void GameApplication::update(float dt) {
 	map<int, GameObject*> gameObjects{currentScene->getGameObjects()};
 	for (auto goPair : gameObjects) {
 		GameObject* go{goPair.second};
@@ -204,4 +191,3 @@ void GameApplication::render()
 
 //	SDL_RenderPresent(renderer);
 }
-

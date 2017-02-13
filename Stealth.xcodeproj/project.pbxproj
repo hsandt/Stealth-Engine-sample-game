@@ -17,7 +17,7 @@
 		458DBB7F1AA37F9C00399127 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458DBB7E1AA37F9C00399127 /* Character.cpp */; };
 		45BAEBF51A8226940099392D /* SdlApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BAEBF41A8226940099392D /* SdlApplication.cpp */; };
 		D0B620B748351A2537EE25C8 /* AIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B602D5DA385DA08D8D299E /* AIController.cpp */; };
-		D0BB0C25A4625D522839FD2E /* HumanController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B0A64AC768138F411DEAA7 /* HumanController.cpp */; };
+		D0BB0C25A4625D522839FD2E /* PlayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B0A64AC768138F411DEAA7 /* PlayerController.cpp */; };
 		D0BCF8A4CC66BD749DE3B090 /* Intention.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0BBA265C8CBD26E4EBAD252 /* Intention.cpp */; };
 		D0BD1099DF391827D510BDF3 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B625433100B068E3C136E3 /* Controller.cpp */; };
 		D0BD37587F2D91277D639FAF /* Locator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B83A3F8066E6B24CD1986A /* Locator.cpp */; };
@@ -50,12 +50,12 @@
 		45933D4A1A78F05B0040A8F2 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 		45933D4B1A78F05B0040A8F2 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
 		45BAEBF41A8226940099392D /* SdlApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SdlApplication.cpp; path = Stealth/src/game/application/SdlApplication.cpp; sourceTree = "<group>"; };
-		D0B0A64AC768138F411DEAA7 /* HumanController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HumanController.cpp; path = Stealth/src/engine/entity/HumanController.cpp; sourceTree = "<group>"; };
+		D0B0A64AC768138F411DEAA7 /* PlayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerController.cpp; path = Stealth/src/engine/entity/PlayerController.cpp; sourceTree = "<group>"; };
 		D0B4EFC4FF8435E472CDA401 /* Locator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Locator.h; path = Stealth/src/engine/service/Locator.h; sourceTree = "<group>"; };
 		D0B59A34F50C1D3ADF0C02A2 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = Stealth/src/engine/entity/Controller.h; sourceTree = "<group>"; };
 		D0B602D5DA385DA08D8D299E /* AIController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIController.cpp; path = src/engine/entity/AIController.cpp; sourceTree = "<group>"; };
 		D0B625433100B068E3C136E3 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = Stealth/src/engine/entity/Controller.cpp; sourceTree = "<group>"; };
-		D0B73E22ADCFB3E0FCD099DF /* HumanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HumanController.h; path = Stealth/src/engine/entity/HumanController.h; sourceTree = "<group>"; };
+		D0B73E22ADCFB3E0FCD099DF /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerController.h; path = Stealth/src/engine/entity/PlayerController.h; sourceTree = "<group>"; };
 		D0B83A3F8066E6B24CD1986A /* Locator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Locator.cpp; path = Stealth/src/engine/service/Locator.cpp; sourceTree = "<group>"; };
 		D0BBA265C8CBD26E4EBAD252 /* Intention.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Intention.cpp; path = Stealth/src/engine/entity/Intention.cpp; sourceTree = "<group>"; };
 		D0BFC9A82C96549ED151D257 /* Intention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intention.h; path = Stealth/src/engine/entity/Intention.h; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 				D0B4EFC4FF8435E472CDA401 /* Locator.h */,
 				D0B625433100B068E3C136E3 /* Controller.cpp */,
 				D0B59A34F50C1D3ADF0C02A2 /* Controller.h */,
-				D0B0A64AC768138F411DEAA7 /* HumanController.cpp */,
-				D0B73E22ADCFB3E0FCD099DF /* HumanController.h */,
+				D0B0A64AC768138F411DEAA7 /* PlayerController.cpp */,
+				D0B73E22ADCFB3E0FCD099DF /* PlayerController.h */,
 				D0BBA265C8CBD26E4EBAD252 /* Intention.cpp */,
 				D0BFC9A82C96549ED151D257 /* Intention.h */,
 				45933D351A78E6690040A8F2 /* Products */,
@@ -186,7 +186,7 @@
 				D0BD1099DF391827D510BDF3 /* Controller.cpp in Sources */,
 				458DBB7D1AA37F9800399127 /* GameObject.cpp in Sources */,
 				458DBB7F1AA37F9C00399127 /* Character.cpp in Sources */,
-				D0BB0C25A4625D522839FD2E /* HumanController.cpp in Sources */,
+				D0BB0C25A4625D522839FD2E /* PlayerController.cpp in Sources */,
 				D0BCF8A4CC66BD749DE3B090 /* Intention.cpp in Sources */,
 				D0B620B748351A2537EE25C8 /* AIController.cpp in Sources */,
 			);

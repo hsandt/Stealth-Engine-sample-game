@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(Stealth_Cpp)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 set(CMAKE_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")  # executable output directory
@@ -9,69 +9,81 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # static librarie
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # dynamic libraries output directory (unused)
 
 set(ENGINE_SOURCE_FILES
-        engine/src/entity/AIController.cpp
-        engine/include/AIController.h
-        engine/src/entity/Character.cpp
-        engine/include/Character.h
-        engine/src/entity/Controller.cpp
-        engine/include/Controller.h
+        engine/src/application/ApplicationContainer.cpp
+        engine/include/application/ApplicationContainer.h
+        engine/src/service/Locator.cpp
+        engine/include/service/Locator.h
         engine/src/entity/GameObject.cpp
-        engine/include/GameObject.h
-        engine/src/entity/HumanController.cpp
-        engine/include/HumanController.h
-        engine/src/entity/Intention.cpp
-        engine/include/Intention.h
-        engine/include/enum/Button.h
-        engine/include/enum/ButtonEvent.h
-        engine/include/enum/ButtonState.h
-        engine/include/enum/KeyDynamicState.h
+        engine/include/entity/GameObject.h
+        engine/include/input/Key.h
+        engine/include/input/KeyEvent.h
+        engine/include/input/ButtonState.h
+        engine/include/input/KeyStates.h
+        engine/include/geometry/Vector2.h
+        engine/include/geometry/Vector3.cpp
         engine/include/geometry/Vector3.h
-        engine/include/utils/Color.cpp
+        engine/src/utils/Color.cpp
         engine/include/utils/Color.h
         engine/include/utils/infix_iterator.h
-        engine/src/helper/helper.cpp
-        engine/include/helper.h
         engine/src/scene/Scene.cpp
-        engine/include/Scene.h
+        engine/include/scene/Scene.h
         engine/src/service/InputManager.cpp
-        engine/include/InputManager.h
-        engine/src/entity/Factory.cpp
-        engine/include/Factory.h
-        engine/include/FactoryUtils.h
+        engine/include/service/InputManager.h
+        engine/src/factory/Factory.cpp
+        engine/include/factory/Factory.h
+        engine/include/factory/FactoryUtils.h
         engine/src/entity/Actor.cpp
-        engine/include/Actor.h
+        engine/include/entity/Actor.h
         engine/src/component/Component.cpp
-        engine/include/Component.h
+        engine/include/component/Component.h
+        engine/src/component/ActorComponent.cpp
+        engine/include/component/ActorComponent.h
         engine/src/component/RenderComponent.cpp
-        engine/include/RenderComponent.h
+        engine/include/component/RenderComponent.h
         engine/src/component/SquareRenderComponent.cpp
-        engine/include/SquareRenderComponent.h
+        engine/include/component/SquareRenderComponent.h
         engine/src/component/Transform.cpp
-        engine/include/Transform.h
+        engine/include/component/Transform.h
         engine/src/renderer/Renderer.cpp
-        engine/include/Renderer.h
-        engine/src/entity/Creator.cpp
-        engine/include/Creator.h
-        engine/include/Object.cpp
-        engine/include/Object.h
-        engine/src/entity/GameObjectCreator.cpp
-        engine/include/GameObjectCreator.h
-        engine/src/entity/ComponentCreator.cpp
-        engine/include/ComponentCreator.h
+        engine/include/renderer/Renderer.h
+        engine/src/object/Object.cpp
+        engine/include/object/Object.h
+        engine/src/factory/GameObjectCreator.cpp
+        engine/include/factory/GameObjectCreator.h
+        engine/src/factory/ComponentCreator.cpp
+        engine/include/factory/ComponentCreator.h
 #        engine/include/GameObject_TImpl.cpp
-        engine/src/renderer/ShaderUtils.cpp engine/include/ShaderUtils.h)
+        engine/src/renderer/ShaderUtils.cpp
+        engine/include/renderer/ShaderUtils.h
+        engine/src/component/InputComponent.cpp
+        engine/include/component/InputComponent.h
+        engine/include/input/KeyBinding.h
+        engine/include/input/KeyData.h
+        engine/include/input/AxisKeyBinding.h
+        engine/include/utils/MathUtil.h
+        )
 
 set(GAME_SOURCE_FILES
-        engine/src/service/Locator.cpp
-        engine/include/Locator.h
         game/src/application/GameApplication.cpp
-        game/include/GameApplication.h
-        game/src/application/ApplicationContainer.cpp
-        game/include/ApplicationContainer.h
+        game/include/application/GameApplication.h
+        game/src/controller/AIController.cpp
+        game/include/controller/AIController.h
+        game/src/controller/Controller.cpp
+        game/include/controller/Controller.h
+        game/src/controller/PlayerController.cpp
+        game/include/controller/PlayerController.h
+        game/src/controller/AIController.cpp
+        game/include/controller/AIController.h
+        game/src/entity/Character.cpp
+        game/include/entity/Character.h
+        game/src/entity/PlayerCharacter.cpp
+        game/include/entity/PlayerCharacter.h
+        game/src/entity/AICharacter.cpp
+        game/include/entity/AICharacter.h
         game/src/entity/Guard.cpp
-        game/include/Guard.h
+        game/include/entity/Guard.h
         game/src/entity/Spy.cpp
-        game/include/Spy.h
+        game/include/entity/Spy.h
         game/src/main.cpp
         )
 

@@ -8,21 +8,28 @@
 
 #include <string>
 
-#include "Character.h"
-#include "HumanController.h"
+#include "entity/Character.h"
+#include "entity/PlayerCharacter.h"
+#include "component/InputComponent.h"
 
-#include "Spy.h"
+#include "entity/Spy.h"
 
 class Controller;
 
 using namespace std;
 
-Spy::Spy(const string &name) : Character(name)
+Spy::Spy() : PlayerCharacter()
 {
-    controller = new HumanController();
     speed = 2;
 }
 
 Spy::~Spy()
 {
+}
+
+void Spy::setupInputBindings()
+{
+    // for now, use update until delegates work
+//    inputComponent->bindAxisKey<Character>(Key::LEFT, &Character::moveHorizontal);
+//    inputComponent->bindAxisKey<Spy>(Key::RIGHT, &Spy::moveVertical);
 }
