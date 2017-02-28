@@ -22,7 +22,7 @@ public:
 	Controller &operator=(const Controller &) & = delete;
 
 	Vector2 getMoveIntention() const { return moveIntention; }
-	Vector2 setMoveIntention(const Vector2& moveVector) {
+	void setMoveIntention(const Vector2& moveVector) {
 		moveIntention = Vector2 { math::clamp(moveVector.x(), -1.0f, 1.0f), math::clamp(moveVector.y(), -1.0f, 1.0f) };
 	}
 

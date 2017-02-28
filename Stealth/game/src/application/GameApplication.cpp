@@ -18,6 +18,7 @@
 //#include <boost/log/trivial.hpp>
 
 // Engine
+#include "debug/Logger.h"
 #include "component/Transform.h"
 #include "entity/GameObject.h"
 #include "factory/Factory.h"
@@ -105,20 +106,22 @@ void GameApplication::stop() {
 }
 
 void GameApplication::init() {
-	// load shaders
-	loadAllShaders();
-
 	// register Service Providers to Service Locators
 	Locator::gameApplication = this;
 
-	renderer = new Renderer(window);
-	Locator::renderer = renderer;
+	// Create logger on standard output stream
+	Locator::logger = new Logger(std::cout, std::cout, std::cerr);
+
+	gameObjectFactory = new Factory();
+	Locator::factory = gameObjectFactory;
 
 	inputManager = new InputManager(window);
 	Locator::inputManager = inputManager;
 
-	gameObjectFactory = new Factory();
-	Locator::factory = gameObjectFactory;
+	renderer = new Renderer(window);
+	Locator::renderer = renderer;
+	// initialize Renderer (will load all standard shaders)
+	renderer->init();
 
 	currentScene = new Scene();
 	currentScene->init();
@@ -126,15 +129,9 @@ void GameApplication::init() {
 	Actor* spy = gameObjectFactory->CreateGameObject<Spy>();
 	Actor* guard = gameObjectFactory->CreateGameObject<Guard>();
 
-	// implicit brace initialization does not seem to work on struct member assignment
 	spy->transform->position = {10.0f, 10.0f};
 	guard->transform->position = {20.0f, 30.0f};
 };
-
-void GameApplication::loadAllShaders() {
-	// Create and compile our GLSL program from the shaders
-	GLuint programID = loadShaders("resources/shaders/SimpleVertexShader.glsl", "resources/shaders/SimpleFragmentShader.glsl");
-}
 
 void GameApplication::destroy() {
 	delete currentScene;

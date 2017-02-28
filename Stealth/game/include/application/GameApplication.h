@@ -28,48 +28,47 @@ public:
     GameApplication(GameApplication&&) = default;
     GameApplication &operator=(GameApplication&&) & = default;
 
-    // Initialize game, called by run()
+    /// Initialize game, called by run()
     void init();
-    /// Load all basic shaders
-    void loadAllShaders();
 
-    // Run application
+    /// Run application
     void run();
 
-    // Exit application
+    /// Exit application
     void stop();
 private:
-    // Destroy application, called by destructor
+    /// Destroy application, called by destructor
     void destroy();
-    // Called to process user input and store the new input dynamic states
+    /// Called to process user input and store the new input dynamic states
     void processInput();
-    // Called to apply any callbacks bound to an input, mainly via InputComponents
+    /// Called to apply any callbacks bound to an input, mainly via InputComponents
     void applyInputBindings();
-    // Called to update AI and physics (mainly via BehaviourComponents)
+    /// Called to update AI and physics (mainly via BehaviourComponents)
     void update(float dt);
-    // Called to render the game view, mainly via RenderComponents
+    /// Called to render the game view, mainly via RenderComponents
     void render();
 
-    // Application window
+    /// Application window
     GLFWwindow *window = nullptr;
 
-    // Renderer
+    /// Renderer
     Renderer *renderer = nullptr;
 
-    // Input manager
+    /// Input manager
     InputManager *inputManager = nullptr;
 
-    // Game object factory
+    /// Game object factory
     Factory *gameObjectFactory = nullptr;
 
-    // Is the game running
+    /// Is the game running
     bool isRunning;
     
-    // FPS and timer per update (s)
+    /// Game FPS
     int fps;
+	/// Time per update (s)
     double secPerUpdate;
 
-    // active scene (make it a unique_ptr if you are sure no one else uses it)
+    /// active scene (make it a unique_ptr if you are sure no one else uses it)
     Scene* currentScene;
 
 };

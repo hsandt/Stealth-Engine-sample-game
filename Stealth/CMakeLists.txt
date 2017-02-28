@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
 project(Stealth_Cpp)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+# TODO: require clang if needed
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
 
 set(CMAKE_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")  # executable output directory
@@ -61,7 +62,9 @@ set(ENGINE_SOURCE_FILES
         engine/include/input/KeyData.h
         engine/include/input/AxisKeyBinding.h
         engine/include/utils/MathUtil.h
-        )
+#        engine/include/debug/Logger.tpp
+        engine/include/debug/Logger.h
+        engine/include/utils/TraitsUtil.h)
 
 set(GAME_SOURCE_FILES
         game/src/application/GameApplication.cpp

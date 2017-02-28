@@ -6,10 +6,11 @@
 //  Copyright (c) 27 Heisei L Nguyen Huu. All rights reserved.
 //
 
-#include <component/Transform.h>
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 
+#include "component/Transform.h"
+#include "debug/Logger.h"
 #include "entity/Character.h"
 #include "entity/PlayerCharacter.h"
 
@@ -28,7 +29,7 @@ Character::~Character()
 {
 	if (controller != nullptr)
 	{
-		cout << "[CHARACTER] Deleting controller" << endl;
+		LOG("[CHARACTER] Deleting controller");
 		delete controller;
 	}
 }
