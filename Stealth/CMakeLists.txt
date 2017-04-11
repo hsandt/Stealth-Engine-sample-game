@@ -10,61 +10,63 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # static librarie
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # dynamic libraries output directory (unused)
 
 set(ENGINE_SOURCE_FILES
-        engine/src/application/ApplicationContainer.cpp
         engine/include/application/ApplicationContainer.h
-        engine/src/service/Locator.cpp
-        engine/include/service/Locator.h
-        engine/src/entity/GameObject.cpp
+        engine/include/component/ActorComponent.h
+        engine/include/component/Component.h
+        engine/include/component/InputComponent.h
+        engine/include/component/RenderComponent.h
+        engine/include/component/SquareRenderComponent.h
+        engine/include/component/Transform.h
+        engine/include/debug/Logger.h
+        engine/include/debug/Stream.h
+        engine/include/entity/Actor.h
         engine/include/entity/GameObject.h
-        engine/include/input/Key.h
-        engine/include/input/KeyEvent.h
-        engine/include/input/ButtonState.h
-        engine/include/input/KeyStates.h
+        engine/include/factory/ComponentCreator.h
+        engine/include/factory/Factory.h
+        engine/include/factory/FactoryUtils.h
+        engine/include/factory/GameObjectCreator.h
         engine/include/geometry/Vector2.h
         engine/include/geometry/Vector3.cpp
         engine/include/geometry/Vector3.h
-        engine/src/utils/Color.cpp
-        engine/include/utils/Color.h
-        engine/include/utils/infix_iterator.h
-        engine/src/scene/Scene.cpp
-        engine/include/scene/Scene.h
-        engine/src/service/InputManager.cpp
-        engine/include/service/InputManager.h
-        engine/src/factory/Factory.cpp
-        engine/include/factory/Factory.h
-        engine/include/factory/FactoryUtils.h
-        engine/src/entity/Actor.cpp
-        engine/include/entity/Actor.h
-        engine/src/component/Component.cpp
-        engine/include/component/Component.h
-        engine/src/component/ActorComponent.cpp
-        engine/include/component/ActorComponent.h
-        engine/src/component/RenderComponent.cpp
-        engine/include/component/RenderComponent.h
-        engine/src/component/SquareRenderComponent.cpp
-        engine/include/component/SquareRenderComponent.h
-        engine/src/component/Transform.cpp
-        engine/include/component/Transform.h
-        engine/src/renderer/Renderer.cpp
-        engine/include/renderer/Renderer.h
-        engine/src/object/Object.cpp
-        engine/include/object/Object.h
-        engine/src/factory/GameObjectCreator.cpp
-        engine/include/factory/GameObjectCreator.h
-        engine/src/factory/ComponentCreator.cpp
-        engine/include/factory/ComponentCreator.h
-#        engine/include/GameObject_TImpl.cpp
-        engine/src/renderer/ShaderUtils.cpp
-        engine/include/renderer/ShaderUtils.h
-        engine/src/component/InputComponent.cpp
-        engine/include/component/InputComponent.h
+        engine/include/input/AxisKeyBinding.h
+        engine/include/input/ButtonState.h
+        engine/include/input/Key.h
         engine/include/input/KeyBinding.h
         engine/include/input/KeyData.h
-        engine/include/input/AxisKeyBinding.h
+        engine/include/input/KeyEvent.h
+        engine/include/input/KeyStates.h
+        engine/include/object/Object.h
+        engine/include/renderer/Renderer.h
+        engine/include/renderer/ShaderUtils.h
+        engine/include/scene/Scene.h
+        engine/include/service/InputManager.h
+        engine/include/service/Locator.h
+        engine/include/utils/Color.h
+        engine/include/utils/ExceptionUtil.h
+        engine/include/utils/infix_iterator.h
         engine/include/utils/MathUtil.h
-#        engine/include/debug/Logger.tpp
-        engine/include/debug/Logger.h
-        engine/include/utils/TraitsUtil.h)
+        engine/include/utils/StringUtil.h
+        engine/include/utils/TraitsUtil.h
+        engine/src/application/ApplicationContainer.cpp
+        engine/src/component/ActorComponent.cpp
+        engine/src/component/Component.cpp
+        engine/src/component/InputComponent.cpp
+        engine/src/component/RenderComponent.cpp
+        engine/src/component/SquareRenderComponent.cpp
+        engine/src/component/Transform.cpp
+        engine/src/entity/Actor.cpp
+        engine/src/entity/GameObject.cpp
+        engine/src/factory/ComponentCreator.cpp
+        engine/src/factory/Factory.cpp
+        engine/src/factory/GameObjectCreator.cpp
+        engine/src/object/Object.cpp
+        engine/src/renderer/Renderer.cpp
+        engine/src/renderer/ShaderUtils.cpp
+        engine/src/scene/Scene.cpp
+        engine/src/service/InputManager.cpp
+        engine/src/service/Locator.cpp
+        engine/src/utils/Color.cpp
+        engine/src/core/EngineCore.cpp engine/include/core/EngineCore.h)
 
 set(GAME_SOURCE_FILES
         game/src/application/GameApplication.cpp
@@ -97,10 +99,16 @@ set(TEST_ENGINE_SOURCE_FILES
         # All actual test cpp files added from here
         engine/tests/geometry/testvec2.cpp
         engine/tests/geometry/testvec3.cpp
+        engine/tests/utils/teststringutils.cpp
         )
 
 
 # Cmake packages
+
+#Set Linker flags
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+
+# or (TEST on Windows)
 
 
 # DEBUG: if libgcc... of MingW is missing and you prefer building statically with standard libraries for dist
@@ -109,11 +117,8 @@ set(TEST_ENGINE_SOURCE_FILES
 # libstdc++
 # libwinpthread-1.dll
 
-#Set Linker flags
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 #set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ -static-libwinpthread")
 
-# or
 #> if (MINGW)
 #>>     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -static-libgcc")
 #>>     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc
@@ -126,8 +131,6 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 #>> endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
-#SET(CMAKE_FIND_LIBRARY_SUFFIXES .a .lib)
-#SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll)
 SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .so .lib)
 
 # Physics
@@ -212,6 +215,7 @@ add_library(engine ${ENGINE_SOURCE_FILES})
 #target_include_directories(engine PUBLIC engine/include PRIVATE engine/libs/include)
 
 add_executable(test_engine ${TEST_ENGINE_SOURCE_FILES})
+# it works in UbisoftGP, try again!
 #target_include_directories(engine_test PUBLIC engine/tests)  # does not seem to work, need full path?
 
 add_executable(StealthCpp ${GAME_SOURCE_FILES})

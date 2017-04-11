@@ -15,6 +15,8 @@
 #include "renderer/Renderer.h"
 #include "factory/Factory.h"
 
+class EngineCore;
+
 class GameApplication
 {
 
@@ -36,6 +38,9 @@ public:
 
     /// Exit application
     void stop();
+
+	GLFWwindow* getWindow() const;
+
 private:
     /// Destroy application, called by destructor
     void destroy();
@@ -51,14 +56,8 @@ private:
     /// Application window
     GLFWwindow *window = nullptr;
 
-    /// Renderer
-    Renderer *renderer = nullptr;
-
-    /// Input manager
-    InputManager *inputManager = nullptr;
-
-    /// Game object factory
-    Factory *gameObjectFactory = nullptr;
+    /// Engine core
+    EngineCore *engineCore = nullptr;
 
     /// Is the game running
     bool isRunning;

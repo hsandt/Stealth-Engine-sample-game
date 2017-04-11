@@ -19,6 +19,7 @@
 
 // Engine
 #include "debug/Logger.h"
+#include "core/EngineCore.h"
 #include "component/Transform.h"
 #include "entity/GameObject.h"
 #include "factory/Factory.h"
@@ -106,28 +107,17 @@ void GameApplication::stop() {
 }
 
 void GameApplication::init() {
+	// Initialize Engine Core, which will initialize all the modules
+	engineCore = new EngineCore(this);
+
 	// register Service Providers to Service Locators
 	Locator::gameApplication = this;
-
-	// Create logger on standard output stream
-	Locator::logger = new Logger(std::cout, std::cout, std::cerr);
-
-	gameObjectFactory = new Factory();
-	Locator::factory = gameObjectFactory;
-
-	inputManager = new InputManager(window);
-	Locator::inputManager = inputManager;
-
-	renderer = new Renderer(window);
-	Locator::renderer = renderer;
-	// initialize Renderer (will load all standard shaders)
-	renderer->init();
 
 	currentScene = new Scene();
 	currentScene->init();
 
-	Actor* spy = gameObjectFactory->CreateGameObject<Spy>();
-	Actor* guard = gameObjectFactory->CreateGameObject<Guard>();
+	Actor* spy = Locator::factory->CreateGameObject<Spy>();
+	Actor* guard = Locator::factory->CreateGameObject<Guard>();
 
 	spy->transform->position = {10.0f, 10.0f};
 	guard->transform->position = {20.0f, 30.0f};
@@ -135,25 +125,19 @@ void GameApplication::init() {
 
 void GameApplication::destroy() {
 	delete currentScene;
+	delete engineCore;
 
-	delete renderer;  // or use unique_ptr
-	delete inputManager;
-	delete gameObjectFactory;
-
-	// clear reverse references considered as weak
 	Locator::gameApplication = nullptr;
-	Locator::renderer = nullptr;
-	Locator::inputManager = nullptr;
-	Locator::factory = nullptr;
+
+	cout << "[GAME] GameApplication destroyed" << endl;
 }
 
 void GameApplication::processInput() {
-	inputManager->processInputs();
+	Locator::inputManager->processInputs();
 }
-
 void GameApplication::applyInputBindings()
 {
-	inputManager->applyInputBindings();
+	Locator::inputManager->applyInputBindings();
 }
 
 void GameApplication::update(float dt) {
@@ -170,9 +154,9 @@ void GameApplication::update(float dt) {
 void GameApplication::render()
 {
 
-	renderer->clear();
+	Locator::renderer->clear();
 
-	renderer->render();
+	Locator::renderer->render();
 
 	/*
 	std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
@@ -184,7 +168,10 @@ void GameApplication::render()
 	}
 	*/
 
-
-
 //	SDL_RenderPresent(renderer);
+}
+
+GLFWwindow* GameApplication::getWindow() const
+{
+	return window;
 }

@@ -1,9 +1,13 @@
+#include <cstdlib>
 #include <iostream>
+#include <memory>
 #include "application/ApplicationContainer.h"
 #include "application/GameApplication.h"
 
 #define APP_WIDTH 1280
 #define APP_HEIGHT 720
+
+using namespace std;
 
 int main(int argc, char* argv[])
 {
@@ -13,9 +17,10 @@ int main(int argc, char* argv[])
 	std::cout << "Main" << std::endl;
 
     ApplicationContainer applicationContainer;
-    applicationContainer.init(APP_WIDTH, APP_HEIGHT);
-    applicationContainer.runGame(30);
-    return 0;
-}
+    ApplicationContainer::RESULT result = applicationContainer.init(APP_WIDTH, APP_HEIGHT);
+    if (result == ApplicationContainer::FAILURE)
+	    return EXIT_FAILURE;
 
-//-1073741515
+    applicationContainer.runGame(30);
+    return EXIT_SUCCESS;
+}
