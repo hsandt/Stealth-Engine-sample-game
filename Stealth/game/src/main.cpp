@@ -1,7 +1,8 @@
 #include <cstdlib>
+#include <exception>
 #include <iostream>
-#include <memory>
-#include "application/ApplicationContainer.h"
+
+#include "application/GLFWWindowManager.h"
 #include "application/GameApplication.h"
 
 #define APP_WIDTH 1280
@@ -11,16 +12,16 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-#if GLFW_DLL
-	std::cout << "GLFW_DLL" << std::endl;
-#endif
-	std::cout << "Main" << std::endl;
+    GameApplication gameApplication;
+	gameApplication.setTitle("Stealth C++");
+	gameApplication.setInitialWindowSize(1280, 720);
 
-    ApplicationContainer applicationContainer;
-    ApplicationContainer::RESULT result = applicationContainer.init(APP_WIDTH, APP_HEIGHT);
-    if (result == ApplicationContainer::FAILURE)
-	    return EXIT_FAILURE;
-
-    applicationContainer.runGame(30);
+	try {
+		gameApplication.init();
+		gameApplication.run();
+	} catch (const exception& e) {
+		cout << "[main] Exception caught: " << e.what() << endl;
+		return EXIT_FAILURE;
+	}
     return EXIT_SUCCESS;
 }

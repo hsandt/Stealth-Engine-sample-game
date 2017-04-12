@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(Stealth_Cpp)
+project(Stealth_Cpp CXX)
 
 # TODO: require clang if needed
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
@@ -10,13 +10,18 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # static librarie
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")  # dynamic libraries output directory (unused)
 
 set(ENGINE_SOURCE_FILES
-        engine/include/application/ApplicationContainer.h
+        engine/include/application/ApplicationResult.h
+        engine/include/application/GameClass.h
+        engine/include/application/GameConfig.h
+        engine/include/application/GLFWWindowManager.h
+        engine/include/application/WindowManager.h
         engine/include/component/ActorComponent.h
         engine/include/component/Component.h
         engine/include/component/InputComponent.h
         engine/include/component/RenderComponent.h
         engine/include/component/SquareRenderComponent.h
         engine/include/component/Transform.h
+        engine/include/core/EngineCore.h
         engine/include/debug/Logger.h
         engine/include/debug/Stream.h
         engine/include/entity/Actor.h
@@ -40,20 +45,23 @@ set(ENGINE_SOURCE_FILES
         engine/include/renderer/ShaderUtils.h
         engine/include/scene/Scene.h
         engine/include/service/InputManager.h
-        engine/include/service/Locator.h
         engine/include/utils/Color.h
         engine/include/utils/ExceptionUtil.h
         engine/include/utils/infix_iterator.h
         engine/include/utils/MathUtil.h
         engine/include/utils/StringUtil.h
         engine/include/utils/TraitsUtil.h
-        engine/src/application/ApplicationContainer.cpp
+        engine/src/application/GameClass.cpp
+        engine/src/application/GLFWWindowManager.cpp
+        engine/src/application/GLFWWindowManager.cpp
+        engine/src/application/WindowManager.cpp
         engine/src/component/ActorComponent.cpp
         engine/src/component/Component.cpp
         engine/src/component/InputComponent.cpp
         engine/src/component/RenderComponent.cpp
         engine/src/component/SquareRenderComponent.cpp
         engine/src/component/Transform.cpp
+        engine/src/core/EngineCore.cpp
         engine/src/entity/Actor.cpp
         engine/src/entity/GameObject.cpp
         engine/src/factory/ComponentCreator.cpp
@@ -64,9 +72,8 @@ set(ENGINE_SOURCE_FILES
         engine/src/renderer/ShaderUtils.cpp
         engine/src/scene/Scene.cpp
         engine/src/service/InputManager.cpp
-        engine/src/service/Locator.cpp
         engine/src/utils/Color.cpp
-        engine/src/core/EngineCore.cpp engine/include/core/EngineCore.h)
+        )
 
 set(GAME_SOURCE_FILES
         game/src/application/GameApplication.cpp
@@ -224,7 +231,7 @@ add_executable(StealthCpp ${GAME_SOURCE_FILES})
 
 # http://qrikko.blogspot.fr/2016/05/cmake-and-how-to-copy-resources-during.html
 # Scan through resource folder for updated files and copy if none existing or changed
-message(WARNING ${PROJECT_SOURCE_DIR})
+message(STATUS ${PROJECT_SOURCE_DIR})
 
 file (GLOB_RECURSE resources "${PROJECT_SOURCE_DIR}/engine/resources/*.*")
 foreach(resource ${resources})

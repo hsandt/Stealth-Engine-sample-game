@@ -4,7 +4,7 @@
 
 #include "controller/PlayerController.h"
 #include "entity/Character.h"
-#include "service/Locator.h"
+#include "core/EngineCore.h"
 #include "service/InputManager.h"
 
 #include "entity/PlayerCharacter.h"
@@ -31,11 +31,11 @@ void PlayerCharacter::update(float dt)
 	Character::update(dt);
 
 	// delegates not ready so use this instead of key bindings
-	if (Locator::getInputManager()->isKeyDown(Key::LEFT))
+	if (EngineCore::getInputManager()->isKeyDown(Key::LEFT))
 	{
 		moveHorizontal(-1.f);
 	}
-	else if (Locator::getInputManager()->isKeyDown(Key::RIGHT))
+	else if (EngineCore::getInputManager()->isKeyDown(Key::RIGHT))
 	{
 		moveHorizontal(1.f);
 
@@ -45,12 +45,12 @@ void PlayerCharacter::update(float dt)
 		moveHorizontal(0.f);
 	}
 
-	if (Locator::getInputManager()->isKeyDown(Key::DOWN))
+	if (EngineCore::getInputManager()->isKeyDown(Key::DOWN))
 	{
 		moveVertical(-1.f);
 
 	}
-	else if (Locator::getInputManager()->isKeyDown(Key::UP))
+	else if (EngineCore::getInputManager()->isKeyDown(Key::UP))
 	{
 		moveVertical(1.f);
 	}

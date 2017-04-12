@@ -24,9 +24,10 @@
 #include "entity/GameObject.h"
 #include "factory/Factory.h"
 #include "renderer/Renderer.h"
-#include "service/Locator.h"
+#include "core/EngineCore.h"
 #include "scene/Scene.h"
 #include "geometry/Vector2.h"
+#include "application/WindowManager.h"
 
 // Game
 #include "entity/Guard.h"
@@ -37,34 +38,70 @@
 
 using namespace std;
 
-GameApplication::GameApplication(GLFWwindow *window, int fps) :
-		window(window), isRunning(false), fps(fps) {
-	secPerUpdate = 1. / fps;  // fixed deltaTime
+GameApplication::GameApplication() :
+		isRunning(false) {
+	if (config.fps > 0)
+		config.fps = 30;
+	secPerUpdate = 1. / config.fps;  // fixed deltaTime
 }
 
 GameApplication::~GameApplication() {
-	destroy();
+	delete currentScene;
+	delete engineCore;
+	cout << "[GAME] GameApplication destroyed" << endl;
 }
 
-void GameApplication::run() {
+void GameApplication::loadConfig(const char* filePath)
+{
+	// TODO
+}
 
+void GameApplication::setTitle(const string & title)
+{
+	config.title = title;
+}
+
+void GameApplication::setInitialWindowSize(int width, int height)
+{
+	config.initialWindowWidth = width;
+	config.initialWindowHeight = height;
+}
+
+void GameApplication::init() {
+	// initialize Engine Core, which will initialize all the modules
+	engineCore = new EngineCore(this);
+	engineCore->init(config);
+
+	currentScene = new Scene();
+	currentScene->init();
+//
+	Actor* spy = EngineCore::getFactory()->CreateGameObject<Spy>();
+	Actor* guard = EngineCore::getFactory()->CreateGameObject<Guard>();
+
+	spy->transform->position = {10.0f, 10.0f};
+	guard->transform->position = {20.0f, 30.0f};
+};
+
+void GameApplication::run() {
 	double currentTime;
-//    double elapsed;
 	double endTime = glfwGetTime();
 	double lag = 0;
 	double sleep;
 
 	isRunning = true;
 
+	WindowManager* windowManager = engineCore->getWindowManager();
+
 	// update loop
 	while (isRunning) {
 		currentTime = glfwGetTime();
 		lag += currentTime - endTime;
 
+		windowManager->pollEvents();
 		// CHANGE: if using glfwWait, maybe don't poll twice
 		glfwPollEvents();
 
-		if (glfwWindowShouldClose(window))
+		if (windowManager->windowShouldClose())
 			isRunning = false;
 
 		processInput();
@@ -96,7 +133,7 @@ void GameApplication::run() {
 //			glfwPollEvents();
 		}
 
-		glfwSwapBuffers(window);
+		windowManager->swapBuffers();
 
 	}
 
@@ -106,38 +143,14 @@ void GameApplication::stop() {
 	isRunning = false;
 }
 
-void GameApplication::init() {
-	// Initialize Engine Core, which will initialize all the modules
-	engineCore = new EngineCore(this);
-
-	// register Service Providers to Service Locators
-	Locator::gameApplication = this;
-
-	currentScene = new Scene();
-	currentScene->init();
-
-	Actor* spy = Locator::factory->CreateGameObject<Spy>();
-	Actor* guard = Locator::factory->CreateGameObject<Guard>();
-
-	spy->transform->position = {10.0f, 10.0f};
-	guard->transform->position = {20.0f, 30.0f};
-};
-
-void GameApplication::destroy() {
-	delete currentScene;
-	delete engineCore;
-
-	Locator::gameApplication = nullptr;
-
-	cout << "[GAME] GameApplication destroyed" << endl;
-}
-
 void GameApplication::processInput() {
-	Locator::inputManager->processInputs();
+	if (EngineCore::getInputManager())
+		EngineCore::getInputManager()->processInputs();
 }
 void GameApplication::applyInputBindings()
 {
-	Locator::inputManager->applyInputBindings();
+	if (EngineCore::getInputManager())
+		EngineCore::getInputManager()->applyInputBindings();
 }
 
 void GameApplication::update(float dt) {
@@ -153,10 +166,8 @@ void GameApplication::update(float dt) {
 
 void GameApplication::render()
 {
-
-	Locator::renderer->clear();
-
-	Locator::renderer->render();
+	EngineCore::getRenderer()->clear();
+	EngineCore::getRenderer()->render();
 
 	/*
 	std::map<int, std::shared_ptr<GameObject>> gameObjects {currentScene->getGameObjects()};
@@ -169,9 +180,4 @@ void GameApplication::render()
 	*/
 
 //	SDL_RenderPresent(renderer);
-}
-
-GLFWwindow* GameApplication::getWindow() const
-{
-	return window;
 }

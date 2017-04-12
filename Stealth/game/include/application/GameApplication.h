@@ -9,7 +9,9 @@
 #pragma once
 
 #include <memory>
+#include <string>
 
+#include "application/GameConfig.h"
 #include "scene/Scene.h"
 #include "service/InputManager.h"
 #include "renderer/Renderer.h"
@@ -19,18 +21,46 @@ class EngineCore;
 
 class GameApplication
 {
+private:
+	/// Engine core (owned)
+	EngineCore *engineCore = nullptr;
+
+	/* Parameters */
+
+	/// Game configuration data
+	GameConfig config;
+
+	/// Target update period (s)
+	double secPerUpdate;
+
+	/* State vars */
+
+	/// Has the game application been initialized?
+	bool initialized = false;
+
+	/// Is the game running?
+	bool isRunning = false;
+
+	/// active scene (make it a unique_ptr if you are sure no one else uses it)
+	Scene* currentScene;
 
 public:
-    GameApplication(GLFWwindow *win, int fps = 30);
-    GameApplication() = default;
+    GameApplication();
     virtual ~GameApplication();
 
-    GameApplication(const GameApplication &) = default;
-    GameApplication &operator=(const GameApplication &) & = default;
-    GameApplication(GameApplication&&) = default;
-    GameApplication &operator=(GameApplication&&) & = default;
+    GameApplication(const GameApplication &) = delete;
+    GameApplication & operator=(const GameApplication &) & = delete;
 
-    /// Initialize game, called by run()
+    /// Load configuration from the provided file
+    void loadConfig(const char* filePath);
+
+	/// Set the app title in the config
+	void setTitle(const std::string & title);
+
+	/// Set the initial window size in the config
+	void setInitialWindowSize(int width, int height);
+
+    /// Initialize engine, passing the game config
     void init();
 
     /// Run application
@@ -39,11 +69,7 @@ public:
     /// Exit application
     void stop();
 
-	GLFWwindow* getWindow() const;
-
 private:
-    /// Destroy application, called by destructor
-    void destroy();
     /// Called to process user input and store the new input dynamic states
     void processInput();
     /// Called to apply any callbacks bound to an input, mainly via InputComponents
@@ -53,22 +79,6 @@ private:
     /// Called to render the game view, mainly via RenderComponents
     void render();
 
-    /// Application window
-    GLFWwindow *window = nullptr;
-
-    /// Engine core
-    EngineCore *engineCore = nullptr;
-
-    /// Is the game running
-    bool isRunning;
-    
-    /// Game FPS
-    int fps;
-	/// Time per update (s)
-    double secPerUpdate;
-
-    /// active scene (make it a unique_ptr if you are sure no one else uses it)
-    Scene* currentScene;
 
 };
 
