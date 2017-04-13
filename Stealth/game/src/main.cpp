@@ -2,8 +2,7 @@
 #include <exception>
 #include <iostream>
 
-#include "application/GLFWWindowManager.h"
-#include "application/GameApplication.h"
+#include "application/StealthGameApplication.h"
 
 #define APP_WIDTH 1280
 #define APP_HEIGHT 720
@@ -12,7 +11,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    GameApplication gameApplication;
+	StealthGameApplication gameApplication;
 	gameApplication.setTitle("Stealth C++");
 	gameApplication.setInitialWindowSize(1280, 720);
 
@@ -23,5 +22,6 @@ int main(int argc, char* argv[])
 		cout << "[main] Exception caught: " << e.what() << endl;
 		return EXIT_FAILURE;
 	}
+
     return EXIT_SUCCESS;
 }

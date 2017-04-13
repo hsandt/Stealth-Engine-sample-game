@@ -73,11 +73,11 @@ set(ENGINE_SOURCE_FILES
         engine/src/scene/Scene.cpp
         engine/src/service/InputManager.cpp
         engine/src/utils/Color.cpp
-        )
+        engine/src/scene/SceneManager.cpp engine/include/scene/SceneManager.h engine/src/scene/SceneData.cpp engine/include/scene/SceneData.h)
 
 set(GAME_SOURCE_FILES
-        game/src/application/GameApplication.cpp
-        game/include/application/GameApplication.h
+        engine/src/application/GameApplication.cpp
+        engine/include/application/GameApplication.h
         game/src/controller/AIController.cpp
         game/include/controller/AIController.h
         game/src/controller/Controller.cpp
@@ -97,7 +97,7 @@ set(GAME_SOURCE_FILES
         game/src/entity/Spy.cpp
         game/include/entity/Spy.h
         game/src/main.cpp
-        )
+        game/src/application/StealthGameApplication.cpp game/include/application/StealthGameApplication.h)
 
 set(TEST_ENGINE_SOURCE_FILES
         engine/tests/catch.hpp
