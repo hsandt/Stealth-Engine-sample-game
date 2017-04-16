@@ -113,7 +113,9 @@ set(TEST_ENGINE_SOURCE_FILES
 # Cmake packages
 
 #Set Linker flags
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+# was for debug since some C++11 functions were missing, but won't work with Clang (OS X)
+# if you need those options for GCC, use a Platform/compiler if/else/endif
+#set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
 # or (TEST on Windows)
 
@@ -138,7 +140,13 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 #>> endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
-SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .so .lib)
+SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .so .lib .dylib)
+#SET(CMAKE_FIND_LIBRARY_SUFFIXES .dll .so .lib .a)
+# .a required on OS X if no .dylib is available, temporarily
+# FIXME: this is bad practice to alternate static/dynamic libraries based on OS, since one dist
+# will rely on shared library distributed (with INSTALL) and not the other -> set all to dynamic libs
+# add libGLEW.dylib ...
+# you can keep .lib, but only if you compile equivalent .a for everyone (e.g. Box2D.lib AND Box2D.a)
 
 # Physics
 
@@ -167,11 +175,11 @@ if (OPENGL_FOUND)
 else (OPENGL_FOUND)
     message(SEND_ERROR "OPENGL not found!")
 endif (OPENGL_FOUND)
-message(STATUS OpenGL gl lib: ${OPENGL_gl_LIBRARY})
-message(STATUS OpenGL glu lib: ${OPENGL_glu_LIBRARY})
-message(STATUS OpenGL xmesa lib: ${OPENGL_xmesa_LIBRARY})
-message(STATUS OpenGL include dir: ${OPENGL_INCLUDE_DIR})
-message(STATUS OpenGL libs: ${OPENGL_LIBRARIES})
+message(STATUS "OpenGL gl lib: ${OPENGL_gl_LIBRARY}")
+message(STATUS "OpenGL glu lib: ${OPENGL_glu_LIBRARY}")
+message(STATUS "OpenGL xmesa lib: ${OPENGL_xmesa_LIBRARY}")
+message(STATUS "OpenGL include dir: ${OPENGL_INCLUDE_DIR}")
+message(STATUS "OpenGL libs: ${OPENGL_LIBRARIES}")
 
 # LINUX: I installed libGLEW.so from GLEW 2.0 with some API changes, check compatibility!
 
@@ -188,7 +196,20 @@ message(STATUS OpenGL libs: ${OPENGL_LIBRARIES})
 # static cause: Warning: corrupt .drectve at end of def file
 # glew32s.lib(tmp/glew_static/Release/x64/glew.obj):(.text$mn+0xd): undefined reference to `__imp_wglGetProcAddress'
 #find_library(GLEW glew32s ${PROJECT_SOURCE_DIR}/engine/libs)  # static
-find_library(GLEW GLEW ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+
+# REFACTOR: use FIND_LIBRARY_USE_LIB64_PATHS to search automatically in lib32/lib64 as needed
+# for now, make 64-bit the default
+
+if (${CMAKE_SIZEOF_VOID_P} MATCHES "8")
+    message(STATUS "architecture 64-bit")
+    find_library(GLEW GLEW.2.0.0 ${PROJECT_SOURCE_DIR}/engine/libs)  # libGLEW.2.0.0.dylib
+else()
+    message(STATUS "architecture 32-bit")
+    find_library(GLEW GLEW32 ${PROJECT_SOURCE_DIR}/engine/libs)
+endif()
+
+#find_library(GLEW GLEW ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
+# Windows 32d fallback (I think it means 3.2, not 32-bit!)
 if (NOT GLEW_FOUND)
     find_library(GLEW glew32d ${PROJECT_SOURCE_DIR}/engine/libs)  # static??
 endif(NOT GLEW_FOUND)
@@ -200,16 +221,24 @@ message(STATUS "GLEW lib path: ${GLEW}")
 
 # IMPROVE: create or download FindGLFW.cmake somewhere
 # VERSION NOTES: Windows glfw3.dll is GLFW 3.2.0, libglfw.so.3.2 is GLFW 3.2.1 (API compatible)
-find_library(GLFW glfw ${PROJECT_SOURCE_DIR}/engine/libs)
+
+# search different names based on OS (or rename all the libs uniformly)
+if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    find_library(GLFW glfw.3.2 ${PROJECT_SOURCE_DIR}/engine/libs)  # libglfw.3.2.dylib
+else((${CMAKE_SYSTEM_NAME} MATCHES "Darwin"))
+    find_library(GLFW glfw ${PROJECT_SOURCE_DIR}/engine/libs)  # libglfw.so.3.2 or glfw3.dll
+endif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+message(STATUS "GLFW lib path: ${GLFW}")
+
 #set(GLFW_LOCATION libs)
 #find_package(GLFW)  # does not work with .a (detected in priority with MingW-w64)
-message(STATUS "glfw lib path: ${GLFW}")
-message(STATUS "glfw libs: ${GLFW_LIBRARIES}")
-message(STATUS "glfw include dir: ${GLFW_INCLUDE_DIR}")
+#message(STATUS "glfw lib path: ${GLFW}")
+#message(STATUS "glfw libs: ${GLFW_LIBRARIES}")
+#message(STATUS "glfw include dir: ${GLFW_INCLUDE_DIR}")
 #add_definitions(-DGLFW_DLL) (if using .a, do not use DLL (crashes as can't detect libgcc... and glfw3.dll anyway)
 
 
-
+# TODO: use INSTALL to distribute the shared libaries so the app is portable
 
 # target
 
@@ -278,9 +307,9 @@ endforeach()
 
 target_link_libraries(engine
 #        ${Box2D}
-        ${OPENGL_LIBRARIES}
-        ${GLEW}
-        ${GLFW}
+        "${OPENGL_LIBRARIES}"
+        "${GLEW}"
+        "${GLFW}"
         )
 
 target_link_libraries(test_engine
@@ -289,7 +318,7 @@ target_link_libraries(test_engine
 
 target_link_libraries(StealthCpp
         engine
-        ${SDL2_LIBRARY}
-        ${SDL2_IMAGE_LIBRARIES}
-        ${SDL2_TTF_LIBRARIES}
+#        "${SDL2_LIBRARY}"
+#        "${SDL2_IMAGE_LIBRARIES}"
+#        "${SDL2_TTF_LIBRARIES}"
 )
