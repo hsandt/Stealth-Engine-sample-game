@@ -2,6 +2,16 @@
 	"build_systems":
 	[
 		{
+			"name": "CMake and Make Game",
+			"shell_cmd": "cmake . -Wformat-security && make all",
+			"working_dir": "${project_path}/Stealth",
+		},
+		{
+			"name": "CMake and Make Engine",
+			"shell_cmd": "cmake . -Wformat-security && make all",
+			"working_dir": "${project_path}/Stealth/engine",
+		},
+		{
 			"cmd":
 			[
 				"make"
