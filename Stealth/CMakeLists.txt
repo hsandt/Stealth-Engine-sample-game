@@ -55,6 +55,9 @@ target_link_libraries(StealthCpp
     engine
 )
 
+# REFACTOR: The resources copy code is basically the same as in engine/CMakeLists.txt
+# Make it a macro that takes a folder as parameter and just pass engine/ or game/ depending on the project.
+
 # Scan through engine resources folder for updated files and copy any new or modified files to target resources folder
 # http://qrikko.blogspot.fr/2016/05/cmake-and-how-to-copy-resources-during.html
 message(STATUS "Copying resources from ${PROJECT_SOURCE_DIR}/engine/resources...")
@@ -86,9 +89,6 @@ foreach(resource ${resources})
             COMMENT "Moving updated engine resource-file '${filename}'"
     )
 endforeach()
-
-# TODO: copy resources for the game itself, reusing code above with a variable folder prefix
-# that is first "engine" and then "game"
 
 # Allow to run game executable with "make run"
 add_custom_target(run
