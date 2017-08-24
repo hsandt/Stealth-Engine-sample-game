@@ -19,8 +19,9 @@ int main(int argc, char* argv[])
 		gameApplication.init();
 		gameApplication.run();
 	} catch (const exception& e) {
-		cout << "[main] Exception caught: " << e.what() << endl;
-		return EXIT_FAILURE;
+		throw;  // prefer throwing to see red message at the end
+//		cout << "[main] Exception caught: " << e.what() << endl;
+//		return EXIT_FAILURE;
 	}
 
     return EXIT_SUCCESS;

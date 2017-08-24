@@ -21,26 +21,28 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")  # executable outp
 # Input files
 
 set(GAME_SOURCE_FILES
-        game/src/controller/AIController.cpp
+        game/include/application/StealthGameApplication.h
         game/include/controller/AIController.h
-        game/src/controller/Controller.cpp
+        game/include/controller/AIController.h
         game/include/controller/Controller.h
-        game/src/controller/PlayerController.cpp
         game/include/controller/PlayerController.h
-        game/src/controller/AIController.cpp
-        game/include/controller/AIController.h
-        game/src/entity/Character.cpp
-        game/include/entity/Character.h
-        game/src/entity/PlayerCharacter.cpp
-        game/include/entity/PlayerCharacter.h
-        game/src/entity/AICharacter.cpp
         game/include/entity/AICharacter.h
-        game/src/entity/Guard.cpp
+        game/include/entity/Character.h
         game/include/entity/Guard.h
-        game/src/entity/Spy.cpp
+        game/include/entity/PlayerCharacter.h
         game/include/entity/Spy.h
+        game/src/application/StealthGameApplication.cpp
+        game/src/controller/AIController.cpp
+        game/src/controller/AIController.cpp
+        game/src/controller/Controller.cpp
+        game/src/controller/PlayerController.cpp
+        game/src/entity/AICharacter.cpp
+        game/src/entity/Character.cpp
+        game/src/entity/Guard.cpp
+        game/src/entity/PlayerCharacter.cpp
+        game/src/entity/Spy.cpp
         game/src/main.cpp
-        game/src/application/StealthGameApplication.cpp game/include/application/StealthGameApplication.h)
+        )
 
 
 # Executable

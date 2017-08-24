@@ -19,7 +19,7 @@ StealthGameApplication::StealthGameApplication() : GameApplication()
 
 StealthGameApplication::~StealthGameApplication()
 {
-	cout << "[GAME] StealthGameApplication destroyed" << endl;
+	LOG("[GAME] Destroying StealthGameApplication...");
 }
 
 void StealthGameApplication::onLoadNextScene()
@@ -29,4 +29,7 @@ void StealthGameApplication::onLoadNextScene()
 
 	spy->transform->position = {10.0f, 10.0f};
 	guard->transform->position = {20.0f, 30.0f};
+
+//	GameObject* go = EngineCore::getFactory()->CreateGameObject<GameObject>();
+//	go->addComponent<Transform>();
 }
