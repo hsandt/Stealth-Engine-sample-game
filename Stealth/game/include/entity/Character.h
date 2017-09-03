@@ -40,6 +40,8 @@ public:
 	/// Character update: apply movement from control
 	virtual void update(float dt) override;
 
+	void init() override;
+
 protected:
 	/* Pointers */
 

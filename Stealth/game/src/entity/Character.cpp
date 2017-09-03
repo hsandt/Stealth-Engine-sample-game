@@ -22,7 +22,7 @@ using namespace std;
 
 Character::Character() : Actor()
 {
-	addComponent<SquareRenderComponent>();
+//	addComponent<SquareRenderComponent>();
 }
 
 Character::~Character()
@@ -32,6 +32,14 @@ Character::~Character()
 		LOG("[CHARACTER] Deleting controller");
 		delete controller;
 	}
+}
+
+void Character::init()
+{
+	Actor::init();
+
+	// TEST
+	addComponent<SquareRenderComponent>();
 }
 
 void Character::update(float dt) {

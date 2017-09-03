@@ -5,10 +5,11 @@
 
 #include "controller/Controller.h"
 
-Controller::~Controller() {
+
+Controller::Controller() {
 
 }
 
-Controller::Controller() {
+Controller::~Controller() {
 
 }
