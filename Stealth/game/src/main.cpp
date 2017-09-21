@@ -15,14 +15,15 @@ int main(int argc, char* argv[])
 	gameApplication.setTitle("Stealth C++");
 	gameApplication.setInitialWindowSize(1280, 720);
 
-	try {
+	// don't catch exceptions at all, so that exception can be debugged directly where it occurs
+//	try {
 		gameApplication.init();
 		gameApplication.run();
-	} catch (const exception& e) {
-		throw;  // prefer throwing to see red message at the end
+//	} catch (const exception& e) {
+//		throw;  // prefer throwing to see a message at the end
 //		cout << "[main] Exception caught: " << e.what() << endl;
 //		return EXIT_FAILURE;
-	}
+//	}
 
     return EXIT_SUCCESS;
 }

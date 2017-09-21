@@ -15,7 +15,7 @@ PlayerCharacter::PlayerCharacter() : Character() {
 }
 
 PlayerCharacter::~PlayerCharacter() {
-	delete controller;
+	// !! Do not delete inputComponent here! It's a weak pointer, GameObject takes care of deleting all components!
 }
 
 void PlayerCharacter::init()
