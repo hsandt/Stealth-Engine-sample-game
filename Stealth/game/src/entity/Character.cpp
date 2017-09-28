@@ -47,8 +47,8 @@ void Character::update(float dt) {
     // if controller, let controller set moveIntention
     if (controller) {
         // move based on moveIntention
-//        transform->position += controller->getMoveIntention() * speed;
-        transform->setPosition(transform->position + controller->getMoveIntention() * speed);
+		// DEBUG: comment to check Rigidbody motion in case of conflicts
+//        transform->setPosition(transform->position + controller->getMoveIntention() * speed);
     }
     else {
         cout << "No controller found on Character" << endl;
