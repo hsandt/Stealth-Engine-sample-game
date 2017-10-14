@@ -11,7 +11,6 @@
 
 PlayerCharacter::PlayerCharacter() : Character() {
 	controller = new PlayerController();
-//	inputComponent = addComponent<InputComponent>();
 }
 
 PlayerCharacter::~PlayerCharacter() {
@@ -22,7 +21,6 @@ void PlayerCharacter::init()
 {
 	Character::init();
 
-	// TEST
 	inputComponent = addComponent<InputComponent>();
 
 	// pure virtual methods need to be called outside constructor for polymorphism to work
