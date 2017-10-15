@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "application/StealthGameApplication.h"
+#include "application/RunMode.h"
 
 #define APP_WIDTH 1280
 #define APP_HEIGHT 720
@@ -17,7 +18,7 @@ int main(int argc, char* argv[])
 
 	// don't catch exceptions at all, so that exception can be debugged directly where it occurs
 //	try {
-		gameApplication.init();
+		gameApplication.init(RunMode::Play);
 		gameApplication.run();
 //	} catch (const exception& e) {
 //		throw;  // prefer throwing to see a message at the end
