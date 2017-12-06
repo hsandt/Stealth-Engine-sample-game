@@ -10,7 +10,6 @@
 #include "entity/PlayerCharacter.h"
 
 PlayerCharacter::PlayerCharacter() : Character() {
-	controller = new PlayerController();
 }
 
 PlayerCharacter::~PlayerCharacter() {
@@ -22,6 +21,7 @@ void PlayerCharacter::init()
 	Character::init();
 
 	inputComponent = addComponent<InputComponent>();
+	controller = addComponent<PlayerController>();
 
 	// pure virtual methods need to be called outside constructor for polymorphism to work
 	setupInputBindings();
@@ -30,33 +30,4 @@ void PlayerCharacter::init()
 void PlayerCharacter::update(float dt)
 {
 	Character::update(dt);
-
-	// delegates not ready so use this instead of key bindings
-	if (EngineCore::getInputManager()->isKeyDown(Key::LEFT))
-	{
-		moveHorizontal(-1.f);
-	}
-	else if (EngineCore::getInputManager()->isKeyDown(Key::RIGHT))
-	{
-		moveHorizontal(1.f);
-
-	}
-	else
-	{
-		moveHorizontal(0.f);
-	}
-
-	if (EngineCore::getInputManager()->isKeyDown(Key::DOWN))
-	{
-		moveVertical(-1.f);
-
-	}
-	else if (EngineCore::getInputManager()->isKeyDown(Key::UP))
-	{
-		moveVertical(1.f);
-	}
-	else
-	{
-		moveVertical(0.f);
-	}
 }

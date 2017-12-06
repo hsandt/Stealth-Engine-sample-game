@@ -24,17 +24,6 @@ public:
     Character(Character&&) = delete;
     Character &operator=(Character&&) & = delete;
 
-	/* Set control intention methods */
-
-	/// Set the control move intention to a normalized intention vector
-	void move(Vector2 moveVector);
-
-	/// Set the control move horizontal intention to a normalized intention vector
-	void moveHorizontal(float value);
-
-	/// Set the control move vertical intention to a normalized intention vector
-	void moveVertical(float value);
-
 	/* Update */
 
 	/// Character update: apply movement from control

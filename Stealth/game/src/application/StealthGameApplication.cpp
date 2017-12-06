@@ -32,9 +32,10 @@ void StealthGameApplication::onLoadNextScene()
 	Actor* guard = EngineCore::getFactory()->CreateGameObject<Guard>();
 
 	spy->transform->setPosition({50.0f, 200.0f});
-	guard->transform->setPosition({20.0f, 30.0f});
+	guard->transform->setPosition({20.0f, 80.0f});
 
 	spy->addComponent<Rigidbody>()->addBoxShape(10.f, 10.f);
+	guard->addComponent<Rigidbody>()->addBoxShape(10.f, 10.f);
 
 
 }

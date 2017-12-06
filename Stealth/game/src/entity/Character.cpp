@@ -54,23 +54,6 @@ void Character::update(float dt) {
     }
 }
 
-void Character::move(Vector2 moveVector)
-{
-	controller->setMoveIntention(moveVector);
-}
-
-void Character::moveHorizontal(float value)
-{
-	Vector2 newMoveIntention {value, controller->getMoveIntention().y()};
-	controller->setMoveIntention(newMoveIntention);
-}
-
-void Character::moveVertical(float value)
-{
-	Vector2 newMoveIntention {controller->getMoveIntention().x(), value};
-	controller->setMoveIntention(newMoveIntention);
-}
-
 /*
 void Character::render(Renderer *renderer) {
      //cout << "rendering at " << go -> GetPosition().x() << endl;

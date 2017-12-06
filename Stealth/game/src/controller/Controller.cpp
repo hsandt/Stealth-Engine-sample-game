@@ -5,7 +5,6 @@
 
 #include "controller/Controller.h"
 
-
 Controller::Controller() {
 
 }

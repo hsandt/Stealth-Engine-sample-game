@@ -24,5 +24,5 @@ Guard::~Guard()
 
 void Guard::updateIntention()
 {
-	moveHorizontal(1.0f);
+//	moveHorizontal(1.0f);
 }

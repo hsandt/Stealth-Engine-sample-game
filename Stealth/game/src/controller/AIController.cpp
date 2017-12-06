@@ -12,3 +12,8 @@ AIController::AIController() {
 AIController::~AIController() {
 
 }
+
+void AIController::update()
+{
+	Component::update();
+}

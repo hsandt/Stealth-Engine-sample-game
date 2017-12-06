@@ -13,10 +13,15 @@ public:
     AIController();
     virtual ~AIController();
 
-    AIController(const AIController &) = delete;
+	static std::string getStringID() { return "AIController"; }
+	std::string getClassStringID() const override { return getStringID(); }
+
+	AIController(const AIController &) = delete;
     AIController &operator=(const AIController &) & = delete;
     AIController(AIController &&) = default;
     AIController &operator=(AIController &&) & = default;
+
+	void update() override;
 
 private:
 

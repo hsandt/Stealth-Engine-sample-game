@@ -9,11 +9,13 @@
 // GCC7: use algorithm std::clamp
 //#include <algorithm>
 #include <iostream>
+#include <component/ScriptComponent.h>
 
+#include "component/ActorComponent.h"
 #include "geometry/Vector2.h"
 #include "utils/MathUtil.h"
 
-class Controller {
+class Controller : public ScriptComponent {
 
 public:
 	Controller();
