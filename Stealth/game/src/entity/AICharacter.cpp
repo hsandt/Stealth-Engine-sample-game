@@ -8,7 +8,6 @@
 #include "entity/AICharacter.h"
 
 AICharacter::AICharacter() : Character() {
-	controller = new AIController();
 }
 
 AICharacter::~AICharacter() {

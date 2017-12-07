@@ -13,7 +13,7 @@ AIController::~AIController() {
 
 }
 
-void AIController::update()
+void AIController::update(float dt)
 {
-	Component::update();
+	Component::update(dt);
 }

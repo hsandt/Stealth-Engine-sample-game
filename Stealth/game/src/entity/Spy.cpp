@@ -7,6 +7,7 @@
 //
 
 #include <string>
+#include <component/CharacterMotor.h>
 
 #include "entity/Character.h"
 #include "entity/PlayerCharacter.h"
@@ -20,7 +21,6 @@ using namespace std;
 
 Spy::Spy() : PlayerCharacter()
 {
-    speed = 2;
 }
 
 Spy::~Spy()

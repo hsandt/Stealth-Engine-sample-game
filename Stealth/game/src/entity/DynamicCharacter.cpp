@@ -1,5 +1,5 @@
 //
-//  Character.cpp
+//  DynamicCharacter.cpp
 //  Stealth
 //
 //  Created by L Nguyen Huu on 28/01/27 H.
@@ -11,40 +11,42 @@
 
 #include "component/Transform.h"
 #include "debug/Logger.h"
-#include "entity/Character.h"
-#include "entity/PlayerCharacter.h"
+#include "entity/DynamicCharacter.h"
+#include "entity/PlayerDynamicCharacter.h"
 
-#include "renderer/Renderer.h"
-#include "component/CharacterMotor.h"
+#include "component/DynamicCharacterMotor.h"
 #include "component/RenderComponent.h"
 #include "component/SquareRenderComponent.h"
+#include "physics/Rigidbody.h"
+#include "renderer/Renderer.h"
 
 using namespace std;
 
-Character::Character() : Actor()
+DynamicCharacter::DynamicCharacter() : Actor()
 {
 //	addComponent<SquareRenderComponent>();
 }
 
-Character::~Character()
+DynamicCharacter::~DynamicCharacter()
 {
 }
 
-void Character::init()
+void DynamicCharacter::init()
 {
 	Actor::init();
 
-	addComponent<CharacterMotor>();
+	addComponent<DynamicCharacterMotor>();
+	addComponent<Rigidbody>()->addBoxShape({10.f, 10.f});
 
 	// TEST
 	addComponent<SquareRenderComponent>();
 }
 
-void Character::update(float dt) {
+void DynamicCharacter::update(float dt) {
 }
 
 /*
-void Character::render(Renderer *renderer) {
+void DynamicCharacter::render(Renderer *renderer) {
      //cout << "rendering at " << go -> GetPosition().x() << endl;
         //BOOST_LOG_TRIVIAL(warning) << "test";
 	shared_ptr<RenderComponent> renderComponent = getComponent<RenderComponent>();

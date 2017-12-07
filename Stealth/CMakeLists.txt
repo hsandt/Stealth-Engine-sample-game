@@ -31,24 +31,32 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")  # executable outp
 
 set(GAME_SOURCE_FILES
         game/include/application/StealthGameApplication.h
+        game/include/component/CharacterMotor.h
+        game/include/component/DynamicCharacterMotor.h
         game/include/controller/AIController.h
         game/include/controller/AIController.h
         game/include/controller/Controller.h
         game/include/controller/PlayerController.h
         game/include/entity/AICharacter.h
         game/include/entity/Character.h
+        game/include/entity/DynamicCharacter.h
         game/include/entity/Guard.h
         game/include/entity/PlayerCharacter.h
+        game/include/entity/PlayerDynamicCharacter.h
         game/include/entity/Spy.h
         game/src/application/StealthGameApplication.cpp
+        game/src/component/CharacterMotor.cpp
+        game/src/component/DynamicCharacterMotor.cpp
         game/src/controller/AIController.cpp
         game/src/controller/AIController.cpp
         game/src/controller/Controller.cpp
         game/src/controller/PlayerController.cpp
         game/src/entity/AICharacter.cpp
         game/src/entity/Character.cpp
+        game/src/entity/DynamicCharacter.cpp
         game/src/entity/Guard.cpp
         game/src/entity/PlayerCharacter.cpp
+        game/src/entity/PlayerDynamicCharacter.cpp
         game/src/entity/Spy.cpp
         game/src/main.cpp
         )

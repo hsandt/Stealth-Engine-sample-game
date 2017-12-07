@@ -1,5 +1,5 @@
 //
-//  Character.h
+//  DynamicCharacter.h
 //  Stealth
 //
 //  Created by L Nguyen Huu on 28/01/27 H.
@@ -14,19 +14,19 @@
 #include "controller/PlayerController.h"
 
 /// Top-view character: an actor who can move on XY
-class Character : public Actor
+class DynamicCharacter : public Actor
 {
 public:
-    Character();
-    virtual ~Character();
-    Character(const Character &) = delete;
-    Character &operator=(const Character &) & = delete;
-    Character(Character&&) = delete;
-    Character &operator=(Character&&) & = delete;
+    DynamicCharacter();
+    virtual ~DynamicCharacter();
+    DynamicCharacter(const DynamicCharacter &) = delete;
+    DynamicCharacter &operator=(const DynamicCharacter &) & = delete;
+    DynamicCharacter(DynamicCharacter&&) = delete;
+    DynamicCharacter &operator=(DynamicCharacter&&) & = delete;
 
 	/* Update */
 
-	/// Character update: apply movement from control
+	/// DynamicCharacter update: apply movement from control
 	virtual void update(float dt) override;
 
 	void init() override;
@@ -36,6 +36,6 @@ protected:
 	/* Identifier */
 
 	/// Return the default name of a new instance of this game object
-	virtual std::string getDefaultName() const override { return "Character"; }
+	virtual std::string getDefaultName() const override { return "DynamicCharacter"; }
 };
 

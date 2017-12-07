@@ -22,9 +22,9 @@ PlayerController::~PlayerController() {
 
 }
 
-void PlayerController::update()
+void PlayerController::update(float dt)
 {
-	Component::update();
+	Component::update(dt);
 
 	// delegates not ready so use this instead of key bindings
 	if (EngineCore::getInputManager()->isKeyDown(Key::LEFT))

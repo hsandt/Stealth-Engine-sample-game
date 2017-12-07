@@ -22,7 +22,7 @@ public:
     PlayerController(PlayerController &&) = default;
     PlayerController &operator=(PlayerController &&) & = default;
 
-	void update() override;
+	void update(float dt) override;
 
 private:
 	/// Set the control move horizontal intention to a normalized intention vector

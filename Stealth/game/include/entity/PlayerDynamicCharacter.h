@@ -4,17 +4,17 @@
 
 #pragma once
 
-#include "entity/Character.h"
+#include "entity/DynamicCharacter.h"
 
 /**  Character controlled by the player
  *
  */
-class PlayerCharacter : public Character {
+class PlayerDynamicCharacter : public DynamicCharacter {
 public:
-	PlayerCharacter();
-	virtual ~PlayerCharacter();
-	PlayerCharacter(const PlayerCharacter &) = delete;
-	PlayerCharacter &operator=(const PlayerCharacter &) & = delete;
+	PlayerDynamicCharacter();
+	virtual ~PlayerDynamicCharacter();
+	PlayerDynamicCharacter(const PlayerDynamicCharacter &) = delete;
+	PlayerDynamicCharacter &operator=(const PlayerDynamicCharacter &) & = delete;
 
 	virtual void setupInputBindings() {}
 
@@ -26,7 +26,7 @@ protected:
 	/* Identifier */
 
 	/// Return the default name of a new instance of this game object
-	virtual std::string getDefaultName() const override { return "PlayerCharacter"; }
+	virtual std::string getDefaultName() const override { return "PlayerDynamicCharacter"; }
 
 	/* Components */
 

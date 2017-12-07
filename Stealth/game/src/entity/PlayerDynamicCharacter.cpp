@@ -2,24 +2,23 @@
 // Created by wing on 17/02/12.
 //
 
-#include "entity/PlayerCharacter.h"
+#include "entity/PlayerDynamicCharacter.h"
 
 #include "entity/Character.h"
-#include "component/CharacterMotor.h"
 #include "controller/PlayerController.h"
 #include "core/EngineCore.h"
 #include "service/InputManager.h"
 
-PlayerCharacter::PlayerCharacter() : Character() {
+PlayerDynamicCharacter::PlayerDynamicCharacter() : DynamicCharacter() {
 }
 
-PlayerCharacter::~PlayerCharacter() {
+PlayerDynamicCharacter::~PlayerDynamicCharacter() {
 	// !! Do not delete inputComponent here! It's a weak pointer, GameObject takes care of deleting all components!
 }
 
-void PlayerCharacter::init()
+void PlayerDynamicCharacter::init()
 {
-	Character::init();
+	DynamicCharacter::init();
 
 	inputComponent = addComponent<InputComponent>();
 	addComponent<PlayerController>();
@@ -28,7 +27,7 @@ void PlayerCharacter::init()
 	setupInputBindings();
 }
 
-void PlayerCharacter::update(float dt)
+void PlayerDynamicCharacter::update(float dt)
 {
-	Character::update(dt);
+	DynamicCharacter::update(dt);
 }

@@ -21,7 +21,7 @@ public:
     AIController(AIController &&) = default;
     AIController &operator=(AIController &&) & = default;
 
-	void update() override;
+	void update(float dt) override;
 
 private:
 
