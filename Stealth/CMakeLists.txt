@@ -74,40 +74,8 @@ target_link_libraries(StealthCpp
     engine
 )
 
-# REFACTOR: The resources copy code is basically the same as in engine/CMakeLists.txt
-# Make it a macro that takes a folder as parameter and just pass engine/ or game/ depending on the project.
-
-# Scan through engine resources folder for updated files and copy any new or modified files to target resources folder
-# http://qrikko.blogspot.fr/2016/05/cmake-and-how-to-copy-resources-during.html
-message(STATUS "Copying resources from ${PROJECT_SOURCE_DIR}/engine/resources...")
-file (GLOB_RECURSE resources "${PROJECT_SOURCE_DIR}/engine/resources/*.*")
-
-foreach(resource ${resources})
-    get_filename_component(filename ${resource} NAME)
-    get_filename_component(dir ${resource} DIRECTORY)
-    get_filename_component(dirname ${dir} NAME)
-
-    # set output to the relative resource directory (including trailing "/")
-    set (output "")
-    while(NOT ${dirname} STREQUAL resources)
-        get_filename_component(path_component ${dir} NAME)
-        set (output "${path_component}/${output}")
-        get_filename_component(dir ${dir} DIRECTORY)
-        get_filename_component(dirname ${dir} NAME)
-    endwhile()
-
-    set(output "${CMAKE_BINARY_DIR}/bin/resources/${output}${filename}")
-
-    # Add POST_BUILD command to copy resource file
-    # http://stackoverflow.com/questions/13429656/cmake-how-to-copy-contents-of-a-directory-into-build-directory-after-make
-    add_custom_command(
-            TARGET StealthCpp POST_BUILD COMMAND
-            ${CMAKE_COMMAND} -E copy_if_different
-            ${resource}
-            ${output}
-            COMMENT "Moving updated engine resource-file '${filename}'"
-    )
-endforeach()
+# Copy game-specific resources
+add_copy_command(StealthCpp "resources")
 
 # Allow to run game executable with "make run"
 add_custom_target(run
