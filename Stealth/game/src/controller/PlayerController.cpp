@@ -10,7 +10,7 @@
 #include "core/EngineCore.h"
 #include "controller/Controller.h"
 #include "input/Key.h"
-#include "service/InputManager.h"
+#include "input/InputManager.h"
 
 using namespace std;
 

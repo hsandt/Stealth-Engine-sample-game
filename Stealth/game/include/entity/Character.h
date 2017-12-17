@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include "entity/GameObject.h"
-#include "entity/Actor.h"
+#include "world/GameObject.h"
+#include "world/Actor.h"
 #include "controller/Controller.h"
 #include "controller/PlayerController.h"
 

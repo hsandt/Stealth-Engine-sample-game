@@ -5,10 +5,10 @@
 
 #include "component/DynamicCharacterMotor.h"
 
-#include "entity/Actor.h"
+#include "world/Actor.h"
 #include "controller/Controller.h"
 #include "component/Transform.h"
-#include "physics/Rigidbody.h"
+#include "component/Rigidbody.h"
 
 DynamicCharacterMotor::DynamicCharacterMotor() {
 

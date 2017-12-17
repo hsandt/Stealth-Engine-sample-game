@@ -5,7 +5,7 @@
 
 #include "component/CharacterMotor.h"
 
-#include "entity/Actor.h"
+#include "world/Actor.h"
 #include "controller/Controller.h"
 #include "component/Transform.h"
 

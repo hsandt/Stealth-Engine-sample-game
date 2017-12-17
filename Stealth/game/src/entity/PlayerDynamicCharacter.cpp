@@ -7,7 +7,7 @@
 #include "entity/Character.h"
 #include "controller/PlayerController.h"
 #include "core/EngineCore.h"
-#include "service/InputManager.h"
+#include "input/InputManager.h"
 
 PlayerDynamicCharacter::PlayerDynamicCharacter() : DynamicCharacter() {
 }

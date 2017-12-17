@@ -10,14 +10,14 @@
 #include "GLFW/glfw3.h"
 
 #include "component/Transform.h"
-#include "debug/Logger.h"
+#include "core/Logger.h"
 #include "entity/DynamicCharacter.h"
 #include "entity/PlayerDynamicCharacter.h"
 
 #include "component/DynamicCharacterMotor.h"
 #include "component/RenderComponent.h"
 #include "component/SquareRenderComponent.h"
-#include "physics/Rigidbody.h"
+#include "component/Rigidbody.h"
 #include "renderer/Renderer.h"
 
 using namespace std;
@@ -53,6 +53,6 @@ void DynamicCharacter::render(Renderer *renderer) {
 	if (renderComponent != nullptr)
 		render(renderer);
 	else
-		cout << "No render component on character " << name << endl;
+		cout << "No render components on character " << name << endl;
 }
 */

@@ -12,8 +12,8 @@
 #include <component/ScriptComponent.h>
 
 #include "component/ActorComponent.h"
-#include "geometry/Vector2.h"
-#include "utils/MathUtil.h"
+#include "core/math/Vector2.h"
+#include "core/math/MathUtil.h"
 
 class Controller : public ScriptComponent {
 

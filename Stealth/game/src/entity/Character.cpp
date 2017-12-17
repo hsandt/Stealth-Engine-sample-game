@@ -10,7 +10,7 @@
 #include "GLFW/glfw3.h"
 
 #include "component/Transform.h"
-#include "debug/Logger.h"
+#include "core/Logger.h"
 #include "entity/Character.h"
 #include "entity/PlayerCharacter.h"
 
@@ -46,11 +46,11 @@ void Character::update(float dt) {
 /*
 void Character::render(Renderer *renderer) {
      //cout << "rendering at " << go -> GetPosition().x() << endl;
-        //BOOST_LOG_TRIVIAL(warning) << "test";
+        //BOOST_LOG_TRIVIAL(warning) << "tests";
 	shared_ptr<RenderComponent> renderComponent = getComponent<RenderComponent>();
 	if (renderComponent != nullptr)
 		render(renderer);
 	else
-		cout << "No render component on character " << name << endl;
+		cout << "No render components on character " << name << endl;
 }
 */

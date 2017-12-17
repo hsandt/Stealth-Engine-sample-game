@@ -9,7 +9,7 @@
 #include "entity/Spy.h"
 #include "component/Transform.h"
 #include "physics/PhysicsManager.h"
-#include "physics/Rigidbody.h"
+#include "component/Rigidbody.h"
 
 #include "application/StealthGameApplication.h"
 
