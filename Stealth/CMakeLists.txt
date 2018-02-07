@@ -10,7 +10,9 @@ add_subdirectory(engine)
 # Flags
 
 # C++17
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
+set(CMAKE_CXX_STANDARD 17)  # more compatibility, as g++ uses -std=c++17 and clang uses -std=c++1z
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-logical-op-parentheses")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
 
 # Produce debugging information on debug, optimize on release
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
@@ -23,7 +25,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -D_GLIBCXX_DEBUG")
 
 # Output paths
 
-set(CMAKE_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build")
+set(CMAKE_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build-${CMAKE_BUILD_TYPE}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")  # executable output directory
 
 
@@ -69,13 +71,15 @@ add_executable(StealthCpp ${GAME_SOURCE_FILES})
 target_include_directories(StealthCpp PUBLIC engine/include)
 target_include_directories(StealthCpp PUBLIC game/include)
 
+# Copy game-specific resources
+message(STATUS "Copying game resources from ${PROJECT_SOURCE_DIR}...")
+add_copy_command(StealthCpp "resources")
+add_copy_command(StealthCpp "engine/resources")  # may cause conflicts with game resources if same name, consider subfolder "engine"
+
 # Link to static engine library
 target_link_libraries(StealthCpp
     engine
 )
-
-# Copy game-specific resources
-add_copy_command(StealthCpp "resources")
 
 # Allow to run game executable with "make run"
 add_custom_target(run
