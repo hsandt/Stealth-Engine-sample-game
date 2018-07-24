@@ -4,588 +4,656 @@
 		"selected_items":
 		[
 			[
-				"APi",
-				"APickup::APickup"
+				"curren",
+				"current_preview_text"
 			],
 			[
-				"Atta",
-				"AttachTo"
+				"preview",
+				"preview_text"
 			],
 			[
-				"Pu",
-				"PickupMesh"
+				"hov",
+				"hovered"
 			],
 			[
-				"Crea",
-				"CreateDefaultSubobject"
+				"icon",
+				"icon_filename"
 			],
 			[
-				"Pick",
-				"PickupMesh"
+				"cla",
+				"class\tNew Class"
 			],
 			[
-				"Ca",
-				"Category"
+				"raise",
+				"raise_motivation"
 			],
 			[
-				"BpR",
-				"BlueprintReadOnly"
+				"accepte",
+				"accepted_candidates"
 			],
 			[
-				"rend",
-				"renderer"
+				"candsta",
+				"candidate_states"
 			],
 			[
-				"SDL_",
-				"SDL_Renderer"
+				"candid",
+				"candidates"
 			],
 			[
-				"Sc",
-				"Scene::Scene"
+				"skill",
+				"skillset_hud"
 			],
 			[
-				"get",
-				"getGameObjects"
+				"candi",
+				"candidate"
 			],
 			[
-				"current",
-				"currentScene"
+				"Skillset",
+				"SkillsetCharacter"
 			],
 			[
-				"game",
-				"gameObjects"
+				"cnd",
+				"candidate_state"
+			],
+			[
+				"should",
+				"should_display"
+			],
+			[
+				"nb_re",
+				"nb_new_members_required"
+			],
+			[
+				"c",
+				"candidates"
+			],
+			[
+				"rejec",
+				"rejected_candidates"
+			],
+			[
+				"please",
+				"please_come"
+			],
+			[
+				"candidate",
+				"candidate_state"
+			],
+			[
+				"cand",
+				"candidate_index"
+			],
+			[
+				"acc",
+				"accepted_candidates"
+			],
+			[
+				"can",
+				"candidate"
+			],
+			[
+				"candida",
+				"candidates"
+			],
+			[
+				"vis",
+				"visited"
+			],
+			[
+				"visit",
+				"visit_candidate"
+			],
+			[
+				"candia",
+				"candidate_index"
+			],
+			[
+				"labe",
+				"label_suffix"
+			],
+			[
+				"Chara",
+				"CharacterData"
+			],
+			[
+				"strong",
+				"strong_opponents"
+			],
+			[
+				"picked",
+				"picked_values"
+			],
+			[
+				"brie",
+				"briefing_end"
+			],
+			[
+				"GetAct",
+				"GetActorRotation"
+			],
+			[
+				"GetControl",
+				"GetControlRotation"
+			],
+			[
+				"Move",
+				"MovementInput"
+			],
+			[
+				"printc",
+				"printcvector"
+			],
+			[
+				"in",
+				"inc\t#include <…>"
+			],
+			[
+				"print",
+				"printcv"
+			],
+			[
+				"swi",
+				"switch"
+			],
+			[
+				"Vec",
+				"Vector2"
+			],
+			[
+				"DebugMenu",
+				"DebugMenuValueItem"
 			],
 			[
 				"for",
-				"forv	Vector For Loop"
+				"fore\tFor Each"
 			],
 			[
-				"fo",
-				"for	For Loop"
+				"Menu",
+				"MenuItem"
 			],
 			[
-				"proc",
-				"processInput"
+				"game",
+				"gameObject"
 			],
 			[
-				"Ga",
-				"GameApplication::GameApplication"
+				"pause",
+				"pauseMenuUI"
 			],
 			[
-				"Sw",
-				"SwitchBlockState"
+				"InGa",
+				"InGameManager.Instance"
 			],
 			[
-				"Sys",
-				"SystemManager"
+				"Curre",
+				"CurrentValue"
 			],
 			[
-				"Swit",
-				"SwitchBlockManager"
+				"Event",
+				"EventSystem"
 			],
 			[
-				"Res",
-				"ResumeGamePhysics"
+				"UnityE",
+				"UnityEvent"
 			],
 			[
-				"Paus",
+				"Unity",
+				"UnityEngine"
+			],
+			[
+				"names",
+				"namespace"
+			],
+			[
+				"log",
+				"logfv\tDebug.LogFormat var"
+			],
+			[
+				"abs",
+				"abstract"
+			],
+			[
+				"Master",
+				"MasterBehaviour"
+			],
+			[
+				"came",
+				"cameraScrolling"
+			],
+			[
+				"Particle",
+				"ParticleSystems"
+			],
+			[
+				"plate",
+				"player1.GetButtonDown(\"UISubmit"
+			],
+			[
+				"Close",
+				"ClosePauseMenu"
+			],
+			[
+				"Open",
+				"Opening"
+			],
+			[
+				"alien",
+				"alienMap"
+			],
+			[
+				"Game",
+				"GameManager"
+			],
+			[
+				"Sngl",
+				"SingletonManager"
+			],
+			[
+				"Ve",
+				"Vector2"
+			],
+			[
+				"Gizmos",
+				"GizmosUtil"
+			],
+			[
+				"Physi",
+				"Physics2D"
+			],
+			[
+				"newVel",
+				"newVelocity"
+			],
+			[
+				"Sess",
+				"SessionManager.Instance"
+			],
+			[
+				"PauseG",
 				"PauseGamePhysics"
 			],
 			[
 				"Pause",
-				"PauseGame"
+				"PauseGamePhysics"
 			],
 			[
-				"was",
-				"wasAudioSourcePlaying"
+				"inGam",
+				"inGameManagers"
 			],
 			[
-				"Resume",
-				"ResumeGame"
+				"PauSin",
+				"PausableSingletonManager"
 			],
 			[
-				"swit",
-				"switchBlocks"
+				"Paus",
+				"PausableBehaviour"
 			],
 			[
-				"Float",
-				"FloatLayout"
+				"Append",
+				"AppendCallback"
 			],
 			[
-				"size",
-				"size_hint"
+				"curre",
+				"currentValue"
 			],
 			[
-				"center",
-				"center_x"
+				"Res",
+				"Restore"
 			],
 			[
-				"Lat",
-				"LayoutWidget"
+				"Dialogu",
+				"DialogueManager"
 			],
 			[
-				"Show",
-				"ShowPauseMenu"
+				"Dialog",
+				"DialogueEnded"
 			],
 			[
-				"Hi",
-				"HidePauseMenu"
+				"Exe",
+				"Execute"
 			],
 			[
-				"incl",
-				"includeInactive"
+				"event",
+				"eventFlags"
 			],
 			[
-				"Avatar",
-				"AvatarManager"
+				"world",
+				"worldCanvas"
 			],
 			[
-				"mess",
-				"messageName"
+				"bal",
+				"blackBarTop"
 			],
 			[
-				"mes",
-				"messageCanvas"
+				"black",
+				"blackBarBottom"
 			],
 			[
-				"pauseME",
-				"PauseMenuCanvas"
+				"chara",
+				"characterHighlightTransitionDuration"
 			],
 			[
-				"re",
-				"resume"
+				"pickPar",
+				"pickParticlePlayer"
 			],
 			[
-				"pause",
-				"pauseMenu"
+				"Update",
+				"UpdateVectors"
 			],
 			[
-				"paus",
-				"pauseMenu"
+				"PasS",
+				"ParticleSystem"
 			],
 			[
-				"Eve",
-				"EventSystem"
+				"Pati",
+				"ParticleSystem"
 			],
 			[
-				"Find",
-				"FindWithTagOrDie"
+				"type",
+				"typeof"
 			],
 			[
-				"GetCo",
-				"GetComponentOrDie"
+				"rev",
+				"revealPowerUp"
 			],
 			[
-				"Set",
-				"SetWithTagIfNullOrDie"
+				"revel",
+				"RevealPowerUp"
 			],
 			[
-				"Finw",
-				"FindWithTagOrDie"
-			],
-			[
-				"Game",
-				"GameObject"
-			],
-			[
-				"messV",
-				"messageCanvas"
-			],
-			[
-				"MEssage",
-				"messageCanvas"
-			],
-			[
-				"clas",
-				"class	Python 3 Class"
-			],
-			[
-				"cla",
-				"class	Python 3 Class"
-			],
-			[
-				"poly",
-				"polygon_exterior_point_tuples"
-			],
-			[
-				"RemoveA",
-				"RemoveAllAvatars"
-			],
-			[
-				"ReA",
-				"RemoveAllAvatars"
-			],
-			[
-				"Avar",
-				"AvatarManager"
-			],
-			[
-				"GetCp",
-				"GetComponentOrDie"
-			],
-			[
-				"spaw",
-				"spawnedAvatars"
-			],
-			[
-				"Input",
-				"InputManager"
-			],
-			[
-				"requiredNbKe",
-				"requiredNbKeysPerColorDict"
-			],
-			[
-				"requi",
-				"requiredNbKeysPerColorDict"
-			],
-			[
-				"ig",
-				"ignoreColor"
-			],
-			[
-				"required",
-				"requiredNbKeys"
-			],
-			[
-				"GetCom",
-				"GetComponent"
-			],
-			[
-				"avatar",
-				"avatarController"
-			],
-			[
-				"Gam",
-				"GameColor"
-			],
-			[
-				"symbo",
-				"symbolColor"
-			],
-			[
-				"play",
-				"playerNb"
-			],
-			[
-				"StartCo",
-				"StartCoroutine"
-			],
-			[
-				"iteam",
-				"ItemParent"
-			],
-			[
-				"Level",
-				"LevelManager"
-			],
-			[
-				"Star",
-				"StartSession"
-			],
-			[
-				"Sess",
-				"SessionManager"
-			],
-			[
-				"spwa",
-				"spawnedAvatars"
-			],
-			[
-				"Clear",
-				"ClearTile"
-			],
-			[
-				"swir",
-				"switchBlockGridDict"
-			],
-			[
-				"Get",
-				"GetPlayer"
-			],
-			[
-				"us",
-				"using"
-			],
-			[
-				"color",
-				"colorName"
-			],
-			[
-				"Lin",
-				"Linq"
-			],
-			[
-				"ava",
-				"avatarNo"
-			],
-			[
-				"spr",
-				"spriteAnimator"
-			],
-			[
-				"coll",
-				"collider2D"
-			],
-			[
-				"pick",
-				"pickUp"
-			],
-			[
-				"Unity",
-				"UnityException"
-			],
-			[
-				"rigid",
-				"rigidbody2D	GameObject.*"
-			],
-			[
-				"Des",
-				"Destroy	Object.*(obj, t)"
-			],
-			[
-				"move",
-				"moveVelocity"
+				"Reve",
+				"RevealPowerUp"
 			],
 			[
 				"delta",
-				"deltaTime	AccelerationEvent.*"
+				"deltaTime"
 			],
 			[
-				"moveV",
-				"moveVelocity"
+				"Human",
+				"HumanCharacterPlayerControl"
 			],
 			[
-				"rigidbody2D",
-				"rigidbody2D	GameObject.*"
+				"trans",
+				"transform"
 			],
 			[
-				"Ava",
-				"AvatarPickUp"
+				"orig",
+				"originalPosition"
 			],
 			[
-				"Upd",
-				"UpdateVerticalPosition"
+				"reac",
+				"reactingGround"
 			],
 			[
-				"upd",
-				"updatedVerticalPosition"
+				"Reac",
+				"ReactingGround"
 			],
 			[
-				"new",
-				"newActiveColor"
+				"BoxC",
+				"BoxCollider2D"
 			],
 			[
-				"time",
-				"timeRemainingWithoutColorSwitch"
+				"grab",
+				"grabAnchor"
 			],
 			[
-				"Sit",
-				"SwitchBlockManager"
+				"posi",
+				"position3D"
 			],
 			[
-				"sw",
-				"switchColorIntention"
+				"tras",
+				"transform"
 			],
 			[
-				"Switc",
-				"SwitchColor"
+				"Oxygen",
+				"OxygenBottle"
 			],
 			[
-				"GetBu",
-				"GetButtonDown"
+				"rele",
+				"m_ReleaseDecel"
 			],
 			[
-				"Inp",
-				"InputManager"
+				"Time",
+				"Time.deltaTime"
 			],
 			[
-				"Handle",
-				"HandleSwitchActionInput"
+				"moveIn",
+				"moveIntentionVector"
 			],
 			[
-				"Vec",
-				"Vector3"
+				"Alien",
+				"AlienCharacterMotor"
 			],
 			[
-				"player",
-				"playerNo"
+				"AlienCo",
+				"AlienCharacterControl"
 			],
 			[
-				"Are",
-				"AreColliding"
+				"Debu",
+				"DebugScreen"
 			],
 			[
-				"other",
-				"otherBox"
+				"Ana",
+				"AnalyticsManager"
 			],
 			[
-				"nor",
-				"normal_y"
+				"logf",
+				"logfv\tDebug.LogFormat var"
 			],
 			[
-				"noral",
-				"normal_y"
+				"newV",
+				"newVelocity"
 			],
 			[
-				"normal",
-				"normal_x"
+				"newVelo",
+				"newVelocityY"
 			],
 			[
-				"x_",
-				"x_exit_dist"
+				"decel",
+				"decelerating"
 			],
 			[
-				"y",
-				"you"
+				"m_Jum",
+				"m_JumpInput"
 			],
 			[
-				"will",
-				"willMoveVector"
+				"orign",
+				"originalGasLength"
 			],
 			[
-				"Hand",
-				"HandleDirectionInput"
+				"gas",
+				"gasLength"
 			],
 			[
-				"Change",
-				"ChangeStateForColor"
+				"origi",
+				"originalStopPlanePosition"
 			],
 			[
-				"init",
-				"initActiveColor"
+				"block",
+				"blockingAstronaut"
 			],
 			[
-				"Swi",
-				"SwitchBlockState"
+				"Rayc",
+				"RaycastHit2D"
 			],
 			[
-				"On",
-				"OnSwitchActiveColor"
+				"m_A",
+				"m_AirSpeed"
 			],
 			[
-				"active",
-				"activeColor"
+				"Physic",
+				"Physics2DUtil"
 			],
 			[
-				"acti",
-				"activeColor"
+				"asc",
+				"ascendingSlope"
 			],
 			[
-				"SDL_Cre",
-				"SDL_CreateTextureFromSurface"
+				"Tool",
+				"Tooltip(\"Position"
 			],
 			[
-				"load",
-				"loadedImage"
+				"Detec",
+				"DetectStepDown"
 			],
 			[
-				"SDL",
-				"SDL_Training"
+				"stepdi",
+				"stepDownHeight"
 			],
 			[
-				"Action",
-				"ActionState"
+				"m_stepup",
+				"m_NoStepUpTimeRemaining"
 			],
 			[
-				"curs",
-				"cursorSprite"
+				"m_No",
+				"m_NoStepUpTime"
 			],
 			[
-				"ver",
-				"verticalTouch"
+				"Code",
+				"CodeTuning.float1"
 			],
 			[
-				"touc",
-				"touchArea"
-			],
-			[
-				"touch",
-				"touchArea"
-			],
-			[
-				"debug",
-				"debugPlatformSet"
-			],
-			[
-				"width",
-				"widthFactor"
-			],
-			[
-				"target",
-				"targetPushable"
+				"null",
+				"non-null"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "//\n// Created by L Nguyen Huu on 25/02/15 ap. J.-C..\n// Copyright (c) 2015 L Nguyen Huu. All rights reserved.\n\n#include \"GameApplication.h\"\n#include \"InputManager.h\"\n\n#pragma once\n\nclass Locator {\npublic:\n	friend class GameApplication; // does not compile, add class or import\n\n	Locator() = delete;\n\n    static std::shared_ptr<GameApplication> getGameApplication();\n    static std::shared_ptr<InputManager> getInputManager();\n\nprivate:\n	static std::weak_ptr<GameApplication> gameApplication;\n    static std::weak_ptr<InputManager> inputManager;\n\n};\n",
-			"file": "Stealth/src/engine/service/Locator.h",
-			"file_size": 549,
-			"file_write_time": 130835859213122442,
+			"file": "Stealth/CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 549,
+				"buffer_size": 3269,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Stealth/src/engine/service/InputManager.cpp",
+			"file": "Stealth/engine/CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 4014,
+				"buffer_size": 9821,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "build.py",
+			"file": "Stealth/engine/include/application/GameApplication.h",
 			"settings":
 			{
-				"buffer_size": 1246,
+				"buffer_size": 2052,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "CMakeLists.txt",
+			"file": "Stealth/engine/cmake/FindGLEW.cmake",
 			"settings":
 			{
-				"buffer_size": 2195,
+				"buffer_size": 2165,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": ".gitignore",
+			"file": "Stealth/engine/cmake/FindGLFW.cmake",
 			"settings":
 			{
-				"buffer_size": 1681,
+				"buffer_size": 7700,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "cmake_minimum_required(VERSION 2.8.4)\nproject(Stealth)\n\nset(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -std=c++11\")\n\nset(SOURCE_FILES\n    Stealth/src/engine/entity/Character.cpp\n    Stealth/src/engine/entity/Character.h\n    Stealth/src/engine/entity/Controller.cpp\n    Stealth/src/engine/entity/Controller.h\n    Stealth/src/engine/entity/GameObject.cpp\n    Stealth/src/engine/entity/GameObject.h\n    Stealth/src/engine/entity/HumanController.cpp\n    Stealth/src/engine/entity/HumanController.h\n    Stealth/src/engine/entity/Intention.cpp\n    Stealth/src/engine/entity/Intention.h\n    Stealth/src/engine/enum/Button.h\n    Stealth/src/engine/enum/ButtonEvent.h\n    Stealth/src/engine/enum/ButtonState.h\n    Stealth/src/engine/geometry/Point3.h\n    Stealth/src/engine/helper/helper.cpp\n    Stealth/src/engine/helper/helper.h\n    Stealth/src/engine/scene/Scene.cpp\n    Stealth/src/engine/scene/Scene.h\n    Stealth/src/engine/service/InputManager.cpp\n    Stealth/src/engine/service/InputManager.h\n    Stealth/src/engine/service/Locator.cpp\n    Stealth/src/engine/service/Locator.h\n    Stealth/src/game/application/GameApplication.cpp\n    Stealth/src/game/application/GameApplication.h\n    Stealth/src/game/application/SdlApplication.cpp\n    Stealth/src/game/application/SdlApplication.h\n    Stealth/src/game/entity/Guard.cpp\n    Stealth/src/game/entity/Guard.h\n    Stealth/src/game/entity/Spy.cpp\n    Stealth/src/game/entity/Spy.h\n    Stealth/src/game/main.cpp)\n\ninclude_directories(Stealth/src/engine)\ninclude_directories(Stealth/src/engine/entity)\ninclude_directories(Stealth/src/engine/enum)\ninclude_directories(Stealth/src/engine/geometry)\ninclude_directories(Stealth/src/engine/helper)\ninclude_directories(Stealth/src/engine/scene)\ninclude_directories(Stealth/src/engine/service)\ninclude_directories(Stealth/src/game)\ninclude_directories(Stealth/src/game/application)\ninclude_directories(Stealth/src/game/entity)\n\nadd_executable(Stealth ${SOURCE_FILES})",
+			"file": "Stealth/engine/cmake/SelectLibraryConfigurations.cmake",
 			"settings":
 			{
-				"buffer_size": 1946,
-				"line_ending": "Unix",
-				"name": "cmake_minimum_required(VERSION 2.8.4)"
+				"buffer_size": 3017,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "run.py",
+			"file": "Stealth/engine/cmake/FindPackageHandleStandardArgs.cmake",
 			"settings":
 			{
-				"buffer_size": 192,
+				"buffer_size": 14705,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Stealth/engine/cmake/FindPackageMessage.cmake",
+			"settings":
+			{
+				"buffer_size": 1564,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Stealth/engine/include/geometry/Vector3.h",
+			"settings":
+			{
+				"buffer_size": 6908,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Stealth/engine/include/geometry/Vector2.h",
+			"settings":
+			{
+				"buffer_size": 5718,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Stealth/engine/src/application/GameApplication.cpp",
+			"settings":
+			{
+				"buffer_size": 4928,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/wing/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 1049,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Stealth/engine/src/factory/Factory.cpp",
+			"settings":
+			{
+				"buffer_size": 1722,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Stealth.sublime-project",
+			"settings":
+			{
+				"buffer_size": 1238,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Packages/C++/cmake.sublime-build",
+	"build_system": "CMake and Make Game",
 	"build_system_choices":
 	[
 		[
 			[
 				[
+					"CMake and Make",
+					""
+				],
+				[
 					"Make for Xcode",
 					""
 				],
@@ -616,34 +684,142 @@
 				[
 					"Python for Xcode",
 					"Stop"
-				],
-				[
-					"Packages/C++/C++ Single File.sublime-build",
-					""
-				],
-				[
-					"Packages/C++/C++ Single File.sublime-build",
-					"Run"
 				],
 				[
 					"Packages/C++/cmake.sublime-build",
 					""
 				],
 				[
-					"Packages/Kivy/Kivy-Project.sublime-build",
+					"Packages/Python/Python-nosetests.sublime-build",
 					""
 				],
 				[
-					"Packages/Kivy/Kivy.sublime-build",
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"CMake and Make",
+				""
+			]
+		],
+		[
+			[
+				[
+					"CMake and Make Engine",
+					""
+				],
+				[
+					"CMake and Make Game",
+					""
+				],
+				[
+					"Make for Xcode",
+					""
+				],
+				[
+					"Make for Xcode",
+					"Debug"
+				],
+				[
+					"Make for Xcode",
+					"Run"
+				],
+				[
+					"Make for Xcode",
+					"Stop"
+				],
+				[
+					"Python for Xcode",
+					""
+				],
+				[
+					"Python for Xcode",
+					"Debug"
+				],
+				[
+					"Python for Xcode",
+					"Run"
+				],
+				[
+					"Python for Xcode",
+					"Stop"
+				],
+				[
+					"Packages/C++/cmake.sublime-build",
 					""
 				],
 				[
 					"Packages/Python/Python-nosetests.sublime-build",
 					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
 				]
 			],
 			[
-				"Packages/C++/cmake.sublime-build",
+				"CMake and Make Game",
+				""
+			]
+		],
+		[
+			[
+				[
+					"CMake and Make Game",
+					""
+				],
+				[
+					"CMake and Make Test Engine",
+					""
+				],
+				[
+					"Make for Xcode",
+					""
+				],
+				[
+					"Make for Xcode",
+					"Debug"
+				],
+				[
+					"Make for Xcode",
+					"Run"
+				],
+				[
+					"Make for Xcode",
+					"Stop"
+				],
+				[
+					"Python for Xcode",
+					""
+				],
+				[
+					"Python for Xcode",
+					"Debug"
+				],
+				[
+					"Python for Xcode",
+					"Run"
+				],
+				[
+					"Python for Xcode",
+					"Stop"
+				],
+				[
+					"Packages/C++/cmake.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python-nosetests.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"CMake and Make Test Engine",
 				""
 			]
 		]
@@ -652,140 +828,317 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "sort",
 		"selected_items":
 		[
 			[
-				"build",
-				"Build: Build"
+				"sort",
+				"Sort Lines"
 			],
 			[
-				"rei",
-				"Indentation: Reindent Lines"
+				"cma",
+				"Build With: cmake"
 			],
 			[
-				"pack dis",
-				"Package Control: Disable Package"
+				"rename",
+				"File: Rename"
 			],
 			[
-				"insp",
-				"Package Control: Install Package"
+				"locate",
+				"File: Locate"
 			],
 			[
-				"key",
-				"Preferences: Key Bindings - User"
+				"bookma",
+				"SublimeBookmarks: Goto Next Bookmark"
 			],
 			[
-				"pref",
-				"Preferences: Settings - Default"
-			],
-			[
-				"prefe",
-				"Preferences: Settings - User"
-			],
-			[
-				"pre us",
-				"Preferences: Key Bindings - User"
-			],
-			[
-				"pref ke",
-				"Preferences: Key Bindings - User"
-			],
-			[
-				"user ",
-				"Preferences: Settings - User"
-			],
-			[
-				"pack d",
-				"Package Control: Disable Package"
-			],
-			[
-				"packa",
-				"Package Control: Disable Package"
-			],
-			[
-				"indent",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"pac ins",
-				"Package Control: Install Package"
-			],
-			[
-				"packin",
-				"Package Control: Install Package"
-			],
-			[
-				"packa e",
-				"Package Control: Enable Package"
+				"diff",
+				"Git: Diff Current File"
 			],
 			[
 				"pack ins",
 				"Package Control: Install Package"
 			],
 			[
-				"pack",
-				"Preferences: Browse Packages"
+				"pacl re",
+				"Package Control: Remove Package"
+			],
+			[
+				"reload",
+				"Syntax Manager: Reload Settings"
+			],
+			[
+				"whites",
+				"Whitespace: Remove Trailing Whitespace"
+			],
+			[
+				"linen",
+				"Line Endings Unify"
+			],
+			[
+				"pack coin",
+				"Package Control: Install Package"
+			],
+			[
+				"pac re",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack rem",
+				"Package Control: Remove Channel"
+			],
+			[
+				"pa en",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack en",
+				"Package Control: Enable Package"
+			],
+			[
+				"packe",
+				"Package Control: Enable Package"
+			],
+			[
+				"pacd",
+				"Package Control: Disable Package"
+			],
+			[
+				"conflic",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"pack ",
+				"Package Control: Install Package"
 			],
 			[
 				"packins",
 				"Package Control: Install Package"
 			],
 			[
+				"pac dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack e",
+				"Package Control: Enable Package"
+			],
+			[
+				"reve",
+				"File: Reveal"
+			],
+			[
+				"select b",
+				"BracketHighlighter: Select Bracket Content with Brackets"
+			],
+			[
+				"select",
+				"BracketHighlighter: Select Bracket Content"
+			],
+			[
+				"expa",
+				"ExpandRegion"
+			],
+			[
+				"paac ins",
+				"Package Control: Install Package"
+			],
+			[
+				"cp",
+				"File: Copy Path"
+			],
+			[
+				"Build: ",
+				"Build With: Make"
+			],
+			[
+				"",
+				"AutocompletionFuzzy: Complete subword forward"
+			],
+			[
+				"REVE",
+				"File: Reveal"
+			],
+			[
+				"pack di",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"del",
+				"File: Delete"
+			],
+			[
+				"loca",
+				"File: Locate"
+			],
+			[
+				"pac en",
+				"Package Control: Enable Package"
+			],
+			[
+				"pac e",
+				"Package Control: Enable Package"
+			],
+			[
+				"pro",
+				"Project Manager"
+			],
+			[
+				"proje",
+				"Project Manager"
+			],
+			[
+				"pack dis",
+				"Package Control: Disable Package"
+			],
+			[
 				"packdis",
 				"Package Control: Disable Package"
 			],
 			[
-				"package con",
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"hex",
+				"Hex Viewer: Toggle Hex View"
+			],
+			[
+				"heaxa",
+				"Hex Viewer: Generate Hash"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"proj ma",
+				"Project Manager: Add Project"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"renae",
+				"File: Rename"
+			],
+			[
+				"subw",
+				"AutocompletionFuzzy: Complete subword forward"
+			],
+			[
+				"rev",
+				"File: Reveal"
+			],
+			[
+				"p",
+				"Package Control: Enable Package"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"shell",
+				"SublimeREPL: Shell"
+			],
+			[
+				"console",
+				"SublimeREPL: Python - Sublime Text Console"
+			],
+			[
+				"tpra",
+				"Text Pastry: Menu"
+			],
+			[
+				"text pa",
+				"Text Pastry: Range"
+			],
+			[
+				"pac d",
 				"Package Control: Disable Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
+				"pack d",
+				"Package Control: Disable Package"
 			],
 			[
-				"cle",
-				"Build: Clean"
-			],
-			[
-				"",
-				"Build: Build"
-			],
-			[
-				"pac",
+				"pack ena",
 				"Package Control: Enable Package"
 			],
 			[
-				"rope",
-				"Package Control: Enable Package"
+				"pac di",
+				"Package Control: Disable Package"
 			],
 			[
-				"pa",
-				"Package Control: Install Package"
+				"brack",
+				"BracketHighlighter: Wrap Selections with Brackets"
 			],
 			[
-				"attri",
-				"Code Folding: Fold Tag Attributes"
+				"sublieboo",
+				"SublimeBookmarks: Goto Bookmark"
 			],
 			[
-				"reidn",
-				"Indentation: Reindent Lines"
+				"subboo",
+				"SublimeBookmarks: Goto Bookmark"
 			],
 			[
-				"reind",
-				"Indentation: Reindent Lines"
+				"book",
+				"Bookmarks: Toggle"
+			],
+			[
+				"line",
+				"Line Ending: Unix"
+			],
+			[
+				"cop",
+				"File: Copy Path"
+			],
+			[
+				"exp",
+				"ExpandRegion"
+			],
+			[
+				"fl",
+				"File: Locate"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"sideb",
+				"View: Toggle Open Files in Side Bar"
 			]
 		],
-		"width": 476.0
+		"width": 521.0
 	},
 	"console":
 	{
-		"height": 414.0,
+		"height": 330.0,
 		"history":
 		[
-			"view.end_edit(1)",
-			"view.end_edit()",
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
 		]
 	},
 	"distraction_free":
@@ -799,150 +1152,182 @@
 	},
 	"expanded_folders":
 	[
-		"/home/wing/Projects/C++/Stealth C++/Stealth/src"
+		"/home/wing/Projects/C++/Stealth C++",
+		"/home/wing/Projects/C++/Stealth C++/Stealth",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/application",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/debug",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/entity",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/geometry",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/physics",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/renderer",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/libs",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/libs/include",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/include",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/include/application",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/include/controller",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/include/entity",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/src",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/src/application",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/src/controller"
 	],
 	"file_history":
 	[
-		"/home/wing/Projects/C++/Stealth C++/Makefile",
-		"/Users/hs/Documents/Unreal Projects/IntroProgrammingTP/Source/IntroProgrammingTP/Pickup.cpp",
-		"/Users/hs/Backup/macbook_pro_2015-02-21/root/Users/hs/Developer/AppCode/Live Templates/enum-class.file-template",
-		"/Users/hs/Backup/macbook_pro_2015-02-21/root/Users/hs/Developer/AppCode/Live Templates/switch-case.live-template",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth.sublime-project",
-		"/Users/hs/Documents/Unreal Projects/IntroProgrammingTP/Source/IntroProgrammingTP/Pickup.h",
-		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPerson.h",
-		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPersonCharacter.h",
-		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPersonGameMode.cpp",
-		"/Users/Shared/UnrealEngine/4.7/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/TP_ThirdPersonCharacter.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/Scene.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/SdlApplication.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/GameApplication.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/entity/Character.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/GameObject.cpp",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/Scene.h",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/SdlApplication.h",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/entity/Character.h",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/engine/scene/GameObject.h",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/application/GameApplication.h",
-		"/Users/hs/Archives/Graphics/Adobe CS6 Master Collection (Mac) Including retina/amtlib.framework/amtlib",
-		"/Users/hs/Projects/AI/Schwab/Stealth/Stealth/src/game/main.cpp",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/hs/Documents/cours/M2/physics/re15_1_31/newhfe.for",
-		"/Users/hs/Developer/Xcode/Xcode4CppClassTemplate-master/README.md",
-		"/Users/hs/Developer/Xcode/Xcode4CppClassTemplate-master/C++ Class.xctemplate/NoneVirtualDestructor/___FILEBASENAME___.h",
-		"/Users/hs/Developer/Xcode/Xcode4CppClassTemplate-master/C++ Class.xctemplate/NoneVirtualDestructor/___FILEBASENAME___.cpp",
-		"/Users/hs/Developer/Xcode/Xcode4CppClassTemplate-master/Pete C++ Class.xctemplate/___FILEBASENAME___.cpp",
-		"/Users/hs/Developer/Xcode/Xcode4CppClassTemplate-master/Pete C++ Class.xctemplate/___FILEBASENAME___.h",
-		"/Users/hs/Projects/Events/GGJ 2015/PP Dash/src/index.htm",
-		"/usr/local/bin/firefox",
-		"/Volumes/Wing/hs/Library/Application Support/Firefox/Profiles/.DS_Store",
-		"/Users/hs/Documents/backup/local_backup/sessions/Report-2.session",
-		"/usr/local/bin/subl",
-		"/Applications/Firefox.app/Contents/MacOS/firefox-bin",
-		"/Applications/Firefox.app/Contents/MacOS/firefox",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2d/Code/Camera/tk2dCamera.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/IntegrationTestsFramework/TestRunner/TestComponent.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/SFX/color_switch.wav",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/AvatarManager.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Tiles/SwitchBlock.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Extensions/Extensions.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Navigation/Grid.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Avatar/AvatarPickUp.cs",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/SublimeUnityCSharp/Syntaxes/UnityC#.tmLanguage",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/SwitchBlockManager.cs",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/User/Default (Linux).sublime-keymap",
-		"/Users/hs/Developer/Sublime Text/Unzipped Packages/Origami.sublime-package/Origami.sublime-commands",
-		"/Users/hs/Developer/Sublime Text/Unzipped Packages/Origami.sublime-package/origami.py",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/User/Projects/library.json",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Avatar/AvatarInfo.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Type/ArrayTypes.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Text/Stages/stage5.txt",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Fx/QualityManager.js",
-		"/Users/hs/Projects/Events/GGJ 2015/b 2/src/tutorial.htm",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/UnitTestResults.xml",
-		"/Users/hs/Developer/config/config.sublime-project",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/RawAssets/yellow_square",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/hs/Dropbox/AI/projects/Python projects/Kivy projects/Widget Training/simple_paint_app.sublime-project",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/Kivy/kivy.tmLanguage",
-		"/Users/hs/Dropbox/AI/projects/Python projects/Kivy projects/Ippy - stash/patch",
-		"/Users/hs/Library/Application Support/Blender/2.73/scripts/presets/keyconfig/training03.blend",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Content/PlayersInfo.cs",
-		"/Users/hs/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Type/CustomDictionary.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Type/DictionaryTypes.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Patterns/Singleton.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Avatar/AvatarController.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/UnitTesting/Editor/TestRunner/UnitTestInfo.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/UIManager.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/SystemController.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Editor/UnityLockImproved/UnityLock.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scenes/StageColor.unity",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/SessionManager.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/BlueAndRed.sublime-project",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/BlueAndRed.sublime-workspace",
-		"/Users/hs/Projects/AI/Ippy/ippy/parser/convert.py",
-		"/Users/hs/Music/Radio/The Spinning Stream.m3u",
-		"/Users/hs/Dropbox/keio/sports/バレーボールパーティー練習.txt",
-		"/Users/hs/Music/Radio/R-a-dio_main.mp3.m3u",
-		"/Applications/Kivy.app/Contents/Resources/kivy/kivy/core/window/sdl.pyx",
-		"/Users/hs/Dropbox/AI/.DS_Store",
-		"/Users/hs/Dropbox/AI/.directory",
-		"/Users/hs/Projects/AI/Ippy/ippy/editor/polygoneditor.py",
-		"/Applications/Kivy.app/Contents/Resources/kivy/kivy/core/window/window_pygame.py",
-		"/Users/hs/Resources/emoticons.txt",
-		"/Library/Python/2.7/site-packages/shapely/geos.py",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2d/Code/Sprites/tk2dSpriteCollectionInterfaces.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Fx/ReflectionFx.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Sounds/Player/player_killed_1.wav",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Item/KeyBehaviour.cs",
-		"/usr/local/bin/python-kivy",
-		"/Users/hs/Projects/AI/Ippy/.idea/Ippy.iml",
-		"/Users/hs/.ssh/python-kivy",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/UnitTesting/Editor/TestRunner/IUnitTestEngine.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2d/Editor/Runtime/tk2dResourceEditor.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Anims/Block/red_square.controller",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/readme.rtf",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Resources/ColoredNoise.shader",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Navigation/Coord.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/changelog.txt",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Tests/AvatarBotMoveRight.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Anims/Item/pick_up.anim",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Editor/HierarchyGeneration.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Animation/MechAnimation.js",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Editor/Plane1x1W20L20HC.asset",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Shaders/BackgroundAndCharacters/CharacterSelfIlluminationReflective.shader",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TileMap/tileMapData.asset",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Tiles/Warper.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scenes/LevelSample.unity",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/LICENSE.txt",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2dTileMap/Editor/tk2dTileMapUtility.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Enums/GameColor.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Type/MultidimensionalArray.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Managers/MusicManager.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2d/Code/Fonts/tk2dTextMesh.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Rewired/Examples/EightPlayers/Scripts/EightPlayersExample_Player.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Common/ResultWriter/ResultSummarizer.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/TK2DROOT/tk2d/Editor/tk2dPreferencesEditor.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/AI/SpiderReturnMoveController.js",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/ThrowCustomException.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Tests/MoveRightAction.cs",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Modules/SpawnAtCheckpoint.js",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Textures/Minebot.tif",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MicrosoftXboxOne.asset",
-		"/Users/hs/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/Assets/Scripts/Helper/MathHelper.cs"
+		"/home/wing/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/build/CMakeCache.txt",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/include/application/StealthGameApplication.h",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/src/application/StealthGameApplication.cpp",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/geometry/Vector2.h",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/include/controller/Controller.h",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/game/src/controller/Controller.cpp",
+		"/home/wing/Projects/Ren'Py/Skillset/traceback.txt",
+		"/home/wing/Projects/Ren'Py/Skillset/game/script.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/ui.py",
+		"/home/wing/Projects/Ren'Py/Renpy Imagebuttons GUI sample 2013-07-30/game/screens.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/common/00action_data.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/display/imagelike.py",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/exports.py",
+		"/home/wing/Projects/Ren'Py/Renpy Tutorial/game/script.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset/game/gui.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset/game/options.rpy",
+		"/home/wing/Projects/Ren'Py/Renpy Imagebuttons GUI sample 2013-07-30/game/options.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/game/screens.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/display/screen.py",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/ast.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/files.txt",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/tmp/Skillset/lint.txt",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/atl.py",
+		"/home/wing/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/wing/Projects/Ren'Py/Skillset/game/images/character/readme.txt",
+		"/home/wing/Projects/Ren'Py/Skillset/game/images/character/Yamato/Credits.txt",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/parser.py",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/character.py",
+		"/home/wing/Projects/Ren'Py/Skillset/game/s00_proto.rpy",
+		"/home/wing/Projects/Ren'Py/Skillset/log.txt",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/display/image.py",
+		"/home/wing/Projects/Ren'Py/Skillset-0.1-dists/Skillset-0.1-all/renpy/easy.py",
+		"/home/wing/Projects/Ren'Py/Skillset/game/images/character/girl a 2.png",
+		"/home/wing/.cache/.fr-UISi1h/readme.txt",
+		"/home/wing/Dropbox/Bug reports/Ubuntu/compiz crash (also see screenshots Unity disappeared).txt",
+		"/home/wing/Dropbox/Projects Dropbox/C++/training/Cpp11_Training/Cpp11_Training/Display.h",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/utils/MathUtil.h",
+		"/home/wing/Projects/C++/Stealth C++/Stealth/engine/include/utils/Color.h",
+		"/home/wing/Dropbox/Projects Dropbox/Python/testing/misc.py",
+		"/home/wing/Dropbox/Projects Dropbox/C++/training/data/menus/solarus_logo.lua",
+		"/home/wing/PycharmProjects/play-video/python/main.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/common/000statements.rpy",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/statements.py",
+		"/home/wing/Dropbox/Bug reports/Unity/bug_unity_cloud_build_cannot_access_private_submodule_via_team_rights.txt",
+		"/home/wing/Games/IDE/gobelins-ide-2016-mars-21-linux-32-bit-17_v2.0.zip",
+		"/tmp/Zip Browser/21b27786040e15d568938e1fd906887a/Mars 21 v0.9.9 Linux 32-bit_Data/Managed/DOTween50.dll",
+		"/home/wing/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/doc/statement_equivalents.html",
+		"/home/wing/Projects/Ren'Py/Skillset/.gitignore",
+		"/home/wing/.config/sublime-text-3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/usr/share/app-install/desktop/eog:eog.desktop",
+		"/usr/share/applications/eog.desktop",
+		"/home/wing/Dropbox/Macbook_backup/Ubuntu/bugs/install inkscape libgfortran error.txt",
+		"/home/wing/Developer/RenPy/gui7_custom.rpy",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/launcher/System Editor.edit.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/gui/project.json",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy.sh",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/launcher/game/gui7/images.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/launcher/game/gui7/__init__.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/gui/game/guisupport.rpy",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/launcher/game/tl/indonesian/gui7.rpy",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/launcher/game/gui7/parameters.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/launcher/game/project.rpy",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/launcher/game/gui7/code.py",
+		"/home/wing/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings",
+		"/home/wing/.config/sublime-text-3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
+		"/home/wing/Projects/Ren'Py/Skillset/game/screens.rpy",
+		"/home/wing/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/wing/.config/sublime-text-3/Packages/User/SyntaxMgr.sublime-settings",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/common/_compat/styles.rpym",
+		"/home/wing/.config/sublime-text-3/Packages/User/trailing_spaces.sublime-settings",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/common/000namespaces.rpy",
+		"/home/wing/.config/sublime-text-3/Packages/User/Default (Linux).sublime-mousemap",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/display/transform.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/exports.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/parser.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/ui.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/translation/__init__.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/game.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/rapt/private/lib/python2.7/code.py",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/common/00action_control.rpy",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy/script.py",
+		"/home/wing/Applications/Productivity/freeplane-1.5.17/doc/whatsNew-1.5.x.mm",
+		"/home/wing/Archives/productivity/freeplane_bin-1.5.17.zip",
+		"/home/wing/Projects/Ren'Py/Skillset/game/script.rpyc",
+		"/home/wing/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-mousemap",
+		"/home/wing/.config/sublime-text-3/Packages/BracketHighlighter/Example.sublime-keymap",
+		"/home/wing/.config/sublime-text-3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/home/wing/.config/sublime-text-3/Packages/User/bh_core.sublime-settings",
+		"/home/wing/Applications/Game Engines/renpy-6.99.11-sdk/renpy.py",
+		"/media/wing/DATA/Projects/Video Games/StairlessTower 4.13/Binaries/Linux/failed.hotreload",
+		"/home/wing/.config/sublime-text-3/Packages/User/Default (Windows).sublime-keymap",
+		"/home/wing/.config/sublime-text-3/Packages/User/Default (OSX).sublime-keymap",
+		"/home/wing/Developer/UnrealEngine/Engine/Source/Runtime/Core/Public/Math/Rotator.h",
+		"/home/wing/.config/sublime-text-3/Packages/User/Default (OSX).sublime-mousemap",
+		"/home/wing/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/media/wing/DATA/Projects/Video Games/StairlessTower 4.13/Config/DefaultGame.ini",
+		"/home/wing/Dropbox/Macbook_backup/clean_install/Ubuntu/shortcuts.txt",
+		"/home/wing/Developer/UnrealEngine/Engine/Source/Editor/UnrealEd/Private/TexAlignTools.cpp",
+		"/home/wing/Developer/UnrealEngine/Engine/Source/Runtime/Core/Public/Math/TransformCalculus.h",
+		"/home/wing/Developer/UnrealEngine/Engine/Source/ThirdParty/OSVRClientKit/include/osvr/Util/EigenInterop.h",
+		"/media/wing/DATA/Projects/Video Games/StairlessTower 4.13/NativizedAssetsLegacy/Public/ThirdPersonCharacter__pf1682475099.h",
+		"/media/wing/DATA/Projects/Video Games/StairlessTower 4.13/NativizedAssetsLegacy/Private/ThirdPersonCharacter__pf1682475099.cpp",
+		"/media/wing/DATA/Projects/Video Games/StairlessTower 4.13/Intermediate/Build/BuildRules/StairlessTowerModuleRulesSourceFiles.txt",
+		"/home/wing/Developer/UnrealEngine/Engine/Source/Editor/UnrealEd/Private/Tests/LightingTests.cpp",
+		"/home/wing/Dropbox/Macbook_backup/Unreal Engine/autocompletion/Sublime Text UE syntax draft.cpp",
+		"/media/wing/DATA/Projects/Video Games/StairlessTower 4.13/Intermediate/Build/Win64/UE4Editor/Inc/StairlessTower/StairlessTowerGameMode.generated.h",
+		"/F/Dropbox/Macbook_backup/Unreal Engine/autocompletion/Sublime Text UE syntax draft",
+		"/F/Projects/Video Games/StairlessTower/Source/StairlessTower/StairlessTowerGameMode.cpp",
+		"/F/Projects/Video Games/StairlessTower/Source/StairlessTower/StairlessTower.Build.cs",
+		"/F/Projects/Video Games/StairlessTower/Source/StairlessTower/StairlessTower.h",
+		"/F/Projects/Video Games/StairlessTower/Source/StairlessTower/StairlessTower.cpp",
+		"/F/Projects/Video Games/StairlessTower/Source/StairlessTower/StairlessTowerCharacter.h",
+		"/F/Projects/Video Games/StairlessTower/Source/StairlessTower/StairlessTowerCharacter.cpp",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/UI/MenuItemBool.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/UI/MenuItemValue.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/UI/MenuItemToggle.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/UI/MenuItemInt.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/UI/PauseMenuUI.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/Managers/InGameManager.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/Managers/PauseMenuManager.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/Managers/DebugMenuManager.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Game/Scripts/UI/MenuItemFloat.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Commons/Helper/Extensions.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Reflection/UnityVariable.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Reflection/UnityMember.cs",
+		"/F/Projects/Video Games/IDE 02 - Martian Coop/Unity - Martian Coop/Assets/Reflection/UnityMethod.cs"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 105.0,
 		"where_history":
 		[
+			"",
+			"/home/wing/Projects/Ren'Py/Renpy Imagebuttons GUI sample 2013-07-30/game",
+			"",
+			"/home/wing/Developer/UnrealEngine/Engine/Source/Editor",
+			"F:\\Projects\\Video Games\\IDE 02 - Martian Coop\\Unity - Martian Coop\\Assets,*.cs",
+			"F:\\Projects\\Video Games\\IDE 02 - Martian Coop\\Unity - Martian Coop\\Assets\\Game,*.cs",
 			"<open folders>",
-			"/Users/hs/Projets/Python/Point-and-click/repo/engine/geta"
+			"F:\\Projects\\Video Games\\IDE 05 - Manga-ville\\Unity - Manga-ville\\Assets\\Game,*.cs",
+			"F:\\Projects\\Video Games\\IDE 02 - Martian Coop\\Unity - Martian Coop\\Assets\\Game,*.cs",
+			"F:\\Projects\\Video Games\\IDE 02 - Martian Coop\\Unity - Martian Coop\\Assets\\Game",
+			"<open folders>",
+			"F:\\Projects\\Video Games\\IDE 05 - Manga-ville\\Unity - Manga-ville\\Assets\\unity-ui-extensions",
+			"Assets/unity-ui-extensions",
+			"/Assets/unity-ui-extensions",
+			"<open folders>"
 		]
 	},
 	"find_state":
@@ -950,134 +1335,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"build",
-			"go",
-			" id",
-			" _id",
-			"_id",
-			"SDLApplication",
-			"\"\n",
-			" \n",
-			"state",
-			"Swi",
-			";",
-			"//",
-			"comment",
-			"//",
-			"{",
-			"bracket",
-			"(.*)",
-			"()",
-			"//",
-			"comment",
-			"play",
-			"DestroySelf",
-			"Tag",
-			"TileParent",
-			"tag",
-			"move",
-			"Start",
-			"50",
-			"\"],",
-			"siz",
-			"shift+tab",
-			"polygon",
-			"Debug",
-			"START",
-			"messageCa",
-			"SystemManager",
-			"SystemController",
-			"pauseMenuCanvas",
-			"string",
-			"component",
-			"Component",
-			"startS",
-			"Dictionary",
-			"uiCameraAnchor",
-			"Start",
-			"Input",
-			"500",
-			"remove_widget",
-			"remove_wid",
-			"width",
-			"++",
-			"Enum",
-			"TileParent",
-			"tileParent",
-			"extraLa",
-			"audio",
-			"Switc",
-			"extraLoopTile",
-			"Red",
-			"green",
-			"Red",
-			"programatically",
-			"meta",
-			"ToString",
-			"symbolColor",
-			">();\n",
-			"var warp = other.GetComponent<AvatarWarp>();",
-			"willMoveVector",
-			";\n",
-			"box2",
-			"box1",
-			"collision_box",
-			";\n",
-			"float",
-			".h",
-			".w",
-			"self",
-			"SwitchColorHandler",
-			"SwitchColorEventManager",
-			"SwitchBlockEventManager",
-			"C.",
-			"const",
-			");\n",
-			"ren",
-			"win",
-			"window",
-			"TState",
-			"State2",
-			"touchArea = new Rect(uiFactor * transform.localPosition.x, uiFactor * transform.localPosition.y, uiFactor * transform.localScale.x, uiFactor * transform.localScale.y);",
-			"target",
-			"target =",
-			"target",
-			"pushArea",
-			"grounded",
-			"lastGrounded",
-			"lastGround",
-			"sqrMa",
-			"lastGroundedPosition",
-			"lastgrounded",
-			"maxGroundAcc",
-			"position",
-			"lookAt",
-			"targetLookAt",
-			"targetLoo",
-			"position",
-			"distanceSmo",
-			"groundNorm",
-			"Isground",
-			"CustomCharacterMotor",
-			"DetermineCur",
-			"GetDesiredHorizontalVelocity",
-			"DetermineC",
-			"Determine",
-			"canMove",
-			"resource",
-			"camera",
-			"upper",
-			"stateName",
-			";\n",
-			"view",
-			"Rese",
-			"Search",
-			"From",
-			"eventManager.",
-			"Trigger",
-			"Controller",
-			"Move",
-			"CharacterMove"
+			"config",
+			"glfw",
+			"GLEW_LIBRARY",
+			"glfw",
+			"message",
+			"add_lib",
+			"find",
+			"close",
+			"glew",
+			"find_package",
+			"charac",
+			"glew",
+			"include",
+			"menu",
+			"print",
+			"exception",
+			"choice",
+			"display_me",
+			"choice",
+			"{0} ",
+			"_current_screen",
+			"preview_fra",
+			"style_prefix",
+			"prefix",
+			"gui_text",
+			"label_text",
+			"gui_label_text",
+			"text_siz",
+			"text_siw",
+			"text",
+			"is text",
+			"background",
+			"label",
+			"confirm_frame_borders",
+			"borders(",
+			"borders",
+			"frame_bord",
+			"confirm_frame_borders",
+			"loc",
+			"imgname",
+			"frame",
+			"borders",
+			"screen prefe",
+			"prefere",
+			"screen pre",
+			"frame",
+			"roundrect",
+			"frame",
+			"root =",
+			"root",
+			"frame",
+			"color",
+			"background",
+			" at",
+			"at ",
+			"DialogueChoice",
+			"choice",
+			"Choice",
+			"undo",
+			"choice",
+			"Choice",
+			"aha",
+			"720",
+			"$",
+			"choice",
+			"peter",
+			"image f neutral = \"character/peter_neutral.png\"\nimage f smile = \"character/peter_smile.png\"\nimage f glad = \"character/peter_glad.png\"\nimage f suspicious = \"character/peter_suspicious.png\"\nimage f angry = \"character/peter_angry.png\"\n",
+			"neutral",
+			"unity",
+			"i",
+			"textbutton",
+			"keyboardState",
+			"PolyKEY",
+			"CreateObject",
+			"nb_accepted_female_candidates",
+			"accepted_candidates",
+			"no_female",
+			"menu",
+			"raise_motivation",
+			"for ",
+			"for i",
+			"for",
+			"motivation",
+			"jump .final",
+			"gathering_hi",
+			"A_gathering_hi",
+			"nb_new_members_required",
+			"are_inte",
+			"B_are_interested",
+			"accepted_candidates",
+			"D_which_role",
+			"which_r",
+			"candidate_sta",
+			"nb_new_members_required",
+			"a",
+			"$ ren",
+			"$ re",
+			"$ ",
+			"at_list",
+			"sls",
+			"show",
+			"at_list",
+			"CharacterData",
+			"characterdata",
+			"CharacterData",
+			"vbox",
+			"screen choi",
+			"vbox",
+			"choice_vbox",
+			"xalign",
+			"MODIFIED",
+			"choice_button",
+			"choice_button_text_idle_color",
+			"choice_button_text",
+			"choice_button_text_xalign",
+			"menu",
+			"show",
+			"skillset_hud",
+			"lets_",
+			"play_with_d",
+			"are_interested",
+			"play_with_d",
+			"gui_swatches",
+			"choose_gui_color",
+			"gui_project_common",
+			"update_gui_defines",
+			"accent_color",
+			"choose_gui_color"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1085,30 +1470,10 @@
 		"regex": false,
 		"replace_history":
 		[
-			" id",
-			"id",
-			"SdlApplication",
-			" \n",
-			"Button",
-			"red",
-			"blue",
-			"otherBox",
-			"this",
-			"renderer",
-			"State2",
-			"TState",
-			"target",
-			"EventManager.Instance.",
-			"walk_",
-			"idle_",
-			"",
-			"sprite.DirtySprite",
-			"myCharacter",
-			"character.animation",
-			"character",
-			"hero.realTurn",
-			"hero.realMove",
-			"nextY"
+			"GameModeManager.Instance.SetInputMap",
+			"\t\n",
+			"reader.GetAttribute",
+			"experimentElement.GetAttribute"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1124,125 +1489,474 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Stealth/src/engine/service/Locator.h",
+					"file": "Stealth/CMakeLists.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 549,
+						"buffer_size": 3269,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								548,
-								548
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Stealth/src/engine/service/InputManager.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4014,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
 							[
-								497,
-								497
-							]
-						],
-						"settings":
-						{
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
-							"syntax": "Packages/C++/C++.tmLanguage",
+							"ensure_single_trailing_newline": true,
+							"git_gutter_enabled": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax_mgr_loaded": true,
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 627.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "build.py",
+					"buffer": 1,
+					"file": "Stealth/engine/CMakeLists.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1246,
+						"buffer_size": 9821,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								85,
-								85
+								6406,
+								6406
 							]
 						],
 						"settings":
 						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
-							"syntax": "Packages/Python/Python.sublime-syntax",
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax_mgr_loaded": true,
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 330.0,
+						"translation.y": 3193.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "CMakeLists.txt",
+					"buffer": 2,
+					"file": "Stealth/engine/include/application/GameApplication.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2195,
+						"buffer_size": 2052,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								609,
-								609
+								846,
+								846
 							]
 						],
 						"settings":
 						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2049,
+										2050
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										398,
+										399
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"syntax_mgr_loaded": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 570.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Stealth/engine/cmake/FindGLEW.cmake",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1379,
+								1379
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"open_with_edit": true,
+							"remove_trailing_whitespace_on_save": true,
 							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
+							"syntax_mgr_loaded": true,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 660.0,
+						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1250,29 +1964,113 @@
 				},
 				{
 					"buffer": 4,
-					"file": ".gitignore",
+					"file": "Stealth/engine/cmake/FindGLFW.cmake",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1681,
+						"buffer_size": 7700,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								72,
-								72
+								1414,
+								1414
 							]
 						],
 						"settings":
 						{
-							"encoding_helper_encoding": "BINARY",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax_mgr_loaded": true,
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 475.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1280,58 +2078,956 @@
 				},
 				{
 					"buffer": 5,
+					"file": "Stealth/engine/cmake/SelectLibraryConfigurations.cmake",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1946,
+						"buffer_size": 3017,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								572,
-								572
+								842,
+								842
 							]
 						],
 						"settings":
 						{
-							"auto_name": "cmake_minimum_required(VERSION 2.8.4)",
-							"default_dir": "/home/wing/Projects/C++/Stealth C++/Stealth/src",
-							"encoding_helper_encoding": "",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"open_with_edit": true,
+							"remove_trailing_whitespace_on_save": true,
 							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax_mgr_loaded": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 66.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "run.py",
+					"file": "Stealth/engine/cmake/FindPackageHandleStandardArgs.cmake",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 192,
+						"buffer_size": 14705,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								124,
-								124
+								14038,
+								14038
 							]
 						],
 						"settings":
 						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"open_with_edit": true,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax_mgr_loaded": true,
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6899.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Stealth/engine/cmake/FindPackageMessage.cmake",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								148,
+								148
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"open_with_edit": true,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax_mgr_loaded": true,
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Stealth/engine/include/geometry/Vector3.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6908,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										280,
+										281
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										233,
+										234
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"syntax_mgr_loaded": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Stealth/engine/include/geometry/Vector2.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										4182,
+										4183
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										222,
+										223
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"syntax_mgr_loaded": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Stealth/engine/src/application/GameApplication.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"syntax_mgr_loaded": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/wing/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								384,
+								384
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										417,
+										418
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										368,
+										369
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax_mgr_loaded": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "Stealth/engine/src/factory/Factory.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"syntax_mgr_loaded": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1339,17 +3035,147 @@
 					},
 					"stack_index": 6,
 					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "Stealth.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								401,
+								401
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										709,
+										710
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										324,
+										325
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_single_trailing_newline": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"ignore_whitespace_on_current_line": true,
+							"ignore_whitespace_only_lines": false,
+							"remove_trailing_whitespace_on_save": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax_mgr_loaded": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 27.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 40.0
 	},
 	"layout":
 	{
@@ -1376,17 +3202,17 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 177.0
+		"height": 258.0
 	},
 	"output.find_results":
 	{
-		"height": 0.0
+		"height": 254.0
 	},
 	"pinned_build_system": "",
 	"project": "Stealth.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1396,228 +3222,516 @@
 		"selected_items":
 		[
 			[
-				"main",
-				"game/main.cpp"
+				"gama",
+				"Stealth/engine/src/application/GameApplication.cpp"
 			],
 			[
-				"gameo",
-				"engine/scene/GameObject.h"
+				"findglew",
+				"Stealth/engine/cmake/FindGLEW.cmake"
 			],
 			[
-				"sdla",
-				"game/application/SdlApplication.cpp"
+				"gameppli",
+				"Stealth/engine/src/application/GameApplication.cpp"
 			],
 			[
-				"sdl",
-				"game/application/SdlApplication.h"
+				"vector3",
+				"Stealth/engine/include/geometry/Vector3.h"
 			],
 			[
-				"c",
-				"Scripts/Enums/GameColor.cs"
+				"gameappl",
+				"Stealth/engine/src/application/GameApplication.cpp"
 			],
 			[
-				"swbl",
-				"Scripts/Tiles/SwitchBlock.cs"
+				"fac",
+				"Stealth/engine/src/factory/Factory.cpp"
 			],
 			[
-				"sbm",
-				"Scripts/Managers/SwitchBlockManager.cs"
+				"polycorein",
+				"Core/Contents/Source/PolyCoreInput.cpp"
 			],
 			[
-				"swima",
-				"Scripts/Managers/SwitchBlockManager.cs"
+				"input",
+				"Core/Contents/Source/PolyInputEvent.cpp"
 			],
 			[
-				"ex",
-				"Scripts/Extensions/Extensions.cs"
+				"factor",
+				"Dependencies/Build/Debug/lua51/src/lua51/test/factorial.lua"
 			],
 			[
-				"pick",
-				"Scripts/Avatar/AvatarPickUp.cs"
+				"transform",
+				"IDE/Contents/Source/TransformGizmo.cpp"
 			],
 			[
-				"exte",
-				"Scripts/Extensions/Extensions.cs"
+				"component",
+				"Dependencies/Build/Release/assimp/src/assimp/port/Assimp.NET/Assimp.NET_CS/aiComponent.cs"
 			],
 			[
-				"swb",
-				"Scripts/Tiles/SwitchBlock.cs"
+				"statem",
+				"renpy-6.99.11-sdk/renpy/common/000statements.rpy"
 			],
 			[
-				"avma",
-				"Scripts/Managers/AvatarManager.cs"
+				"state",
+				"renpy-6.99.11-sdk/doc/statement_equivalents.html"
 			],
 			[
-				"avmo",
-				"Scripts/Avatar/AvatarMotor.cs"
+				"stateme",
+				"renpy-6.99.11-sdk/renpy/statements.py"
 			],
 			[
-				"stage6",
-				"Text/Stages/stage6.txt"
+				"gitgi",
+				"Skillset/.gitignore"
 			],
 			[
-				"grid",
-				"Scripts/Navigation/Grid.cs"
+				"000names",
+				"renpy-6.99.11-sdk/renpy/common/000namespaces.rpy"
 			],
 			[
-				"plai",
-				"Scripts/Content/PlayersInfo.cs"
+				"gitig",
+				"Skillset/.gitignore"
 			],
 			[
-				"uima",
-				"Scripts/Managers/UIManager.cs"
+				"parser",
+				"renpy-6.99.11-sdk/renpy/parser.py"
 			],
 			[
-				"sysma",
-				"Scripts/Managers/SystemManager.cs"
+				"expor",
+				"renpy-6.99.11-sdk/renpy/exports.py"
 			],
 			[
-				"sb",
-				"Scripts/Tiles/SwitchBlock.cs"
+				"giting",
+				".gitignore"
 			],
 			[
-				"sess",
-				"Scripts/Managers/SessionManager.cs"
+				"makefile",
+				"Makefile"
 			],
 			[
-				"sco",
-				"Scripts/Managers/SystemController.cs"
+				"icuinterna",
+				"Engine/Source/Runtime/Core/Private/Internationalization/ICUInternationalization.cpp"
 			],
 			[
-				"contro",
-				"Scripts/Avatar/AvatarController.cs"
+				"gene",
+				"GenerateProjectFiles.sh"
 			],
 			[
-				"pol",
-				"Benchmarks/poly_2007-04-23/poly1a.xml"
+				"build.cs",
+				"Engine/Build/BatchFiles/Linux/GenerateProjectFiles.sh"
 			],
 			[
-				"avama",
-				"Scripts/Managers/AvatarManager.cs"
+				"hotrelo",
+				"Source/Developer/HotReload/Private/HotReload.cpp"
 			],
 			[
-				"systemc",
-				"Scripts/Managers/SystemController.cs"
+				"hotrel",
+				"Source/Developer/HotReload/HotReload.Build.cs"
 			],
 			[
-				"sesma",
-				"Scripts/Managers/SessionManager.cs"
+				"actor.h",
+				"Source/Runtime/Engine/Classes/GameFramework/Actor.h"
 			],
 			[
-				"controll",
-				"Scripts/Managers/SystemController.cs"
-			],
-			[
-				"sysco",
-				"Scripts/Managers/SystemController.cs"
-			],
-			[
-				"avatarcontroler",
-				"Scripts/Avatar/AvatarController.cs"
-			],
-			[
-				"picku",
-				"Scripts/Avatar/AvatarPickUp.cs"
-			],
-			[
-				"lemana",
-				"Scripts/Managers/LevelManager.cs"
-			],
-			[
-				"lema",
-				"TileMap/tileMapData.asset"
-			],
-			[
-				"avi",
-				"Scripts/Avatar/AvatarInfo.cs"
-			],
-			[
-				"warp",
-				"Scripts/Tiles/Warper.cs"
-			],
-			[
-				"sema",
-				"Scripts/Managers/SessionManager.cs"
-			],
-			[
-				"levelm",
-				"Scripts/Managers/LevelManager.cs"
-			],
-			[
-				"levma",
-				"Scripts/Managers/LevelManager.cs"
-			],
-			[
-				"muma",
-				"Scripts/Managers/MusicManager.cs"
-			],
-			[
-				"warper",
-				"Scripts/Tiles/Warper.cs"
-			],
-			[
-				"sesm",
-				"Scripts/Managers/SessionManager.cs"
-			],
-			[
-				"gamec",
-				"Scripts/Enums/GameColor.cs"
-			],
-			[
-				"sessm",
-				"Scripts/Managers/SessionManager.cs"
-			],
-			[
-				"manager",
-				"Scripts/Managers/LevelManager.cs"
-			],
-			[
-				"stage5",
-				"Text/Stages/stage5.txt"
-			],
-			[
-				"motor",
-				"Scripts/Avatar/AvatarMotor.cs"
-			],
-			[
-				"avaco",
-				"Scripts/Avatar/AvatarController.cs"
-			],
-			[
-				"player",
-				"Scripts/Content/PlayersInfo.cs"
-			],
-			[
-				"switma",
-				"Scripts/Managers/SwitchBlockManager.cs"
-			],
-			[
-				"inpum",
-				"Scripts/Managers/InputManager.cs"
-			],
-			[
-				"inma",
-				"UnityTestTools/Examples/IntegrationTestsFrameworkExamples/AngryBotsTests/Scripts/Rain/RainManager.js"
+				"pawn.h",
+				"Source/Runtime/Engine/Classes/GameFramework/Pawn.h"
 			],
 			[
 				"",
-				"Scripts/Managers/AvatarManager.cs"
+				"Source/Runtime/Engine/Private/Pawn.cpp"
 			],
 			[
-				"a",
-				"Scripts/Type/ArrayTypes.cs"
+				"syntxdra",
+				"autocompletion/Sublime Text UE syntax draft.cpp"
 			],
 			[
-				"avamap",
-				"Prefabs/Managers/AvatarManager.prefab"
+				"acontroller",
+				"Source/Runtime/AIModule/Private/AIController.cpp"
 			],
 			[
-				"key",
-				"Scripts/Item/KeyBehaviour.cs"
+				"uesyn",
+				"autocompletion/Sublime Text UE syntax draft"
 			],
 			[
-				"ses",
-				"Scripts/Managers/SessionManager.cs"
+				"autocom",
+				"autocompletion/Sublime Text UE syntax draft"
+			],
+			[
+				"thirdp",
+				"StairlessTower\\NativizedAssetsLegacy\\Public\\ThirdPersonCharacter__pf1682475099.h"
+			],
+			[
+				"stairle",
+				"StairlessTower\\Source\\StairlessTower\\StairlessTower.h"
+			],
+			[
+				"gamemode",
+				"StairlessTower\\Source\\StairlessTower\\StairlessTowerGameMode.cpp"
+			],
+			[
+				"gne",
+				"StairlessTower\\Intermediate\\Build\\Win64\\UE4Editor\\Inc\\StairlessTower\\StairlessTowerGameMode.generated.h"
+			],
+			[
+				"character.",
+				"StairlessTower\\Source\\StairlessTower\\Character\\StairlessTowerCharacter.h"
+			],
+			[
+				"stchara",
+				"StairlessTower\\Source\\StairlessTower\\Character\\StairlessTowerCharacter.cpp"
+			],
+			[
+				"debugu",
+				"StairlessTower\\Source\\StairlessTower\\Debug\\DebugUtility.h"
+			],
+			[
+				"alienli",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Alien\\AlienLight.cs"
+			],
+			[
+				"dialogueman",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\DialogueManager.cs"
+			],
+			[
+				"showoxy",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Event\\ShowOxygenGaugeEventBehaviour.cs"
+			],
+			[
+				"astomotor",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Astronaut\\AstronautMotor.cs"
+			],
+			[
+				"color",
+				"Unity - Martian Coop\\Assets\\Commons\\Helper\\Util\\ColorUtil.cs"
+			],
+			[
+				"pauseme",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\PauseMenuManager.cs"
+			],
+			[
+				"oxygele",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Astronaut\\OxygenLevel.cs"
+			],
+			[
+				"menuitem",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItem.cs"
+			],
+			[
+				"menu",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItemBool.cs"
+			],
+			[
+				"ingamema",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\InGameManager.cs"
+			],
+			[
+				"menuitemedi",
+				"Unity - Martian Coop\\Assets\\Game\\Editor\\CustomEditor\\MenuItemBoolViewEditor.cs"
+			],
+			[
+				"menuitemto",
+				"Unity - Martian Coop\\Assets\\Game\\Editor\\CustomEditor\\MenuItemToggleEditor.cs"
+			],
+			[
+				"menuitemint",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItemIntView.cs"
+			],
+			[
+				"showo",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Event\\ShowOxygenGaugeEventBehaviour.cs"
+			],
+			[
+				"oxygen",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Items\\OxygenBottle.cs"
+			],
+			[
+				"oxygenle",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Astronaut\\OxygenLevel.cs"
+			],
+			[
+				"booledito",
+				"Unity - Martian Coop\\Assets\\Game\\Editor\\CustomEditor\\MenuItemBoolViewEditor.cs"
+			],
+			[
+				"menubool",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItemBoolView.cs"
+			],
+			[
+				"menuite",
+				"F:\\Projects\\Video Games\\IDE 02 - Martian Coop\\Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItemIntView.cs"
+			],
+			[
+				"astronautox",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Astronaut\\OxygenLevel.cs"
+			],
+			[
+				"menuitemtog",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItemToggle.cs"
+			],
+			[
+				"menueditor",
+				"Unity - Martian Coop\\Assets\\Game\\Editor\\CustomEditor\\MenuItemBoolViewEditor.cs"
+			],
+			[
+				"editor.cs",
+				"Unity - Martian Coop\\Assets\\Game\\Editor\\CustomEditor\\MenuItemBoolViewEditor.cs.meta"
+			],
+			[
+				"unityme",
+				"Unity - Martian Coop\\Assets\\Reflection\\UnityMethod.cs"
+			],
+			[
+				"menuitembo",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItemBoolView.cs"
+			],
+			[
+				"extens",
+				"Unity - Martian Coop\\Assets\\Commons\\Helper\\Extensions.cs"
+			],
+			[
+				"debugme",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\DebugMenuManager.cs"
+			],
+			[
+				"pausemen",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\PauseMenuManager.cs"
+			],
+			[
+				"oxygenleve",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Astronaut\\OxygenLevel.cs"
+			],
+			[
+				"reflection/red",
+				"Unity - Martian Coop\\Assets\\Reflection\\README.md"
+			],
+			[
+				"menui",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\MenuItemBoolView.cs"
+			],
+			[
+				"control",
+				"Unity - Martian Coop\\Assets\\Ludiq\\Controls.meta"
+			],
+			[
+				"unityva",
+				"Unity - Martian Coop\\Assets\\Reflection\\UnityVariable.cs"
+			],
+			[
+				"masterbe",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Base\\MasterBehaviour.cs"
+			],
+			[
+				"alienmaster",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Alien\\AlienMaster.cs"
+			],
+			[
+				"asmoto",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Astronaut\\AstronautMotor.cs"
+			],
+			[
+				"extinguis",
+				"Unity - Martian Coop\\Assets\\Standard Assets\\ParticleSystems\\Scripts\\ExtinguishableParticleSystem.cs"
+			],
+			[
+				"event",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Event\\Event.cs"
+			],
+			[
+				"crumblin",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Environment\\Dynamic\\CrumblingCliff.cs"
+			],
+			[
+				"camerasc",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Camera\\CameraScrolling.cs"
+			],
+			[
+				"masterbeha",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Base\\MasterBehaviour.cs"
+			],
+			[
+				"masterbeh",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Base\\MasterBehaviour.cs"
+			],
+			[
+				"alienlig",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Alien\\AlienLight.cs"
+			],
+			[
+				"humanmotor",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Human\\HumanCharacterMotor.cs"
+			],
+			[
+				"humaninve",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Human\\HumanInventory.cs"
+			],
+			[
+				"extension",
+				"Unity - Martian Coop\\Assets\\Commons\\Helper\\Extensions.cs"
+			],
+			[
+				"extes",
+				"Unity - Martian Coop\\Assets\\Standard Assets\\ParticleSystems\\Scripts\\ExtinguishableParticleSystem.cs"
+			],
+			[
+				"playsou",
+				"Unity - Martian Coop\\Assets\\Commons\\Helper\\PlaySound.cs"
+			],
+			[
+				"particlepla",
+				"Unity - Martian Coop\\Assets\\Commons\\Helper\\ParticlePlayer.cs"
+			],
+			[
+				"alienplayercon",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Alien\\AlienCharacterPlayerControl.cs"
+			],
+			[
+				"hummaster",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Human\\HumanMaster.cs"
+			],
+			[
+				"alienmotor",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Alien\\AlienCharacterMotor.cs"
+			],
+			[
+				"dialo",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\DialogueManager.cs"
+			],
+			[
+				"sessmana",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\SessionManager.cs"
+			],
+			[
+				"pausemeuma",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\PauseMenuManager.cs"
+			],
+			[
+				"gamema",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\GameModeManager.cs"
+			],
+			[
+				"sessionma",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\SessionManager.cs"
+			],
+			[
+				"endingme",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\EndingManager.cs"
+			],
+			[
+				"creditsma",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\CreditsManager.cs"
+			],
+			[
+				"openinse",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Movie\\OpeningSequence.cs"
+			],
+			[
+				"pausem",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\PauseMenuUI.cs"
+			],
+			[
+				"humanplayercon",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Human\\HumanCharacterPlayerControl.cs"
+			],
+			[
+				"sessma",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\SessionManager.cs"
+			],
+			[
+				"endingm",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\EndingManager.cs"
+			],
+			[
+				"session",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\SessionManager.cs"
+			],
+			[
+				"creditsman",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\CreditsManager.cs"
+			],
+			[
+				"openings",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Movie\\OpeningSequence.cs"
+			],
+			[
+				"titleman",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\TitleManager.cs"
+			],
+			[
+				"endinga",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\EndingManager.cs"
+			],
+			[
+				"magene",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\ManagerGenerator.cs"
+			],
+			[
+				"titlem",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\TitleManager.cs"
+			],
+			[
+				"dialogeui",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\DialogueUI.cs"
+			],
+			[
+				"master",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Base\\MasterBehaviour.cs"
+			],
+			[
+				"pausemenu",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\PauseMenuManager.cs"
+			],
+			[
+				"gameman",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\GameManager.cs"
+			],
+			[
+				"dialogueui",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\UI\\DialogueUI.cs"
+			],
+			[
+				"endingman",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\EndingManager.cs"
+			],
+			[
+				"titlema",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\TitleManager.cs"
+			],
+			[
+				"opening",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Movie\\OpeningSequence.cs"
+			],
+			[
+				"dialogu",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\DialogueManager.cs"
+			],
+			[
+				"sess",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\SessionManager.cs"
+			],
+			[
+				"dialoguema",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\DialogueManager.cs"
+			],
+			[
+				"humamotor",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Human\\HumanCharacterMotor.cs"
+			],
+			[
+				"humancharamo",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Human\\HumanCharacter_MotionState.cs"
+			],
+			[
+				"alienmas",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Alien\\AlienMaster.cs"
+			],
+			[
+				"humanmaster",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Character\\Human\\HumanMaster.cs"
+			],
+			[
+				"humaneditor",
+				"Unity - Martian Coop\\Assets\\Game\\Editor\\CustomEditor\\HumanCharacterMotorEditor.cs"
+			],
+			[
+				"pauseg",
+				"Unity - Martian Coop\\Assets\\Game\\Scripts\\Managers\\PauseMenuManager.cs"
 			]
 		],
 		"width": 0.0
@@ -1625,30 +3739,286 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "ste",
+		"last_filter": "skills",
 		"selected_items":
 		[
 			[
-				"ste",
-				"~/Projects/AI/Schwab/Stealth-Unity/Stealth-Unity.sublime-project"
-			],
-			[
-				" ",
-				"~/Projects/AI/Schwab/Stealth-Unity/Stealth-Unity.sublime-project"
+				"skills",
+				"~/Projects/Ren'Py/Skillset/skillset.sublime-project"
 			],
 			[
 				"",
-				"~/Projects/Video Games/01 - Blue and Red/Unity - Blue and Red/BlueAndRed.sublime-project"
+				"~/Projects/Ren'Py/Skillset/skillset.sublime-project"
+			],
+			[
+				"skill",
+				"~/Projects/Ren'Py/Skillset/skillset.sublime-project"
+			],
+			[
+				"steal",
+				"~/Projects/C++/Stealth C++/Stealth.sublime-project"
+			],
+			[
+				"pack",
+				"~/.config/sublime-text-3/Packages/packages.sublime-project"
+			],
+			[
+				"ahk",
+				"F:\\Developer\\AutoHotKey\\ahk.sublime-project"
+			],
+			[
+				"manga",
+				"F:\\Projects\\Video Games\\IDE 05 - Manga-ville\\Unity - Manga-ville\\manga-ville.sublime-project"
+			],
+			[
+				"port",
+				"F:\\Projects\\Web\\Webfaction\\Portfolio\\portfolio.sublime-project"
+			],
+			[
+				"mang",
+				"F:\\Projects\\Video Games\\IDE 05 - Manga-ville\\Unity - Manga-ville\\manga-ville.sublime-project"
+			],
+			[
+				"man",
+				"F:\\Projects\\Video Games\\IDE 05 - Manga-ville\\Unity - Manga-ville\\manga-ville.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 27.0,
+		"height": 172.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"setvaria",
+				"SetVariable"
+			],
+			[
+				"setvar",
+				"SetVariable"
+			],
+			[
+				"image",
+				"Image"
+			],
+			[
+				"displa",
+				"display_menu"
+			],
+			[
+				"choice",
+				"choice"
+			],
+			[
+				"menusta",
+				"menu_statement"
+			],
+			[
+				"menu",
+				"menu"
+			],
+			[
+				"factor",
+				"Factories"
+			],
+			[
+				"create",
+				"Create"
+			],
+			[
+				"transfor",
+				"Transform"
+			],
+			[
+				"component",
+				"aiComponent"
+			],
+			[
+				"show",
+				"show"
+			],
+			[
+				"generima",
+				"generate_image"
+			],
+			[
+				"updategui",
+				"update_gui_defines"
+			],
+			[
+				"menuon",
+				"display_menu_each_item_once"
+			],
+			[
+				"candid",
+				"CandidateState"
+			],
+			[
+				"while",
+				"while_statement"
+			],
+			[
+				"labelname",
+				"label_name"
+			],
+			[
+				"set_global",
+				"set_global_label"
+			],
+			[
+				"jump",
+				"Jump"
+			],
+			[
+				"call",
+				"call"
+			],
+			[
+				"display_",
+				"display_menu"
+			],
+			[
+				"yaw",
+				"Yaw"
+			],
+			[
+				"getcontroller",
+				"GetController"
+			],
+			[
+				"getactorrota",
+				"K2_GetActorRotation"
+			],
+			[
+				"getrotat",
+				"getRotation"
+			],
+			[
+				"acontroller",
+				"AController"
+			],
+			[
+				"setupde",
+				"SetupDebugMenu"
+			],
+			[
+				"unityva",
+				"UnityVariable"
+			],
+			[
+				"revealp",
+				"revealPowerLevel"
+			],
+			[
+				"popup",
+				"Popup"
+			],
+			[
+				"pausega",
+				"PauseGame"
+			],
+			[
+				"pausegam",
+				"PauseGamePhysics"
+			],
+			[
+				"pausegamep",
+				"PauseGamePhysics"
+			],
+			[
+				"die",
+				"Die"
+			],
+			[
+				"moveair",
+				"MoveAir"
+			],
+			[
+				"isdia",
+				"IsDialogueActive"
+			],
+			[
+				"ispause",
+				"IsPauseMenuActive"
+			],
+			[
+				"oxygend",
+				"OxygenDie"
+			],
+			[
+				"notif",
+				"Notify"
+			],
+			[
+				"oxygendi",
+				"OxygenDie"
+			],
+			[
+				"movela",
+				"MoveLadder"
+			],
+			[
+				"drawlocal",
+				"DrawLocalLine"
+			],
+			[
+				"drawbo",
+				"DrawBounds"
+			],
+			[
+				"debug2d",
+				"DebugBounds2D"
+			],
+			[
+				"debugbo",
+				"DebugBounds2D"
+			],
+			[
+				"drawbou",
+				"DrawBounds2D"
+			],
+			[
+				"debugbou",
+				"DebugBounds"
+			],
+			[
+				"drawb",
+				"DrawBounds"
+			],
+			[
+				"drbou",
+				"DrawBounds"
+			],
+			[
+				"drawbox",
+				"DrawBox"
+			],
+			[
+				"resampl",
+				"ResampleInSpace"
+			],
+			[
+				"calcs",
+				"CalcStartUnitVector"
+			],
+			[
+				"calcst",
+				"CalcStartUnitVector"
+			],
+			[
+				"selectable",
+				"UISelectableExtension"
+			],
+			[
+				"kanjiren",
+				"KanjiRenderer"
+			],
+			[
+				"buil",
+				"Build"
+			]
 		],
 		"width": 392.0
 	},
@@ -1659,8 +4029,8 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 187.0,
+	"side_bar_visible": true,
+	"side_bar_width": 384.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

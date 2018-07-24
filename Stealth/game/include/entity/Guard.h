@@ -10,12 +10,12 @@
 
 #include <string>
 
-#include "entity/Character.h"
+#include "AICharacter.h"
 
-class Guard : public Character
+class Guard : public AICharacter
 {
 public:
-    Guard(const std::string &name, Point3d const &pos);
+    Guard();
     virtual ~Guard();
 
     Guard(const Guard &) = delete;
@@ -23,8 +23,12 @@ public:
     Guard(Guard&&) = default;
     Guard &operator=(Guard&&) & = default;
 
-    virtual void update(double dt) override;
+protected:
+	/* Identifier */
 
-private:
+	/// Return the default name of a new instance of this game object
+	virtual std::string getDefaultName() const override { return "Guard"; }
+
+	void updateIntention() override;
+
 };
-

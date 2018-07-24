@@ -1,7 +1,7 @@
 from subprocess import Popen
 
 # run process as child (still receive process output)
-pid = Popen(['build/Debug/Stealth']).pid
+pid = Popen(['build/Debug/TestEngine']).pid
 
 # store pid
 with open('pid.tmp', 'w') as f:

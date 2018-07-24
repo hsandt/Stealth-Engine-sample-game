@@ -10,13 +10,12 @@
 
 #include <string>
 
-#include "entity/Character.h"
-#include "entity/HumanController.h"
+#include "entity/PlayerCharacter.h"
 
-class Spy : public Character
+class Spy : public PlayerCharacter
 {
 public:
-    Spy(const std::string &name, Point3d const &pos);
+    Spy();
     virtual ~Spy();
 
     Spy(const Spy &) = delete;
@@ -24,7 +23,12 @@ public:
     Spy(Spy&&) = default;
     Spy &operator=(Spy&&) & = default;
 
+	void setupInputBindings() override;
+
 protected:
+	/* Identifier */
+
+	/// Return the default name of a new instance of this game object
+	virtual std::string getDefaultName() const override { return "Spy"; }
 
 };
-
