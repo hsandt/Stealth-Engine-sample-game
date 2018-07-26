@@ -9,15 +9,16 @@
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 
-#include "component/Transform.h"
-#include "core/Logger.h"
-#include "entity/Character.h"
-#include "entity/PlayerCharacter.h"
-
-#include "renderer/Renderer.h"
-#include "component/CharacterMotor.h"
+// Engine
 #include "component/RenderComponent.h"
 #include "component/SquareRenderComponent.h"
+#include "component/Transform.h"
+#include "core/Logger.h"
+
+// Game
+#include "entity/Character.h"
+#include "entity/PlayerCharacter.h"
+#include "component/CharacterMotor.h"
 
 using namespace std;
 
@@ -42,15 +43,3 @@ void Character::init()
 
 void Character::update(float dt) {
 }
-
-/*
-void Character::render(Renderer *renderer) {
-     //cout << "rendering at " << go -> GetPosition().x() << endl;
-        //BOOST_LOG_TRIVIAL(warning) << "tests";
-	shared_ptr<RenderComponent> renderComponent = getComponent<RenderComponent>();
-	if (renderComponent != nullptr)
-		render(renderer);
-	else
-		cout << "No render components on character " << name << endl;
-}
-*/

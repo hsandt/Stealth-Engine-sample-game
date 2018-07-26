@@ -6,6 +6,8 @@
 
 #include "entity/DynamicCharacter.h"
 
+class InputComponent;
+
 /**  Character controlled by the player
  *
  */

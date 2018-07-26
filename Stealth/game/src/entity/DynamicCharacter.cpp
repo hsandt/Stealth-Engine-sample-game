@@ -18,7 +18,6 @@
 #include "component/RenderComponent.h"
 #include "component/SquareRenderComponent.h"
 #include "component/Rigidbody.h"
-#include "renderer/Renderer.h"
 
 using namespace std;
 
@@ -44,15 +43,3 @@ void DynamicCharacter::init()
 
 void DynamicCharacter::update(float dt) {
 }
-
-/*
-void DynamicCharacter::render(Renderer *renderer) {
-     //cout << "rendering at " << go -> GetPosition().x() << endl;
-        //BOOST_LOG_TRIVIAL(warning) << "test";
-	shared_ptr<RenderComponent> renderComponent = getComponent<RenderComponent>();
-	if (renderComponent != nullptr)
-		render(renderer);
-	else
-		cout << "No render components on character " << name << endl;
-}
-*/

@@ -6,6 +6,8 @@
 
 #include "entity/Character.h"
 
+class InputComponent;
+
 /**  Character controlled by the player
  *
  */
