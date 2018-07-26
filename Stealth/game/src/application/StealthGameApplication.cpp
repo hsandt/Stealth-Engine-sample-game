@@ -4,14 +4,14 @@
 
 #include <iostream>
 
-#include "entity/PlayerDynamicCharacter.h"
-#include "entity/Guard.h"
-#include "entity/Spy.h"
-#include "component/Transform.h"
-#include "physics/PhysicsManager.h"
-#include "component/Rigidbody.h"
-
 #include "application/StealthGameApplication.h"
+
+#include "component/Rigidbody.h"
+#include "component/Transform.h"
+#include "entity/Guard.h"
+#include "entity/PlayerDynamicCharacter.h"
+#include "entity/Spy.h"
+#include "interfaces/physics/PhysicsManager.h"
 
 using namespace std;
 
